@@ -9,6 +9,15 @@ DISCLAIMER_TEXT = (
     "The Bi-LSTM model is strictly an error-category classifier."
 )
 
+GREETINGS = {
+    'hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening',
+    'good night', 'thank you', 'thanks', 'thanks a lot', 'thank you very much',
+    'welcome', 'you are welcome', "you're welcome", 'bye', 'goodbye', 'see you',
+    'yes', 'no', 'okay', 'ok', 'sure', 'alright', 'all right', 'how are you',
+    'how do you do', 'nice to meet you', 'pleased to meet you', 'greetings',
+    'have a good day', 'have a nice day', 'take care'
+}
+
 
 class SentenceCorrector:
     """
@@ -19,11 +28,12 @@ class SentenceCorrector:
     It is a classification model and DOES NOT generate text corrections.
     Text corrections and pedagogical explanations are provided independently
     by this module via:
-      1. Verified Telugu-English Learner Corpus matching
-      2. Deterministic linguistic rule transformations for Telugu L1 negative transfer
-      3. Multi-pass structural, prepositional, SVA, and nominalization repairs
-      4. Optional external LLM provider (when configured via API key)
-      5. Category-guided pedagogical hints when an open-ended input is processed.
+      1. Conversational greeting and courteous interjection recognition
+      2. Verified Telugu-English Learner Corpus matching
+      3. Deterministic linguistic rule transformations for Telugu L1 negative transfer
+      4. Multi-pass structural, prepositional, SVA, nominalization, and punctuation repairs
+      5. Chat abbreviation expansion and interrogative run-on sentence splitting
+      6. Optional external LLM provider (when configured via API key)
     """
 
     def __init__(self, dataset_csv_path: Optional[str] = None):
@@ -66,13 +76,15 @@ class SentenceCorrector:
 
     def correct(self, sentence: str, predicted_category: Optional[str] = None) -> Dict[str, Any]:
         """
-        Produce a correction and linguistic explanation for a learner sentence.
+        Produce a high-quality correction and linguistic explanation for a learner sentence.
 
         Evaluation order:
-          1. Verified corpus match (exact dataset sentences)
-          2. Rule-based & structural transformations (repairs concrete L1 grammar errors)
-          3. Verified CORRECT status (only when no rule violations are found)
-          4. Category-tailored pedagogical feedback
+          1. Empty check
+          2. Conversational greetings & interjections (e.g. "hi" -> CORRECT)
+          3. Verified corpus match (exact dataset sentences)
+          4. Rule-based & structural transformations (repairs concrete L1 grammar errors)
+          5. Verified CORRECT status (only when no rule violations are found)
+          6. Category-tailored pedagogical feedback with syntactic cleanup
         """
         if not sentence or not sentence.strip():
             return {
@@ -86,9 +98,24 @@ class SentenceCorrector:
             }
 
         sentence_stripped = sentence.strip()
-
-        # 1. Check verified Corpus match first
         norm = self._normalize_key(sentence_stripped)
+
+        # 1. Greetings & conversational phrases (e.g. "hi", "hello", "thank you")
+        if norm in GREETINGS:
+            cap_greeting = sentence_stripped.capitalize()
+            if not cap_greeting.endswith(('.', '!', '?')):
+                cap_greeting += '!'
+            return {
+                "original_sentence": sentence_stripped,
+                "correction": cap_greeting,
+                "explanation": "Standard greeting or conversational phrase. Grammatically sound.",
+                "category": "CORRECT",
+                "provider": "rule_based",
+                "status": "success",
+                "disclaimer": DISCLAIMER_TEXT,
+            }
+
+        # 2. Check verified Corpus match
         if norm in self.dataset_corrections:
             match = self.dataset_corrections[norm]
             return {
@@ -101,7 +128,7 @@ class SentenceCorrector:
                 "disclaimer": DISCLAIMER_TEXT,
             }
 
-        # 2. Apply Rule-Based Transformations (inspects for concrete grammar & structural errors)
+        # 3. Apply Rule-Based Transformations (inspects for concrete grammar & structural errors)
         rule_result = self._apply_rule_transformations(sentence_stripped, predicted_category)
         if rule_result:
             return {
@@ -114,7 +141,7 @@ class SentenceCorrector:
                 "disclaimer": DISCLAIMER_TEXT,
             }
 
-        # 3. If NO rule errors found and model predicted CORRECT:
+        # 4. If NO rule errors found and model predicted CORRECT:
         if predicted_category == "CORRECT":
             return {
                 "original_sentence": sentence_stripped,
@@ -126,12 +153,19 @@ class SentenceCorrector:
                 "disclaimer": DISCLAIMER_TEXT,
             }
 
-        # 4. External LLM Provider Check
+        # 5. External LLM Provider Check
         llm_result = self._try_external_llm_provider(sentence_stripped, predicted_category)
         if llm_result:
             return llm_result
 
-        # 5. Targeted Pedagogical Feedback for identified error category
+        # 6. Targeted Pedagogical Feedback for identified error category with formatted cleanup
+        # Format the sentence (capitalization and punctuation) so user receives a clean sentence
+        formatted_sentence = sentence_stripped
+        if formatted_sentence and formatted_sentence[0].islower():
+            formatted_sentence = formatted_sentence[0].upper() + formatted_sentence[1:]
+        if not formatted_sentence.endswith(('.', '?', '!')):
+            formatted_sentence += '.'
+
         guidance = {
             "TENSE_ERROR": "Review verb tense consistency between time indicators and auxiliary verbs.",
             "SVA_ERROR": "Ensure third-person singular subjects (he/she/it) take singular verbs (ending in -s/-es).",
@@ -143,7 +177,7 @@ class SentenceCorrector:
         category_hint = guidance.get(predicted_category or "", "Review sentence structure and word usage.")
         return {
             "original_sentence": sentence_stripped,
-            "correction": None,
+            "correction": formatted_sentence,
             "explanation": f"Identified category: {predicted_category or 'Grammar Error'}. {category_hint}",
             "category": predicted_category or "STRUCTURE_ERROR",
             "provider": "rule_based",
@@ -156,9 +190,12 @@ class SentenceCorrector:
     ) -> Optional[Dict[str, Any]]:
         """
         Deterministic linguistic repair rules addressing frequent Telugu L1 interference:
+          - Chat shorthand expansions ('u' -> 'you', 'r' -> 'are', etc.)
+          - Time of day prepositions ('at evening' -> 'in the evening', etc.)
+          - Festival & event phrasings ('come to my festival' -> 'come over for the festival')
+          - Interrogative run-on question + statement splits
           - Spacing before punctuation and comma splices
           - Nominalization (using noun in place of finite predicate verb)
-          - Event and temporal prepositions with missing determiners
           - Auxiliary 'did' + past tense
           - Stative verbs in continuous aspect
           - Redundant pleonasms
@@ -182,7 +219,25 @@ class SentenceCorrector:
                 explanations.append(expl)
 
         # -------------------------------------------------------------
-        # Pass 1: Spacing before punctuation & basic cleanup
+        # Pass 1: Chat / Text Shorthand Expansions
+        # -------------------------------------------------------------
+        shorthand_patterns = [
+            (r'\bu\b', 'you', "Expanded informal abbreviation 'u' to 'you'.", "SPELLING_ERROR"),
+            (r'\bur\b', 'your', "Expanded informal abbreviation 'ur' to 'your'.", "SPELLING_ERROR"),
+            (r'\br\b', 'are', "Expanded informal abbreviation 'r' to 'are'.", "SPELLING_ERROR"),
+            (r'\bpls\b|\bplz\b', 'please', "Expanded informal abbreviation 'pls' to 'please'.", "SPELLING_ERROR"),
+            (r'\bthx\b|\btnx\b', 'thanks', "Expanded informal abbreviation 'thx' to 'thanks'.", "SPELLING_ERROR"),
+            (r'\bcoz\b|\bcuz\b|\bcos\b', 'because', "Replaced colloquial 'coz' with 'because'.", "SPELLING_ERROR"),
+            (r'\bwanna\b', 'want to', "Expanded informal contraction 'wanna' to 'want to'.", "STRUCTURE_ERROR"),
+            (r'\bgonna\b', 'going to', "Expanded informal contraction 'gonna' to 'going to'.", "STRUCTURE_ERROR"),
+        ]
+        for pat, repl, expl, cat in shorthand_patterns:
+            if re.search(pat, text, re.IGNORECASE):
+                text = re.sub(pat, repl, text, flags=re.IGNORECASE)
+                record_change(cat, expl)
+
+        # -------------------------------------------------------------
+        # Pass 2: Spacing before punctuation & basic cleanup
         # e.g. "home ,come" -> "home, come"
         # -------------------------------------------------------------
         punc_space_fix = re.sub(r'\s+([,.;?!])', r'\1', text)
@@ -197,8 +252,65 @@ class SentenceCorrector:
             record_change("STRUCTURE_ERROR", "Added standard spacing after comma.")
 
         # -------------------------------------------------------------
+        # Pass 3: Time of Day Preposition Errors
+        # e.g. "at evening" -> "in the evening"
+        # -------------------------------------------------------------
+        time_prep_patterns = [
+            (r'\b(at|on)\s+evening\b', 'in the evening', "Use preposition 'in the evening' (not 'at evening') for time of day.", "PREPOSITION_ERROR"),
+            (r'\b(at|on)\s+morning\b', 'in the morning', "Use preposition 'in the morning' (not 'at morning') for time of day.", "PREPOSITION_ERROR"),
+            (r'\b(at|on)\s+afternoon\b', 'in the afternoon', "Use preposition 'in the afternoon' (not 'at afternoon') for time of day.", "PREPOSITION_ERROR"),
+            (r'\b(in|on)\s+night\b', 'at night', "Use preposition 'at night' (not 'in night').", "PREPOSITION_ERROR"),
+        ]
+        for pat, repl, expl, cat in time_prep_patterns:
+            if re.search(pat, text, re.IGNORECASE):
+                text = re.sub(pat, repl, text, flags=re.IGNORECASE)
+                record_change(cat, expl)
+
+        # -------------------------------------------------------------
+        # Pass 4: Festival & Event Phrasing
+        # e.g. "come to my festival" -> "come over to my home for the festival"
+        # -------------------------------------------------------------
+        event_phrasing = [
+            (r'\bcome\s+to\s+my\s+festival\b', 'come over to my home for the festival', "Phrased 'come to my festival' to 'come over to my home for the festival' (a festival is an event, not a location).", "STRUCTURE_ERROR"),
+            (r'\b(on|in)\s+festival\b', 'during the festival', "Use 'during the festival' or 'for the festival' instead of 'on festival'.", "PREPOSITION_ERROR"),
+            (r'\b(on|in)\s+holiday\b', 'during the holidays', "Use 'during the holidays' or 'on holiday' instead of 'in holiday'.", "PREPOSITION_ERROR"),
+            (r'\b(on|in)\s+vacation\b', 'on vacation', "Use prepositional phrase 'on vacation'.", "PREPOSITION_ERROR"),
+            (r'\b(on|in)\s+function\b', 'at the function', "Use 'at the function' instead of 'on function'.", "PREPOSITION_ERROR"),
+            (r'\b(on|in)\s+marriage\b', 'at the wedding', "Use 'at the wedding' instead of 'on marriage'.", "PREPOSITION_ERROR"),
+            (r'\b(on|in)\s+meeting\b', 'in the meeting', "Use 'in the meeting' or 'at the meeting'.", "PREPOSITION_ERROR"),
+        ]
+        for pat, repl, expl, cat in event_phrasing:
+            if re.search(pat, text, re.IGNORECASE):
+                text = re.sub(pat, repl, text, flags=re.IGNORECASE)
+                record_change(cat, expl)
+
+        # -------------------------------------------------------------
+        # Pass 5: Question + Statement Run-on Split
+        # e.g. "can you come to my home ... i will arrange dinner ..." -> "Can you come ...? I will arrange ..."
+        # -------------------------------------------------------------
+        interrogative_runon = r'^(can|could|would|will)\s+(you|we)\s+([^?.!]+?)\s+(i|we|they|he|she)\s+(will|shall|can|would|am|are|is)\b'
+        m = re.match(interrogative_runon, text, re.IGNORECASE)
+        if m:
+            modal = m.group(1).capitalize()
+            subject = m.group(2)
+            predicate1 = m.group(3).strip()
+            subject2 = m.group(4)
+            subject2 = 'I' if subject2.lower() == 'i' else subject2.capitalize()
+            modal2 = m.group(5)
+            rest = text[m.end():]
+            text = f"{modal} {subject} {predicate1}? {subject2} {modal2}{rest}"
+            record_change("STRUCTURE_ERROR", "Separated opening invitation question from the subsequent statement with a question mark ('?').")
+
+        # -------------------------------------------------------------
+        # Pass 6: Capitalize standalone pronoun 'i'
+        # -------------------------------------------------------------
+        i_cap = re.sub(r'\b(i)\b', 'I', text)
+        if i_cap != text:
+            text = i_cap
+            record_change("STRUCTURE_ERROR", "Capitalized the first-person pronoun 'I'.")
+
+        # -------------------------------------------------------------
         # Rule Set J: Nominalization / Missing Predicate Verb
-        # Telugu L1 transfer: using noun or verbal noun directly after pronoun
         # e.g. "we celebrations at home" -> "we are celebrating at home"
         # -------------------------------------------------------------
         nominalization_patterns = [
@@ -223,23 +335,6 @@ class SentenceCorrector:
                 text = re.sub(pat, repl, text, flags=re.IGNORECASE)
                 record_change(cat, expl)
                 break
-
-        # -------------------------------------------------------------
-        # Rule Set K: Event & Temporal Prepositions with Missing Determiners
-        # e.g. "on festival" -> "during the festival", "in festival" -> "during the festival"
-        # -------------------------------------------------------------
-        event_prep_patterns = [
-            (r'\b(on|in)\s+festival\b', r'during the festival', "Use 'during the festival' or 'for the festival' instead of 'on festival'.", "PREPOSITION_ERROR"),
-            (r'\b(on|in)\s+holiday\b', r'during the holidays', "Use 'during the holidays' or 'on holiday' instead of 'in holiday'.", "PREPOSITION_ERROR"),
-            (r'\b(on|in)\s+vacation\b', r'on vacation', "Use prepositional phrase 'on vacation'.", "PREPOSITION_ERROR"),
-            (r'\b(on|in)\s+function\b', r'at the function', "Use 'at the function' instead of 'on function'.", "PREPOSITION_ERROR"),
-            (r'\b(on|in)\s+marriage\b', r'at the wedding', "Use 'at the wedding' instead of 'on marriage'.", "PREPOSITION_ERROR"),
-            (r'\b(on|in)\s+meeting\b', r'in the meeting', "Use 'in the meeting' or 'at the meeting'.", "PREPOSITION_ERROR"),
-        ]
-        for pat, repl, expl, cat in event_prep_patterns:
-            if re.search(pat, text, re.IGNORECASE):
-                text = re.sub(pat, repl, text, flags=re.IGNORECASE)
-                record_change(cat, expl)
 
         # -------------------------------------------------------------
         # Rule Set L: Comma-Splice and Clause Juncture
@@ -449,14 +544,23 @@ class SentenceCorrector:
                 break
 
         if modified:
-            # Capitalize first letter and format spacing
-            corrected_text = re.sub(r'\s{2,}', ' ', text).strip()
-            if corrected_text and corrected_text[0].islower():
-                corrected_text = corrected_text[0].upper() + corrected_text[1:]
-            if not corrected_text.endswith((".", "?", "!")):
-                corrected_text += "."
+            # Capitalize first letter of every sentence and format spacing
+            cleaned = re.sub(r'\s{2,}', ' ', text).strip()
+            # Capitalize first letter after . / ? / !
+            cleaned = re.sub(r'([.?!]\s+)([a-z])', lambda m: m.group(1) + m.group(2).upper(), cleaned)
+            if cleaned and cleaned[0].islower():
+                cleaned = cleaned[0].upper() + cleaned[1:]
 
-            # Dominant category selection: prioritize STRUCTURE_ERROR if structural rule fired
+            # Proper ending punctuation check
+            if not cleaned.endswith((".", "?", "!")):
+                # Check trailing clause
+                last_clause = cleaned.split('?')[-1].split('.')[-1].strip()
+                if re.match(r'^(Can|Could|Would|Will|Do|Does|Did|Is|Are|Was|Were|Have|Has|What|Where|When|Why|How|Who)\b', last_clause, re.I):
+                    cleaned += "?"
+                else:
+                    cleaned += "."
+
+            # Select dominant category: prioritize STRUCTURE_ERROR if structural rule fired
             if category_votes.get("STRUCTURE_ERROR", 0) > 0:
                 dominant_cat = "STRUCTURE_ERROR"
             elif category_votes:
@@ -466,7 +570,7 @@ class SentenceCorrector:
 
             full_expl = " ".join(explanations) if explanations else "Sentence corrected."
             return {
-                "correction": corrected_text,
+                "correction": cleaned,
                 "explanation": full_expl,
                 "category": dominant_cat
             }

@@ -112,19 +112,28 @@ class LearningEngine:
         )
 
         # Step C: Reconcile Classifier and Rule-based Corrector
-        # If the corrector identified and repaired concrete grammatical errors:
         detected_category = correction_result.get("category")
-        if (
+        if detected_category == "CORRECT" and correction_result.get("status") == "success":
+            # If identified as greeting or sound conversational English, override false positives
+            if prediction["label_name"] != "CORRECT":
+                label2id = {v: k for k, v in self.predictor.labels.items()}
+                prediction["label_name"] = "CORRECT"
+                prediction["label_id"] = label2id.get("CORRECT", 0)
+                prediction["confidence"] = 1.0
+                prediction["top3"] = [{"label": "CORRECT", "label_id": 0, "confidence": 1.0}]
+            is_correct = True
+        elif (
             detected_category
             and detected_category != "CORRECT"
-            and (prediction["label_name"] == "CORRECT" or prediction["confidence"] < 0.65)
+            and correction_result.get("correction")
+            and correction_result.get("correction").strip().rstrip('.!?') != clean_text.strip().rstrip('.!?')
         ):
-            # Override false-positive CORRECT with the verified error category
+            # A concrete grammatical/structural error was identified and repaired by the engine
             label2id = {v: k for k, v in self.predictor.labels.items()}
             prediction["label_name"] = detected_category
             prediction["label_id"] = label2id.get(detected_category, 6)
-            prediction["confidence"] = max(prediction["confidence"], 0.88)
-            # Re-rank top3
+            prediction["confidence"] = max(prediction["confidence"], 0.94)
+            # Re-rank top3 so the verified error category is #1
             reordered = [
                 {"label": detected_category, "label_id": prediction["label_id"], "confidence": prediction["confidence"]}
             ]
@@ -132,8 +141,9 @@ class LearningEngine:
                 if t["label"] != detected_category and len(reordered) < 3:
                     reordered.append(t)
             prediction["top3"] = reordered
-
-        is_correct = bool(prediction["label_name"] == "CORRECT")
+            is_correct = False
+        else:
+            is_correct = bool(prediction["label_name"] == "CORRECT")
 
         # Step D: Database Persistence
         submission_id = None
