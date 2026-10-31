@@ -1,0 +1,1221 @@
+sentence,label,label_name,correction,explanation
+I go to school every day by bus.,0,CORRECT,I go to school every day by bus.,Correct sentence.
+She completed her engineering degree last year with high honors.,0,CORRECT,She completed her engineering degree last year with high honors.,Correct sentence.
+My brother works at a software company in Hyderabad.,0,CORRECT,My brother works at a software company in Hyderabad.,Correct sentence.
+We have been living in this apartment for five years.,0,CORRECT,We have been living in this apartment for five years.,Correct sentence.
+The sun rises in the east and sets in the west.,0,CORRECT,The sun rises in the east and sets in the west.,Correct sentence.
+He is an honest police officer who serves his country.,0,CORRECT,He is an honest police officer who serves his country.,Correct sentence.
+The students are preparing diligently for their semester exams.,0,CORRECT,The students are preparing diligently for their semester exams.,Correct sentence.
+I bought an umbrella because the sky looked cloudy.,0,CORRECT,I bought an umbrella because the sky looked cloudy.,Correct sentence.
+She speaks three languages fluently including English and Telugu.,0,CORRECT,She speaks three languages fluently including English and Telugu.,Correct sentence.
+The professor explained the machine learning concept clearly.,0,CORRECT,The professor explained the machine learning concept clearly.,Correct sentence.
+We enjoyed our family vacation in Visakhapatnam last summer.,0,CORRECT,We enjoyed our family vacation in Visakhapatnam last summer.,Correct sentence.
+He does not like spicy food very much.,0,CORRECT,He does not like spicy food very much.,Correct sentence.
+Could you please send me the meeting minutes by evening?,0,CORRECT,Could you please send me the meeting minutes by evening?,Correct sentence.
+They played football in the college ground until sunset.,0,CORRECT,They played football in the college ground until sunset.,Correct sentence.
+My parents visited the temple on Sunday morning.,0,CORRECT,My parents visited the temple on Sunday morning.,Correct sentence.
+The express train arrived on platform number four on time.,0,CORRECT,The express train arrived on platform number four on time.,Correct sentence.
+He has already submitted the final project report to the mentor.,0,CORRECT,He has already submitted the final project report to the mentor.,Correct sentence.
+I usually drink a cup of warm tea before starting work.,0,CORRECT,I usually drink a cup of warm tea before starting work.,Correct sentence.
+She solved all the complex mathematics problems correctly.,0,CORRECT,She solved all the complex mathematics problems correctly.,Correct sentence.
+The public library provides high speed internet access to everyone.,0,CORRECT,The public library provides high speed internet access to everyone.,Correct sentence.
+Neither Rahul nor his brother was present at the function.,0,CORRECT,Neither Rahul nor his brother was present at the function.,Correct sentence.
+Every student in the classroom received a certificate of completion.,0,CORRECT,Every student in the classroom received a certificate of completion.,Correct sentence.
+He is interested in learning artificial intelligence and data science.,0,CORRECT,He is interested in learning artificial intelligence and data science.,Correct sentence.
+She congratulated her friend on winning the debate championship.,0,CORRECT,She congratulated her friend on winning the debate championship.,Correct sentence.
+The weather in Bangalore is very pleasant during winter.,0,CORRECT,The weather in Bangalore is very pleasant during winter.,Correct sentence.
+I have known him since our early school days in Vijayawada.,0,CORRECT,I have known him since our early school days in Vijayawada.,Correct sentence.
+Do you know where the nearest medical store is located?,0,CORRECT,Do you know where the nearest medical store is located?,Correct sentence.
+They decided to travel to Ooty during the holidays.,0,CORRECT,They decided to travel to Ooty during the holidays.,Correct sentence.
+He wrote a thoughtful email to the project manager.,0,CORRECT,He wrote a thoughtful email to the project manager.,Correct sentence.
+The dog barked loudly when the stranger approached the gate.,0,CORRECT,The dog barked loudly when the stranger approached the gate.,Correct sentence.
+Mount Everest is the highest mountain peak in the world.,0,CORRECT,Mount Everest is the highest mountain peak in the world.,Correct sentence.
+She works as a senior software architect in Bengaluru.,0,CORRECT,She works as a senior software architect in Bengaluru.,Correct sentence.
+The children were playing happily in the neighborhood park.,0,CORRECT,The children were playing happily in the neighborhood park.,Correct sentence.
+I will call you as soon as I reach the airport.,0,CORRECT,I will call you as soon as I reach the airport.,Correct sentence.
+He answered all the interview questions with great confidence.,0,CORRECT,He answered all the interview questions with great confidence.,Correct sentence.
+We should protect our environment by planting more trees.,0,CORRECT,We should protect our environment by planting more trees.,Correct sentence.
+She made a delicious South Indian meal for the guests.,0,CORRECT,She made a delicious South Indian meal for the guests.,Correct sentence.
+He was reading an interesting novel throughout the train journey.,0,CORRECT,He was reading an interesting novel throughout the train journey.,Correct sentence.
+The conference will begin at nine o'clock tomorrow morning.,0,CORRECT,The conference will begin at nine o'clock tomorrow morning.,Correct sentence.
+They celebrated their wedding anniversary with close relatives.,0,CORRECT,They celebrated their wedding anniversary with close relatives.,Correct sentence.
+My sister published a research paper in a reputed journal.,0,CORRECT,My sister published a research paper in a reputed journal.,Correct sentence.
+My sister inspected the new laboratory facilities carefully.,0,CORRECT,My sister inspected the new laboratory facilities carefully.,Correct sentence.
+My sister delivered an inspiring keynote speech at the seminar.,0,CORRECT,My sister delivered an inspiring keynote speech at the seminar.,Correct sentence.
+My sister organized a blood donation camp in the village.,0,CORRECT,My sister organized a blood donation camp in the village.,Correct sentence.
+My sister planted twenty fruit saplings in the college garden.,0,CORRECT,My sister planted twenty fruit saplings in the college garden.,Correct sentence.
+My sister repaired the electrical wiring in the computer lab.,0,CORRECT,My sister repaired the electrical wiring in the computer lab.,Correct sentence.
+My sister donated ten thousand rupees to the local orphanage.,0,CORRECT,My sister donated ten thousand rupees to the local orphanage.,Correct sentence.
+My sister reviewed the annual budget proposals thoroughly.,0,CORRECT,My sister reviewed the annual budget proposals thoroughly.,Correct sentence.
+My sister guided the final year students with their projects.,0,CORRECT,My sister guided the final year students with their projects.,Correct sentence.
+My sister distributed study materials to all registered participants.,0,CORRECT,My sister distributed study materials to all registered participants.,Correct sentence.
+My sister monitored the examination hall with strict vigilance.,0,CORRECT,My sister monitored the examination hall with strict vigilance.,Correct sentence.
+My sister designed an intuitive user interface for the mobile app.,0,CORRECT,My sister designed an intuitive user interface for the mobile app.,Correct sentence.
+My sister attended the international technical symposium in Delhi.,0,CORRECT,My sister attended the international technical symposium in Delhi.,Correct sentence.
+The manager published a research paper in a reputed journal.,0,CORRECT,The manager published a research paper in a reputed journal.,Correct sentence.
+The manager inspected the new laboratory facilities carefully.,0,CORRECT,The manager inspected the new laboratory facilities carefully.,Correct sentence.
+The manager delivered an inspiring keynote speech at the seminar.,0,CORRECT,The manager delivered an inspiring keynote speech at the seminar.,Correct sentence.
+The manager organized a blood donation camp in the village.,0,CORRECT,The manager organized a blood donation camp in the village.,Correct sentence.
+The manager planted twenty fruit saplings in the college garden.,0,CORRECT,The manager planted twenty fruit saplings in the college garden.,Correct sentence.
+The manager repaired the electrical wiring in the computer lab.,0,CORRECT,The manager repaired the electrical wiring in the computer lab.,Correct sentence.
+The manager donated ten thousand rupees to the local orphanage.,0,CORRECT,The manager donated ten thousand rupees to the local orphanage.,Correct sentence.
+The manager reviewed the annual budget proposals thoroughly.,0,CORRECT,The manager reviewed the annual budget proposals thoroughly.,Correct sentence.
+The manager guided the final year students with their projects.,0,CORRECT,The manager guided the final year students with their projects.,Correct sentence.
+The manager distributed study materials to all registered participants.,0,CORRECT,The manager distributed study materials to all registered participants.,Correct sentence.
+The manager monitored the examination hall with strict vigilance.,0,CORRECT,The manager monitored the examination hall with strict vigilance.,Correct sentence.
+The manager designed an intuitive user interface for the mobile app.,0,CORRECT,The manager designed an intuitive user interface for the mobile app.,Correct sentence.
+The manager attended the international technical symposium in Delhi.,0,CORRECT,The manager attended the international technical symposium in Delhi.,Correct sentence.
+Our team published a research paper in a reputed journal.,0,CORRECT,Our team published a research paper in a reputed journal.,Correct sentence.
+Our team inspected the new laboratory facilities carefully.,0,CORRECT,Our team inspected the new laboratory facilities carefully.,Correct sentence.
+Our team delivered an inspiring keynote speech at the seminar.,0,CORRECT,Our team delivered an inspiring keynote speech at the seminar.,Correct sentence.
+Our team organized a blood donation camp in the village.,0,CORRECT,Our team organized a blood donation camp in the village.,Correct sentence.
+Our team planted twenty fruit saplings in the college garden.,0,CORRECT,Our team planted twenty fruit saplings in the college garden.,Correct sentence.
+Our team repaired the electrical wiring in the computer lab.,0,CORRECT,Our team repaired the electrical wiring in the computer lab.,Correct sentence.
+Our team donated ten thousand rupees to the local orphanage.,0,CORRECT,Our team donated ten thousand rupees to the local orphanage.,Correct sentence.
+Our team reviewed the annual budget proposals thoroughly.,0,CORRECT,Our team reviewed the annual budget proposals thoroughly.,Correct sentence.
+Our team guided the final year students with their projects.,0,CORRECT,Our team guided the final year students with their projects.,Correct sentence.
+Our team distributed study materials to all registered participants.,0,CORRECT,Our team distributed study materials to all registered participants.,Correct sentence.
+Our team monitored the examination hall with strict vigilance.,0,CORRECT,Our team monitored the examination hall with strict vigilance.,Correct sentence.
+Our team designed an intuitive user interface for the mobile app.,0,CORRECT,Our team designed an intuitive user interface for the mobile app.,Correct sentence.
+Our team attended the international technical symposium in Delhi.,0,CORRECT,Our team attended the international technical symposium in Delhi.,Correct sentence.
+The principal published a research paper in a reputed journal.,0,CORRECT,The principal published a research paper in a reputed journal.,Correct sentence.
+The principal inspected the new laboratory facilities carefully.,0,CORRECT,The principal inspected the new laboratory facilities carefully.,Correct sentence.
+The principal delivered an inspiring keynote speech at the seminar.,0,CORRECT,The principal delivered an inspiring keynote speech at the seminar.,Correct sentence.
+The principal organized a blood donation camp in the village.,0,CORRECT,The principal organized a blood donation camp in the village.,Correct sentence.
+The principal planted twenty fruit saplings in the college garden.,0,CORRECT,The principal planted twenty fruit saplings in the college garden.,Correct sentence.
+The principal repaired the electrical wiring in the computer lab.,0,CORRECT,The principal repaired the electrical wiring in the computer lab.,Correct sentence.
+The principal donated ten thousand rupees to the local orphanage.,0,CORRECT,The principal donated ten thousand rupees to the local orphanage.,Correct sentence.
+The principal reviewed the annual budget proposals thoroughly.,0,CORRECT,The principal reviewed the annual budget proposals thoroughly.,Correct sentence.
+The principal guided the final year students with their projects.,0,CORRECT,The principal guided the final year students with their projects.,Correct sentence.
+The principal distributed study materials to all registered participants.,0,CORRECT,The principal distributed study materials to all registered participants.,Correct sentence.
+The principal monitored the examination hall with strict vigilance.,0,CORRECT,The principal monitored the examination hall with strict vigilance.,Correct sentence.
+The principal designed an intuitive user interface for the mobile app.,0,CORRECT,The principal designed an intuitive user interface for the mobile app.,Correct sentence.
+The principal attended the international technical symposium in Delhi.,0,CORRECT,The principal attended the international technical symposium in Delhi.,Correct sentence.
+The doctor published a research paper in a reputed journal.,0,CORRECT,The doctor published a research paper in a reputed journal.,Correct sentence.
+The doctor inspected the new laboratory facilities carefully.,0,CORRECT,The doctor inspected the new laboratory facilities carefully.,Correct sentence.
+The doctor delivered an inspiring keynote speech at the seminar.,0,CORRECT,The doctor delivered an inspiring keynote speech at the seminar.,Correct sentence.
+The doctor organized a blood donation camp in the village.,0,CORRECT,The doctor organized a blood donation camp in the village.,Correct sentence.
+The doctor planted twenty fruit saplings in the college garden.,0,CORRECT,The doctor planted twenty fruit saplings in the college garden.,Correct sentence.
+The doctor repaired the electrical wiring in the computer lab.,0,CORRECT,The doctor repaired the electrical wiring in the computer lab.,Correct sentence.
+The doctor donated ten thousand rupees to the local orphanage.,0,CORRECT,The doctor donated ten thousand rupees to the local orphanage.,Correct sentence.
+The doctor reviewed the annual budget proposals thoroughly.,0,CORRECT,The doctor reviewed the annual budget proposals thoroughly.,Correct sentence.
+The doctor guided the final year students with their projects.,0,CORRECT,The doctor guided the final year students with their projects.,Correct sentence.
+The doctor distributed study materials to all registered participants.,0,CORRECT,The doctor distributed study materials to all registered participants.,Correct sentence.
+The doctor monitored the examination hall with strict vigilance.,0,CORRECT,The doctor monitored the examination hall with strict vigilance.,Correct sentence.
+The doctor designed an intuitive user interface for the mobile app.,0,CORRECT,The doctor designed an intuitive user interface for the mobile app.,Correct sentence.
+The doctor attended the international technical symposium in Delhi.,0,CORRECT,The doctor attended the international technical symposium in Delhi.,Correct sentence.
+A young researcher published a research paper in a reputed journal.,0,CORRECT,A young researcher published a research paper in a reputed journal.,Correct sentence.
+A young researcher inspected the new laboratory facilities carefully.,0,CORRECT,A young researcher inspected the new laboratory facilities carefully.,Correct sentence.
+A young researcher delivered an inspiring keynote speech at the seminar.,0,CORRECT,A young researcher delivered an inspiring keynote speech at the seminar.,Correct sentence.
+A young researcher organized a blood donation camp in the village.,0,CORRECT,A young researcher organized a blood donation camp in the village.,Correct sentence.
+A young researcher planted twenty fruit saplings in the college garden.,0,CORRECT,A young researcher planted twenty fruit saplings in the college garden.,Correct sentence.
+A young researcher repaired the electrical wiring in the computer lab.,0,CORRECT,A young researcher repaired the electrical wiring in the computer lab.,Correct sentence.
+A young researcher donated ten thousand rupees to the local orphanage.,0,CORRECT,A young researcher donated ten thousand rupees to the local orphanage.,Correct sentence.
+A young researcher reviewed the annual budget proposals thoroughly.,0,CORRECT,A young researcher reviewed the annual budget proposals thoroughly.,Correct sentence.
+A young researcher guided the final year students with their projects.,0,CORRECT,A young researcher guided the final year students with their projects.,Correct sentence.
+A young researcher distributed study materials to all registered participants.,0,CORRECT,A young researcher distributed study materials to all registered participants.,Correct sentence.
+A young researcher monitored the examination hall with strict vigilance.,0,CORRECT,A young researcher monitored the examination hall with strict vigilance.,Correct sentence.
+A young researcher designed an intuitive user interface for the mobile app.,0,CORRECT,A young researcher designed an intuitive user interface for the mobile app.,Correct sentence.
+A young researcher attended the international technical symposium in Delhi.,0,CORRECT,A young researcher attended the international technical symposium in Delhi.,Correct sentence.
+The chief guest published a research paper in a reputed journal.,0,CORRECT,The chief guest published a research paper in a reputed journal.,Correct sentence.
+The chief guest inspected the new laboratory facilities carefully.,0,CORRECT,The chief guest inspected the new laboratory facilities carefully.,Correct sentence.
+The chief guest delivered an inspiring keynote speech at the seminar.,0,CORRECT,The chief guest delivered an inspiring keynote speech at the seminar.,Correct sentence.
+The chief guest organized a blood donation camp in the village.,0,CORRECT,The chief guest organized a blood donation camp in the village.,Correct sentence.
+The chief guest planted twenty fruit saplings in the college garden.,0,CORRECT,The chief guest planted twenty fruit saplings in the college garden.,Correct sentence.
+The chief guest repaired the electrical wiring in the computer lab.,0,CORRECT,The chief guest repaired the electrical wiring in the computer lab.,Correct sentence.
+The chief guest donated ten thousand rupees to the local orphanage.,0,CORRECT,The chief guest donated ten thousand rupees to the local orphanage.,Correct sentence.
+The chief guest reviewed the annual budget proposals thoroughly.,0,CORRECT,The chief guest reviewed the annual budget proposals thoroughly.,Correct sentence.
+The chief guest guided the final year students with their projects.,0,CORRECT,The chief guest guided the final year students with their projects.,Correct sentence.
+The chief guest distributed study materials to all registered participants.,0,CORRECT,The chief guest distributed study materials to all registered participants.,Correct sentence.
+The chief guest monitored the examination hall with strict vigilance.,0,CORRECT,The chief guest monitored the examination hall with strict vigilance.,Correct sentence.
+The chief guest designed an intuitive user interface for the mobile app.,0,CORRECT,The chief guest designed an intuitive user interface for the mobile app.,Correct sentence.
+The chief guest attended the international technical symposium in Delhi.,0,CORRECT,The chief guest attended the international technical symposium in Delhi.,Correct sentence.
+His uncle published a research paper in a reputed journal.,0,CORRECT,His uncle published a research paper in a reputed journal.,Correct sentence.
+His uncle inspected the new laboratory facilities carefully.,0,CORRECT,His uncle inspected the new laboratory facilities carefully.,Correct sentence.
+His uncle delivered an inspiring keynote speech at the seminar.,0,CORRECT,His uncle delivered an inspiring keynote speech at the seminar.,Correct sentence.
+His uncle organized a blood donation camp in the village.,0,CORRECT,His uncle organized a blood donation camp in the village.,Correct sentence.
+His uncle planted twenty fruit saplings in the college garden.,0,CORRECT,His uncle planted twenty fruit saplings in the college garden.,Correct sentence.
+His uncle repaired the electrical wiring in the computer lab.,0,CORRECT,His uncle repaired the electrical wiring in the computer lab.,Correct sentence.
+His uncle donated ten thousand rupees to the local orphanage.,0,CORRECT,His uncle donated ten thousand rupees to the local orphanage.,Correct sentence.
+His uncle reviewed the annual budget proposals thoroughly.,0,CORRECT,His uncle reviewed the annual budget proposals thoroughly.,Correct sentence.
+His uncle guided the final year students with their projects.,0,CORRECT,His uncle guided the final year students with their projects.,Correct sentence.
+His uncle distributed study materials to all registered participants.,0,CORRECT,His uncle distributed study materials to all registered participants.,Correct sentence.
+His uncle monitored the examination hall with strict vigilance.,0,CORRECT,His uncle monitored the examination hall with strict vigilance.,Correct sentence.
+His uncle designed an intuitive user interface for the mobile app.,0,CORRECT,His uncle designed an intuitive user interface for the mobile app.,Correct sentence.
+His uncle attended the international technical symposium in Delhi.,0,CORRECT,His uncle attended the international technical symposium in Delhi.,Correct sentence.
+The librarian published a research paper in a reputed journal.,0,CORRECT,The librarian published a research paper in a reputed journal.,Correct sentence.
+The librarian inspected the new laboratory facilities carefully.,0,CORRECT,The librarian inspected the new laboratory facilities carefully.,Correct sentence.
+The librarian delivered an inspiring keynote speech at the seminar.,0,CORRECT,The librarian delivered an inspiring keynote speech at the seminar.,Correct sentence.
+The librarian organized a blood donation camp in the village.,0,CORRECT,The librarian organized a blood donation camp in the village.,Correct sentence.
+The librarian planted twenty fruit saplings in the college garden.,0,CORRECT,The librarian planted twenty fruit saplings in the college garden.,Correct sentence.
+The librarian repaired the electrical wiring in the computer lab.,0,CORRECT,The librarian repaired the electrical wiring in the computer lab.,Correct sentence.
+The librarian donated ten thousand rupees to the local orphanage.,0,CORRECT,The librarian donated ten thousand rupees to the local orphanage.,Correct sentence.
+The librarian reviewed the annual budget proposals thoroughly.,0,CORRECT,The librarian reviewed the annual budget proposals thoroughly.,Correct sentence.
+The librarian guided the final year students with their projects.,0,CORRECT,The librarian guided the final year students with their projects.,Correct sentence.
+The librarian distributed study materials to all registered participants.,0,CORRECT,The librarian distributed study materials to all registered participants.,Correct sentence.
+The librarian monitored the examination hall with strict vigilance.,0,CORRECT,The librarian monitored the examination hall with strict vigilance.,Correct sentence.
+The librarian designed an intuitive user interface for the mobile app.,0,CORRECT,The librarian designed an intuitive user interface for the mobile app.,Correct sentence.
+The librarian attended the international technical symposium in Delhi.,0,CORRECT,The librarian attended the international technical symposium in Delhi.,Correct sentence.
+My cousin published a research paper in a reputed journal.,0,CORRECT,My cousin published a research paper in a reputed journal.,Correct sentence.
+My cousin inspected the new laboratory facilities carefully.,0,CORRECT,My cousin inspected the new laboratory facilities carefully.,Correct sentence.
+My cousin delivered an inspiring keynote speech at the seminar.,0,CORRECT,My cousin delivered an inspiring keynote speech at the seminar.,Correct sentence.
+My cousin organized a blood donation camp in the village.,0,CORRECT,My cousin organized a blood donation camp in the village.,Correct sentence.
+My cousin planted twenty fruit saplings in the college garden.,0,CORRECT,My cousin planted twenty fruit saplings in the college garden.,Correct sentence.
+My cousin repaired the electrical wiring in the computer lab.,0,CORRECT,My cousin repaired the electrical wiring in the computer lab.,Correct sentence.
+My cousin donated ten thousand rupees to the local orphanage.,0,CORRECT,My cousin donated ten thousand rupees to the local orphanage.,Correct sentence.
+My cousin reviewed the annual budget proposals thoroughly.,0,CORRECT,My cousin reviewed the annual budget proposals thoroughly.,Correct sentence.
+My cousin guided the final year students with their projects.,0,CORRECT,My cousin guided the final year students with their projects.,Correct sentence.
+My cousin distributed study materials to all registered participants.,0,CORRECT,My cousin distributed study materials to all registered participants.,Correct sentence.
+My cousin monitored the examination hall with strict vigilance.,0,CORRECT,My cousin monitored the examination hall with strict vigilance.,Correct sentence.
+My cousin designed an intuitive user interface for the mobile app.,0,CORRECT,My cousin designed an intuitive user interface for the mobile app.,Correct sentence.
+My cousin attended the international technical symposium in Delhi.,0,CORRECT,My cousin attended the international technical symposium in Delhi.,Correct sentence.
+Yesterday I am going to college by bus.,1,TENSE_ERROR,Yesterday I went to college by bus.,Use simple past tense for past completed actions instead of present continuous.
+Last night she is cooking biryani for dinner.,1,TENSE_ERROR,Last night she cooked biryani for dinner.,Use simple past tense for actions completed in the past.
+Yesterday my father is purchasing a new motorcycle.,1,TENSE_ERROR,Yesterday my father purchased a new motorcycle.,Use simple past tense with past time markers like 'yesterday'.
+Did you completed your practical record yesterday?,1,TENSE_ERROR,Did you complete your practical record yesterday?,Auxiliary 'did' must be followed by base form of verb.
+I didn't saw him at the railway station.,1,TENSE_ERROR,I didn't see him at the railway station.,Auxiliary 'didn't' requires the base form of the verb.
+Did she told you about the class test schedule?,1,TENSE_ERROR,Did she tell you about the class test schedule?,Use base verb 'tell' after auxiliary 'did'.
+Why did you went to the market in the rain?,1,TENSE_ERROR,Why did you go to the market in the rain?,Use base form 'go' with auxiliary 'did'.
+He did not brought his identity card to college.,1,TENSE_ERROR,He did not bring his identity card to college.,Use base form 'bring' after 'did not'.
+He is having three elder brothers in village.,1,TENSE_ERROR,He has three elder brothers in the village.,Stative verb 'have' indicating possession does not take continuous aspect.
+I am knowing the answer to this question very well.,1,TENSE_ERROR,I know the answer to this question very well.,Stative verb 'know' cannot be used in continuous tense.
+She is understanding the mathematical formulas easily.,1,TENSE_ERROR,She understands the mathematical formulas easily.,Stative verb 'understand' is not used in continuous form.
+We are liking South Indian food very much.,1,TENSE_ERROR,We like South Indian food very much.,Stative verb 'like' expresses a state and should be in simple present.
+They are wanting more time to submit assignments.,1,TENSE_ERROR,They want more time to submit assignments.,Stative verb 'want' should not be used in continuous form.
+Since three years I am living in this hostel.,1,TENSE_ERROR,I have been living in this hostel for three years.,Use present perfect continuous for actions continuing from the past.
+Since morning she is waiting for the interview call.,1,TENSE_ERROR,She has been waiting for the interview call since morning.,Use present perfect continuous with 'since' for continuous duration.
+We are staying in Hyderabad since five years.,1,TENSE_ERROR,We have been staying in Hyderabad for five years.,Use present perfect continuous tense and 'for' with duration.
+"When you will come to my house, I will give notes.",1,TENSE_ERROR,"When you come to my house, I will give notes.",Do not use 'will' in subordinate time clauses.
+"If it will rain tomorrow, the match will be cancelled.",1,TENSE_ERROR,"If it rains tomorrow, the match will be cancelled.",Use simple present in first conditional 'if' clauses.
+"Until he will apologize, I will not talk to him.",1,TENSE_ERROR,"Until he apologizes, I will not talk to him.",Subordinate clauses introduced by 'until' use present tense.
+He has completed his graduation in 2020.,1,TENSE_ERROR,He completed his graduation in 2020.,Do not use present perfect with specific past time adverbs like 'in 2020'.
+She has visited Tirupati last month with family.,1,TENSE_ERROR,She visited Tirupati last month with family.,Use simple past tense with past time markers like 'last month'.
+They have arrived yesterday night from Guntur.,1,TENSE_ERROR,They arrived last night from Guntur.,Use simple past with past time adverbs instead of present perfect.
+Last year I am writing the entrance examination.,1,TENSE_ERROR,Last year I wrote the entrance examination.,Use simple past tense for past events.
+Tomorrow they came to our house for lunch.,1,TENSE_ERROR,Tomorrow they will come to our house for lunch.,Use future tense for future events instead of past tense.
+He was knowing the secret since last month.,1,TENSE_ERROR,He had known the secret since last month.,Stative verb 'know' should not be in continuous form.
+Yesterday Ramesh is writing the final exam.,1,TENSE_ERROR,Yesterday Ramesh wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday Ramesh is watching a Telugu movie.,1,TENSE_ERROR,Yesterday Ramesh watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday Ramesh is submitting the college fee.,1,TENSE_ERROR,Yesterday Ramesh submitted the college fee.,Use simple past tense for past events.
+Yesterday Ramesh is buying a new laptop.,1,TENSE_ERROR,Yesterday Ramesh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday Ramesh is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday Ramesh traveled to Vijayawada.,Past events require simple past tense.
+Yesterday Priya is writing the final exam.,1,TENSE_ERROR,Yesterday Priya wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday Priya is watching a Telugu movie.,1,TENSE_ERROR,Yesterday Priya watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday Priya is submitting the college fee.,1,TENSE_ERROR,Yesterday Priya submitted the college fee.,Use simple past tense for past events.
+Yesterday Priya is buying a new laptop.,1,TENSE_ERROR,Yesterday Priya bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday Priya is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday Priya traveled to Vijayawada.,Past events require simple past tense.
+Yesterday My brother is writing the final exam.,1,TENSE_ERROR,Yesterday My brother wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday My brother is watching a Telugu movie.,1,TENSE_ERROR,Yesterday My brother watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday My brother is submitting the college fee.,1,TENSE_ERROR,Yesterday My brother submitted the college fee.,Use simple past tense for past events.
+Yesterday My brother is buying a new laptop.,1,TENSE_ERROR,Yesterday My brother bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday My brother is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday My brother traveled to Vijayawada.,Past events require simple past tense.
+Yesterday The teacher is writing the final exam.,1,TENSE_ERROR,Yesterday The teacher wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday The teacher is watching a Telugu movie.,1,TENSE_ERROR,Yesterday The teacher watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday The teacher is submitting the college fee.,1,TENSE_ERROR,Yesterday The teacher submitted the college fee.,Use simple past tense for past events.
+Yesterday The teacher is buying a new laptop.,1,TENSE_ERROR,Yesterday The teacher bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday The teacher is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday The teacher traveled to Vijayawada.,Past events require simple past tense.
+Yesterday The student is writing the final exam.,1,TENSE_ERROR,Yesterday The student wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday The student is watching a Telugu movie.,1,TENSE_ERROR,Yesterday The student watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday The student is submitting the college fee.,1,TENSE_ERROR,Yesterday The student submitted the college fee.,Use simple past tense for past events.
+Yesterday The student is buying a new laptop.,1,TENSE_ERROR,Yesterday The student bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday The student is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday The student traveled to Vijayawada.,Past events require simple past tense.
+Yesterday Suresh is writing the final exam.,1,TENSE_ERROR,Yesterday Suresh wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday Suresh is watching a Telugu movie.,1,TENSE_ERROR,Yesterday Suresh watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday Suresh is submitting the college fee.,1,TENSE_ERROR,Yesterday Suresh submitted the college fee.,Use simple past tense for past events.
+Yesterday Suresh is buying a new laptop.,1,TENSE_ERROR,Yesterday Suresh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday Suresh is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday Suresh traveled to Vijayawada.,Past events require simple past tense.
+Yesterday My friend is writing the final exam.,1,TENSE_ERROR,Yesterday My friend wrote the final exam.,Use simple past tense for actions completed in the past.
+Yesterday My friend is watching a Telugu movie.,1,TENSE_ERROR,Yesterday My friend watched a Telugu movie.,Use simple past tense with past time adverb.
+Yesterday My friend is submitting the college fee.,1,TENSE_ERROR,Yesterday My friend submitted the college fee.,Use simple past tense for past events.
+Yesterday My friend is buying a new laptop.,1,TENSE_ERROR,Yesterday My friend bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Yesterday My friend is traveling to Vijayawada.,1,TENSE_ERROR,Yesterday My friend traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday Ramesh is writing the final exam.,1,TENSE_ERROR,Last Sunday Ramesh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday Ramesh is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday Ramesh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday Ramesh is submitting the college fee.,1,TENSE_ERROR,Last Sunday Ramesh submitted the college fee.,Use simple past tense for past events.
+Last Sunday Ramesh is buying a new laptop.,1,TENSE_ERROR,Last Sunday Ramesh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday Ramesh is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday Ramesh traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday Priya is writing the final exam.,1,TENSE_ERROR,Last Sunday Priya wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday Priya is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday Priya watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday Priya is submitting the college fee.,1,TENSE_ERROR,Last Sunday Priya submitted the college fee.,Use simple past tense for past events.
+Last Sunday Priya is buying a new laptop.,1,TENSE_ERROR,Last Sunday Priya bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday Priya is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday Priya traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday My brother is writing the final exam.,1,TENSE_ERROR,Last Sunday My brother wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday My brother is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday My brother watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday My brother is submitting the college fee.,1,TENSE_ERROR,Last Sunday My brother submitted the college fee.,Use simple past tense for past events.
+Last Sunday My brother is buying a new laptop.,1,TENSE_ERROR,Last Sunday My brother bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday My brother is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday My brother traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday The teacher is writing the final exam.,1,TENSE_ERROR,Last Sunday The teacher wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday The teacher is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday The teacher watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday The teacher is submitting the college fee.,1,TENSE_ERROR,Last Sunday The teacher submitted the college fee.,Use simple past tense for past events.
+Last Sunday The teacher is buying a new laptop.,1,TENSE_ERROR,Last Sunday The teacher bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday The teacher is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday The teacher traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday The student is writing the final exam.,1,TENSE_ERROR,Last Sunday The student wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday The student is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday The student watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday The student is submitting the college fee.,1,TENSE_ERROR,Last Sunday The student submitted the college fee.,Use simple past tense for past events.
+Last Sunday The student is buying a new laptop.,1,TENSE_ERROR,Last Sunday The student bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday The student is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday The student traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday Suresh is writing the final exam.,1,TENSE_ERROR,Last Sunday Suresh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday Suresh is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday Suresh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday Suresh is submitting the college fee.,1,TENSE_ERROR,Last Sunday Suresh submitted the college fee.,Use simple past tense for past events.
+Last Sunday Suresh is buying a new laptop.,1,TENSE_ERROR,Last Sunday Suresh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday Suresh is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday Suresh traveled to Vijayawada.,Past events require simple past tense.
+Last Sunday My friend is writing the final exam.,1,TENSE_ERROR,Last Sunday My friend wrote the final exam.,Use simple past tense for actions completed in the past.
+Last Sunday My friend is watching a Telugu movie.,1,TENSE_ERROR,Last Sunday My friend watched a Telugu movie.,Use simple past tense with past time adverb.
+Last Sunday My friend is submitting the college fee.,1,TENSE_ERROR,Last Sunday My friend submitted the college fee.,Use simple past tense for past events.
+Last Sunday My friend is buying a new laptop.,1,TENSE_ERROR,Last Sunday My friend bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last Sunday My friend is traveling to Vijayawada.,1,TENSE_ERROR,Last Sunday My friend traveled to Vijayawada.,Past events require simple past tense.
+Last week Ramesh is writing the final exam.,1,TENSE_ERROR,Last week Ramesh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week Ramesh is watching a Telugu movie.,1,TENSE_ERROR,Last week Ramesh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week Ramesh is submitting the college fee.,1,TENSE_ERROR,Last week Ramesh submitted the college fee.,Use simple past tense for past events.
+Last week Ramesh is buying a new laptop.,1,TENSE_ERROR,Last week Ramesh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week Ramesh is traveling to Vijayawada.,1,TENSE_ERROR,Last week Ramesh traveled to Vijayawada.,Past events require simple past tense.
+Last week Priya is writing the final exam.,1,TENSE_ERROR,Last week Priya wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week Priya is watching a Telugu movie.,1,TENSE_ERROR,Last week Priya watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week Priya is submitting the college fee.,1,TENSE_ERROR,Last week Priya submitted the college fee.,Use simple past tense for past events.
+Last week Priya is buying a new laptop.,1,TENSE_ERROR,Last week Priya bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week Priya is traveling to Vijayawada.,1,TENSE_ERROR,Last week Priya traveled to Vijayawada.,Past events require simple past tense.
+Last week My brother is writing the final exam.,1,TENSE_ERROR,Last week My brother wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week My brother is watching a Telugu movie.,1,TENSE_ERROR,Last week My brother watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week My brother is submitting the college fee.,1,TENSE_ERROR,Last week My brother submitted the college fee.,Use simple past tense for past events.
+Last week My brother is buying a new laptop.,1,TENSE_ERROR,Last week My brother bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week My brother is traveling to Vijayawada.,1,TENSE_ERROR,Last week My brother traveled to Vijayawada.,Past events require simple past tense.
+Last week The teacher is writing the final exam.,1,TENSE_ERROR,Last week The teacher wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week The teacher is watching a Telugu movie.,1,TENSE_ERROR,Last week The teacher watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week The teacher is submitting the college fee.,1,TENSE_ERROR,Last week The teacher submitted the college fee.,Use simple past tense for past events.
+Last week The teacher is buying a new laptop.,1,TENSE_ERROR,Last week The teacher bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week The teacher is traveling to Vijayawada.,1,TENSE_ERROR,Last week The teacher traveled to Vijayawada.,Past events require simple past tense.
+Last week The student is writing the final exam.,1,TENSE_ERROR,Last week The student wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week The student is watching a Telugu movie.,1,TENSE_ERROR,Last week The student watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week The student is submitting the college fee.,1,TENSE_ERROR,Last week The student submitted the college fee.,Use simple past tense for past events.
+Last week The student is buying a new laptop.,1,TENSE_ERROR,Last week The student bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week The student is traveling to Vijayawada.,1,TENSE_ERROR,Last week The student traveled to Vijayawada.,Past events require simple past tense.
+Last week Suresh is writing the final exam.,1,TENSE_ERROR,Last week Suresh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week Suresh is watching a Telugu movie.,1,TENSE_ERROR,Last week Suresh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week Suresh is submitting the college fee.,1,TENSE_ERROR,Last week Suresh submitted the college fee.,Use simple past tense for past events.
+Last week Suresh is buying a new laptop.,1,TENSE_ERROR,Last week Suresh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week Suresh is traveling to Vijayawada.,1,TENSE_ERROR,Last week Suresh traveled to Vijayawada.,Past events require simple past tense.
+Last week My friend is writing the final exam.,1,TENSE_ERROR,Last week My friend wrote the final exam.,Use simple past tense for actions completed in the past.
+Last week My friend is watching a Telugu movie.,1,TENSE_ERROR,Last week My friend watched a Telugu movie.,Use simple past tense with past time adverb.
+Last week My friend is submitting the college fee.,1,TENSE_ERROR,Last week My friend submitted the college fee.,Use simple past tense for past events.
+Last week My friend is buying a new laptop.,1,TENSE_ERROR,Last week My friend bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last week My friend is traveling to Vijayawada.,1,TENSE_ERROR,Last week My friend traveled to Vijayawada.,Past events require simple past tense.
+Last month Ramesh is writing the final exam.,1,TENSE_ERROR,Last month Ramesh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month Ramesh is watching a Telugu movie.,1,TENSE_ERROR,Last month Ramesh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month Ramesh is submitting the college fee.,1,TENSE_ERROR,Last month Ramesh submitted the college fee.,Use simple past tense for past events.
+Last month Ramesh is buying a new laptop.,1,TENSE_ERROR,Last month Ramesh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month Ramesh is traveling to Vijayawada.,1,TENSE_ERROR,Last month Ramesh traveled to Vijayawada.,Past events require simple past tense.
+Last month Priya is writing the final exam.,1,TENSE_ERROR,Last month Priya wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month Priya is watching a Telugu movie.,1,TENSE_ERROR,Last month Priya watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month Priya is submitting the college fee.,1,TENSE_ERROR,Last month Priya submitted the college fee.,Use simple past tense for past events.
+Last month Priya is buying a new laptop.,1,TENSE_ERROR,Last month Priya bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month Priya is traveling to Vijayawada.,1,TENSE_ERROR,Last month Priya traveled to Vijayawada.,Past events require simple past tense.
+Last month My brother is writing the final exam.,1,TENSE_ERROR,Last month My brother wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month My brother is watching a Telugu movie.,1,TENSE_ERROR,Last month My brother watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month My brother is submitting the college fee.,1,TENSE_ERROR,Last month My brother submitted the college fee.,Use simple past tense for past events.
+Last month My brother is buying a new laptop.,1,TENSE_ERROR,Last month My brother bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month My brother is traveling to Vijayawada.,1,TENSE_ERROR,Last month My brother traveled to Vijayawada.,Past events require simple past tense.
+Last month The teacher is writing the final exam.,1,TENSE_ERROR,Last month The teacher wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month The teacher is watching a Telugu movie.,1,TENSE_ERROR,Last month The teacher watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month The teacher is submitting the college fee.,1,TENSE_ERROR,Last month The teacher submitted the college fee.,Use simple past tense for past events.
+Last month The teacher is buying a new laptop.,1,TENSE_ERROR,Last month The teacher bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month The teacher is traveling to Vijayawada.,1,TENSE_ERROR,Last month The teacher traveled to Vijayawada.,Past events require simple past tense.
+Last month The student is writing the final exam.,1,TENSE_ERROR,Last month The student wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month The student is watching a Telugu movie.,1,TENSE_ERROR,Last month The student watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month The student is submitting the college fee.,1,TENSE_ERROR,Last month The student submitted the college fee.,Use simple past tense for past events.
+Last month The student is buying a new laptop.,1,TENSE_ERROR,Last month The student bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month The student is traveling to Vijayawada.,1,TENSE_ERROR,Last month The student traveled to Vijayawada.,Past events require simple past tense.
+Last month Suresh is writing the final exam.,1,TENSE_ERROR,Last month Suresh wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month Suresh is watching a Telugu movie.,1,TENSE_ERROR,Last month Suresh watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month Suresh is submitting the college fee.,1,TENSE_ERROR,Last month Suresh submitted the college fee.,Use simple past tense for past events.
+Last month Suresh is buying a new laptop.,1,TENSE_ERROR,Last month Suresh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month Suresh is traveling to Vijayawada.,1,TENSE_ERROR,Last month Suresh traveled to Vijayawada.,Past events require simple past tense.
+Last month My friend is writing the final exam.,1,TENSE_ERROR,Last month My friend wrote the final exam.,Use simple past tense for actions completed in the past.
+Last month My friend is watching a Telugu movie.,1,TENSE_ERROR,Last month My friend watched a Telugu movie.,Use simple past tense with past time adverb.
+Last month My friend is submitting the college fee.,1,TENSE_ERROR,Last month My friend submitted the college fee.,Use simple past tense for past events.
+Last month My friend is buying a new laptop.,1,TENSE_ERROR,Last month My friend bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Last month My friend is traveling to Vijayawada.,1,TENSE_ERROR,Last month My friend traveled to Vijayawada.,Past events require simple past tense.
+Two days ago Ramesh is writing the final exam.,1,TENSE_ERROR,Two days ago Ramesh wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago Ramesh is watching a Telugu movie.,1,TENSE_ERROR,Two days ago Ramesh watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago Ramesh is submitting the college fee.,1,TENSE_ERROR,Two days ago Ramesh submitted the college fee.,Use simple past tense for past events.
+Two days ago Ramesh is buying a new laptop.,1,TENSE_ERROR,Two days ago Ramesh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago Ramesh is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago Ramesh traveled to Vijayawada.,Past events require simple past tense.
+Two days ago Priya is writing the final exam.,1,TENSE_ERROR,Two days ago Priya wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago Priya is watching a Telugu movie.,1,TENSE_ERROR,Two days ago Priya watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago Priya is submitting the college fee.,1,TENSE_ERROR,Two days ago Priya submitted the college fee.,Use simple past tense for past events.
+Two days ago Priya is buying a new laptop.,1,TENSE_ERROR,Two days ago Priya bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago Priya is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago Priya traveled to Vijayawada.,Past events require simple past tense.
+Two days ago My brother is writing the final exam.,1,TENSE_ERROR,Two days ago My brother wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago My brother is watching a Telugu movie.,1,TENSE_ERROR,Two days ago My brother watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago My brother is submitting the college fee.,1,TENSE_ERROR,Two days ago My brother submitted the college fee.,Use simple past tense for past events.
+Two days ago My brother is buying a new laptop.,1,TENSE_ERROR,Two days ago My brother bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago My brother is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago My brother traveled to Vijayawada.,Past events require simple past tense.
+Two days ago The teacher is writing the final exam.,1,TENSE_ERROR,Two days ago The teacher wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago The teacher is watching a Telugu movie.,1,TENSE_ERROR,Two days ago The teacher watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago The teacher is submitting the college fee.,1,TENSE_ERROR,Two days ago The teacher submitted the college fee.,Use simple past tense for past events.
+Two days ago The teacher is buying a new laptop.,1,TENSE_ERROR,Two days ago The teacher bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago The teacher is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago The teacher traveled to Vijayawada.,Past events require simple past tense.
+Two days ago The student is writing the final exam.,1,TENSE_ERROR,Two days ago The student wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago The student is watching a Telugu movie.,1,TENSE_ERROR,Two days ago The student watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago The student is submitting the college fee.,1,TENSE_ERROR,Two days ago The student submitted the college fee.,Use simple past tense for past events.
+Two days ago The student is buying a new laptop.,1,TENSE_ERROR,Two days ago The student bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago The student is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago The student traveled to Vijayawada.,Past events require simple past tense.
+Two days ago Suresh is writing the final exam.,1,TENSE_ERROR,Two days ago Suresh wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago Suresh is watching a Telugu movie.,1,TENSE_ERROR,Two days ago Suresh watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago Suresh is submitting the college fee.,1,TENSE_ERROR,Two days ago Suresh submitted the college fee.,Use simple past tense for past events.
+Two days ago Suresh is buying a new laptop.,1,TENSE_ERROR,Two days ago Suresh bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago Suresh is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago Suresh traveled to Vijayawada.,Past events require simple past tense.
+Two days ago My friend is writing the final exam.,1,TENSE_ERROR,Two days ago My friend wrote the final exam.,Use simple past tense for actions completed in the past.
+Two days ago My friend is watching a Telugu movie.,1,TENSE_ERROR,Two days ago My friend watched a Telugu movie.,Use simple past tense with past time adverb.
+Two days ago My friend is submitting the college fee.,1,TENSE_ERROR,Two days ago My friend submitted the college fee.,Use simple past tense for past events.
+Two days ago My friend is buying a new laptop.,1,TENSE_ERROR,Two days ago My friend bought a new laptop.,Use simple past tense instead of present continuous with past time markers.
+Two days ago My friend is traveling to Vijayawada.,1,TENSE_ERROR,Two days ago My friend traveled to Vijayawada.,Past events require simple past tense.
+She go to school every day by auto.,2,SVA_ERROR,She goes to school every day by auto.,Third-person singular subjects take verbs ending in -s/-es in simple present.
+He work in a multinational software company.,2,SVA_ERROR,He works in a multinational software company.,Third-person singular subject requires the verb to take -s.
+The teacher teach English grammar very well.,2,SVA_ERROR,The teacher teaches English grammar very well.,Singular noun 'teacher' requires singular verb 'teaches'.
+My mother cook delicious sambar every Sunday.,2,SVA_ERROR,My mother cooks delicious sambar every Sunday.,Third-person singular subject requires singular verb 'cooks'.
+The bus stop right in front of our apartment.,2,SVA_ERROR,The bus stops right in front of our apartment.,Singular subject 'bus' requires verb ending in -s.
+The dog bark at strangers during the night.,2,SVA_ERROR,The dog barks at strangers during the night.,Singular subject requires third-person singular verb.
+He speak three different languages very fluently.,2,SVA_ERROR,He speaks three different languages very fluently.,Subject 'he' requires verb with -s.
+The sun give light and heat to our planet.,2,SVA_ERROR,The sun gives light and heat to our planet.,Singular subject 'sun' takes verb 'gives'.
+One of my friends are living in the United States.,2,SVA_ERROR,One of my friends is living in the United States.,'One of + plural noun' takes a singular verb.
+One of the teachers were absent yesterday.,2,SVA_ERROR,One of the teachers was absent yesterday.,"Subject is 'one', requiring singular verb 'was'."
+One of these mobile phones belong to my brother.,2,SVA_ERROR,One of these mobile phones belongs to my brother.,Subject 'one' takes singular verb 'belongs'.
+Every student in the college have a library card.,2,SVA_ERROR,Every student in the college has a library card.,'Every' takes a singular verb 'has'.
+Everyone want to become a successful software developer.,2,SVA_ERROR,Everyone wants to become a successful software developer.,Indefinite pronoun 'everyone' is singular and requires 'wants'.
+Each of the candidates were interviewed separately.,2,SVA_ERROR,Each of the candidates was interviewed separately.,'Each' is singular and requires 'was'.
+Somebody have left their umbrella in the classroom.,2,SVA_ERROR,Somebody has left their umbrella in the classroom.,'Somebody' is an indefinite singular pronoun requiring 'has'.
+The children likes playing cricket in the evening.,2,SVA_ERROR,The children like playing cricket in the evening.,Plural subject 'children' requires plural verb 'like'.
+My brothers lives in Bangalore for their studies.,2,SVA_ERROR,My brothers live in Bangalore for their studies.,Plural subject 'brothers' takes plural verb 'live'.
+The students was shouting loudly in the corridor.,2,SVA_ERROR,The students were shouting loudly in the corridor.,Plural subject 'students' requires plural past verb 'were'.
+They was waiting for the train at the platform.,2,SVA_ERROR,They were waiting for the train at the platform.,Plural pronoun 'they' requires 'were' instead of 'was'.
+These mangoes tastes very sweet and delicious.,2,SVA_ERROR,These mangoes taste very sweet and delicious.,Plural noun 'mangoes' requires plural verb 'taste'.
+He don't know the answer to this simple question.,2,SVA_ERROR,He doesn't know the answer to this simple question.,Third-person singular 'he' requires negative auxiliary 'doesn't'.
+She don't like drinking black coffee without milk.,2,SVA_ERROR,She doesn't like drinking black coffee without milk.,Use 'doesn't' with third-person singular pronoun 'she'.
+The quality of these mangoes are not satisfactory.,2,SVA_ERROR,The quality of these mangoes is not satisfactory.,"The head noun 'quality' is singular, so the verb must be 'is'."
+Neither Ravi nor Suresh were present in the meeting.,2,SVA_ERROR,Neither Ravi nor Suresh was present in the meeting.,"When singular subjects are joined by 'neither...nor', the verb is singular."
+Mathematics are a very difficult subject for many.,2,SVA_ERROR,Mathematics is a very difficult subject for many.,Academic subjects ending in -s take a singular verb.
+Rahul drive very carefully on highway.,2,SVA_ERROR,Rahul drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+Rahul write poems in Telugu language.,2,SVA_ERROR,Rahul writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+Rahul play chess with great patience.,2,SVA_ERROR,Rahul plays chess with great patience.,Singular subject requires singular verb 'plays'.
+Rahul know the shortcut route to temple.,2,SVA_ERROR,Rahul knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+Rahul wake up early at five AM.,2,SVA_ERROR,Rahul wakes up early at five AM.,Subject requires verb with -s for habitual action.
+Rahul clean the room every morning.,2,SVA_ERROR,Rahul cleans the room every morning.,Singular subject takes 'cleans'.
+Rahul read newspaper before breakfast.,2,SVA_ERROR,Rahul reads newspaper before breakfast.,Singular subject takes verb with -s.
+Anitha drive very carefully on highway.,2,SVA_ERROR,Anitha drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+Anitha write poems in Telugu language.,2,SVA_ERROR,Anitha writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+Anitha play chess with great patience.,2,SVA_ERROR,Anitha plays chess with great patience.,Singular subject requires singular verb 'plays'.
+Anitha know the shortcut route to temple.,2,SVA_ERROR,Anitha knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+Anitha wake up early at five AM.,2,SVA_ERROR,Anitha wakes up early at five AM.,Subject requires verb with -s for habitual action.
+Anitha clean the room every morning.,2,SVA_ERROR,Anitha cleans the room every morning.,Singular subject takes 'cleans'.
+Anitha read newspaper before breakfast.,2,SVA_ERROR,Anitha reads newspaper before breakfast.,Singular subject takes verb with -s.
+My uncle drive very carefully on highway.,2,SVA_ERROR,My uncle drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+My uncle write poems in Telugu language.,2,SVA_ERROR,My uncle writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+My uncle play chess with great patience.,2,SVA_ERROR,My uncle plays chess with great patience.,Singular subject requires singular verb 'plays'.
+My uncle know the shortcut route to temple.,2,SVA_ERROR,My uncle knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+My uncle wake up early at five AM.,2,SVA_ERROR,My uncle wakes up early at five AM.,Subject requires verb with -s for habitual action.
+My uncle clean the room every morning.,2,SVA_ERROR,My uncle cleans the room every morning.,Singular subject takes 'cleans'.
+My uncle read newspaper before breakfast.,2,SVA_ERROR,My uncle reads newspaper before breakfast.,Singular subject takes verb with -s.
+The mechanic drive very carefully on highway.,2,SVA_ERROR,The mechanic drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+The mechanic write poems in Telugu language.,2,SVA_ERROR,The mechanic writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+The mechanic play chess with great patience.,2,SVA_ERROR,The mechanic plays chess with great patience.,Singular subject requires singular verb 'plays'.
+The mechanic know the shortcut route to temple.,2,SVA_ERROR,The mechanic knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+The mechanic wake up early at five AM.,2,SVA_ERROR,The mechanic wakes up early at five AM.,Subject requires verb with -s for habitual action.
+The mechanic clean the room every morning.,2,SVA_ERROR,The mechanic cleans the room every morning.,Singular subject takes 'cleans'.
+The mechanic read newspaper before breakfast.,2,SVA_ERROR,The mechanic reads newspaper before breakfast.,Singular subject takes verb with -s.
+The driver drive very carefully on highway.,2,SVA_ERROR,The driver drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+The driver write poems in Telugu language.,2,SVA_ERROR,The driver writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+The driver play chess with great patience.,2,SVA_ERROR,The driver plays chess with great patience.,Singular subject requires singular verb 'plays'.
+The driver know the shortcut route to temple.,2,SVA_ERROR,The driver knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+The driver wake up early at five AM.,2,SVA_ERROR,The driver wakes up early at five AM.,Subject requires verb with -s for habitual action.
+The driver clean the room every morning.,2,SVA_ERROR,The driver cleans the room every morning.,Singular subject takes 'cleans'.
+The driver read newspaper before breakfast.,2,SVA_ERROR,The driver reads newspaper before breakfast.,Singular subject takes verb with -s.
+Our watchman drive very carefully on highway.,2,SVA_ERROR,Our watchman drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+Our watchman write poems in Telugu language.,2,SVA_ERROR,Our watchman writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+Our watchman play chess with great patience.,2,SVA_ERROR,Our watchman plays chess with great patience.,Singular subject requires singular verb 'plays'.
+Our watchman know the shortcut route to temple.,2,SVA_ERROR,Our watchman knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+Our watchman wake up early at five AM.,2,SVA_ERROR,Our watchman wakes up early at five AM.,Subject requires verb with -s for habitual action.
+Our watchman clean the room every morning.,2,SVA_ERROR,Our watchman cleans the room every morning.,Singular subject takes 'cleans'.
+Our watchman read newspaper before breakfast.,2,SVA_ERROR,Our watchman reads newspaper before breakfast.,Singular subject takes verb with -s.
+The gardener drive very carefully on highway.,2,SVA_ERROR,The gardener drives very carefully on highway.,Singular subject requires third-person singular verb with -s.
+The gardener write poems in Telugu language.,2,SVA_ERROR,The gardener writes poems in Telugu language.,Third-person singular subject requires verb ending in -s.
+The gardener play chess with great patience.,2,SVA_ERROR,The gardener plays chess with great patience.,Singular subject requires singular verb 'plays'.
+The gardener know the shortcut route to temple.,2,SVA_ERROR,The gardener knows the shortcut route to temple.,Third-person singular subject takes 'knows'.
+The gardener wake up early at five AM.,2,SVA_ERROR,The gardener wakes up early at five AM.,Subject requires verb with -s for habitual action.
+The gardener clean the room every morning.,2,SVA_ERROR,The gardener cleans the room every morning.,Singular subject takes 'cleans'.
+The gardener read newspaper before breakfast.,2,SVA_ERROR,The gardener reads newspaper before breakfast.,Singular subject takes verb with -s.
+The boys was participating in the annual tournament.,2,SVA_ERROR,The boys were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+The boys has completed the ground maintenance work.,2,SVA_ERROR,The boys have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+The boys is demanding higher monthly salaries.,2,SVA_ERROR,The boys are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+The boys likes watching Telugu cinema together.,2,SVA_ERROR,The boys like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+The girls was participating in the annual tournament.,2,SVA_ERROR,The girls were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+The girls has completed the ground maintenance work.,2,SVA_ERROR,The girls have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+The girls is demanding higher monthly salaries.,2,SVA_ERROR,The girls are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+The girls likes watching Telugu cinema together.,2,SVA_ERROR,The girls like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+Both students was participating in the annual tournament.,2,SVA_ERROR,Both students were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+Both students has completed the ground maintenance work.,2,SVA_ERROR,Both students have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+Both students is demanding higher monthly salaries.,2,SVA_ERROR,Both students are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+Both students likes watching Telugu cinema together.,2,SVA_ERROR,Both students like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+The workers was participating in the annual tournament.,2,SVA_ERROR,The workers were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+The workers has completed the ground maintenance work.,2,SVA_ERROR,The workers have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+The workers is demanding higher monthly salaries.,2,SVA_ERROR,The workers are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+The workers likes watching Telugu cinema together.,2,SVA_ERROR,The workers like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+The police officers was participating in the annual tournament.,2,SVA_ERROR,The police officers were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+The police officers has completed the ground maintenance work.,2,SVA_ERROR,The police officers have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+The police officers is demanding higher monthly salaries.,2,SVA_ERROR,The police officers are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+The police officers likes watching Telugu cinema together.,2,SVA_ERROR,The police officers like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+My friends was participating in the annual tournament.,2,SVA_ERROR,My friends were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+My friends has completed the ground maintenance work.,2,SVA_ERROR,My friends have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+My friends is demanding higher monthly salaries.,2,SVA_ERROR,My friends are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+My friends likes watching Telugu cinema together.,2,SVA_ERROR,My friends like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+The players was participating in the annual tournament.,2,SVA_ERROR,The players were participating in the annual tournament.,Plural subject requires plural verb 'were'.
+The players has completed the ground maintenance work.,2,SVA_ERROR,The players have completed the ground maintenance work.,Plural subject requires plural auxiliary 'have'.
+The players is demanding higher monthly salaries.,2,SVA_ERROR,The players are demanding higher monthly salaries.,Plural subject takes plural verb 'are'.
+The players likes watching Telugu cinema together.,2,SVA_ERROR,The players like watching Telugu cinema together.,Plural subject takes base verb form without -s.
+One of my cousins are working in Hyderabad IT corridor.,2,SVA_ERROR,One of my cousins is working in Hyderabad IT corridor.,'One of + plural noun' takes singular verb 'is'.
+One of my cousins were selected for state cricket team.,2,SVA_ERROR,One of my cousins was selected for state cricket team.,"Head subject is singular 'one', requiring 'was'."
+One of my cousins have won first prize in competition.,2,SVA_ERROR,One of my cousins has won first prize in competition.,Singular head 'one' requires singular auxiliary 'has'.
+One of my cousins know how to speak German fluently.,2,SVA_ERROR,One of my cousins knows how to speak German fluently.,'One of' takes singular verb ending in -s.
+One of the players are working in Hyderabad IT corridor.,2,SVA_ERROR,One of the players is working in Hyderabad IT corridor.,'One of + plural noun' takes singular verb 'is'.
+One of the players were selected for state cricket team.,2,SVA_ERROR,One of the players was selected for state cricket team.,"Head subject is singular 'one', requiring 'was'."
+One of the players have won first prize in competition.,2,SVA_ERROR,One of the players has won first prize in competition.,Singular head 'one' requires singular auxiliary 'has'.
+One of the players know how to speak German fluently.,2,SVA_ERROR,One of the players knows how to speak German fluently.,'One of' takes singular verb ending in -s.
+One of the doctors are working in Hyderabad IT corridor.,2,SVA_ERROR,One of the doctors is working in Hyderabad IT corridor.,'One of + plural noun' takes singular verb 'is'.
+One of the doctors were selected for state cricket team.,2,SVA_ERROR,One of the doctors was selected for state cricket team.,"Head subject is singular 'one', requiring 'was'."
+One of the doctors have won first prize in competition.,2,SVA_ERROR,One of the doctors has won first prize in competition.,Singular head 'one' requires singular auxiliary 'has'.
+One of the doctors know how to speak German fluently.,2,SVA_ERROR,One of the doctors knows how to speak German fluently.,'One of' takes singular verb ending in -s.
+One of our neighbors are working in Hyderabad IT corridor.,2,SVA_ERROR,One of our neighbors is working in Hyderabad IT corridor.,'One of + plural noun' takes singular verb 'is'.
+One of our neighbors were selected for state cricket team.,2,SVA_ERROR,One of our neighbors was selected for state cricket team.,"Head subject is singular 'one', requiring 'was'."
+One of our neighbors have won first prize in competition.,2,SVA_ERROR,One of our neighbors has won first prize in competition.,Singular head 'one' requires singular auxiliary 'has'.
+One of our neighbors know how to speak German fluently.,2,SVA_ERROR,One of our neighbors knows how to speak German fluently.,'One of' takes singular verb ending in -s.
+Neither of the candidates are qualified for the position.,2,SVA_ERROR,Neither of the candidates is qualified for the position.,'Neither of' takes a singular verb.
+Neither of the buses go to the railway station.,2,SVA_ERROR,Neither of the buses goes to the railway station.,'Neither of' requires singular verb 'goes'.
+Either of the two options are acceptable to us.,2,SVA_ERROR,Either of the two options is acceptable to us.,'Either of' requires singular verb 'is'.
+A large number of students was protesting outside.,2,SVA_ERROR,A large number of students were protesting outside.,'A number of + plural noun' takes a plural verb.
+The police is investigating the theft case in town.,2,SVA_ERROR,The police are investigating the theft case in town.,'Police' is a plural noun and takes 'are'.
+A pair of leather shoes were left near the temple door.,2,SVA_ERROR,A pair of leather shoes was left near the temple door.,'A pair of' is singular and requires 'was'.
+The cattle is grazing peacefully in the green pasture.,2,SVA_ERROR,The cattle are grazing peacefully in the green pasture.,'Cattle' is a plural collective noun requiring 'are'.
+The majority of members was absent from the meeting.,2,SVA_ERROR,The majority of members were absent from the meeting.,'Majority of + plural noun' takes plural verb 'were'.
+My father work in the postal department.,2,SVA_ERROR,My father works in the postal department.,Singular third person subject requires verb ending in -s.
+His uncle run a small grocery shop in market.,2,SVA_ERROR,His uncle runs a small grocery shop in the market.,Third person singular subject requires 'runs'.
+The software engineer test the code carefully.,2,SVA_ERROR,The software engineer tests the code carefully.,Singular subject requires verb with -s.
+The security guard patrol the apartment at night.,2,SVA_ERROR,The security guard patrols the apartment at night.,Singular subject takes 'patrols'.
+The chef prepare delicious South Indian meals.,2,SVA_ERROR,The chef prepares delicious South Indian meals.,Singular subject takes 'prepares'.
+The farmer cultivate paddy in five acres of land.,2,SVA_ERROR,The farmer cultivates paddy in five acres of land.,Singular subject takes 'cultivates'.
+The tailor stitch formal shirts perfectly.,2,SVA_ERROR,The tailor stitches formal shirts perfectly.,Singular subject takes 'stitches'.
+Our professor explain difficult topics simply.,2,SVA_ERROR,Our professor explains difficult topics simply.,Singular subject takes 'explains'.
+The postman deliver letters around noon every day.,2,SVA_ERROR,The postman delivers letters around noon every day.,Singular subject takes 'delivers'.
+The electrician repair the ceiling fan quickly.,2,SVA_ERROR,The electrician repairs the ceiling fan quickly.,Singular subject takes 'repairs'.
+We was discussing the project roadmap yesterday.,2,SVA_ERROR,We were discussing the project roadmap yesterday.,Plural pronoun 'we' requires 'were'.
+They has submitted their laboratory records on time.,2,SVA_ERROR,They have submitted their laboratory records on time.,Plural subject takes 'have'.
+You was not present in the morning seminar.,2,SVA_ERROR,You were not present in the morning seminar.,Pronoun 'you' always takes plural verb 'were'.
+The children plays with paper boats in the rain.,2,SVA_ERROR,The children play with paper boats in the rain.,Plural subject 'children' takes base verb 'play'.
+These sweet mangoes is very fresh and delicious.,2,SVA_ERROR,These sweet mangoes are very fresh and delicious.,Plural subject requires 'are'.
+Each of the participants have received a gift kit.,2,SVA_ERROR,Each of the participants has received a gift kit.,'Each of' takes singular auxiliary 'has'.
+Everyone in the auditorium want to ask questions.,2,SVA_ERROR,Everyone in the auditorium wants to ask questions.,Indefinite pronoun 'everyone' takes singular verb 'wants'.
+Someone have broken the computer laboratory window.,2,SVA_ERROR,Someone has broken the computer laboratory window.,'Someone' requires singular auxiliary 'has'.
+Nobody know where the confidential files are kept.,2,SVA_ERROR,Nobody knows where the confidential files are kept.,'Nobody' takes singular verb 'knows'.
+Both of the candidates is suitable for the scholarship.,2,SVA_ERROR,Both of the candidates are suitable for the scholarship.,'Both of' takes plural verb 'are'.
+A lot of students has enrolled in the online course.,2,SVA_ERROR,A lot of students have enrolled in the online course.,'A lot of students' takes plural verb 'have'.
+Neither Ravi nor his friends was invited to dinner.,2,SVA_ERROR,Neither Ravi nor his friends were invited to dinner.,Verb agrees with the closer plural subject 'friends'.
+The cost of essential commodities have increased rapidly.,2,SVA_ERROR,The cost of essential commodities has increased rapidly.,"Head noun 'cost' is singular, requiring 'has'."
+The bouquet of red roses smell very sweet.,2,SVA_ERROR,The bouquet of red roses smells very sweet.,"Head noun 'bouquet' is singular, requiring 'smells'."
+Every man and woman were given equal opportunity.,2,SVA_ERROR,Every man and woman was given equal opportunity.,'Every' requires singular verb 'was'.
+Ten kilometers are a long distance to walk on foot.,2,SVA_ERROR,Ten kilometers is a long distance to walk on foot.,Distances treated as a single unit take singular verb 'is'.
+Fifty thousand rupees are a huge amount of money.,2,SVA_ERROR,Fifty thousand rupees is a huge amount of money.,Sum of money treated as a whole takes singular verb 'is'.
+Bread and butter are his favorite daily breakfast.,2,SVA_ERROR,Bread and butter is his favorite daily breakfast.,Compound idea treated as a single dish takes singular verb 'is'.
+Slow and steady win the race.,2,SVA_ERROR,Slow and steady wins the race.,Single conceptual unit takes singular verb 'wins'.
+The committee have agreed on the proposed agenda.,2,SVA_ERROR,The committee has agreed on the proposed agenda.,Collective noun acting as a single unit takes 'has'.
+Neither of the answers are correct.,2,SVA_ERROR,Neither of the answers is correct.,'Neither' takes singular verb 'is'.
+Either of the two shirts suit you well.,2,SVA_ERROR,Either of the two shirts suits you well.,'Either' takes singular verb 'suits'.
+The news about the cyclone are alarming.,2,SVA_ERROR,The news about the cyclone is alarming.,'News' is uncountable singular noun taking 'is'.
+Physics are my favorite subject in science stream.,2,SVA_ERROR,Physics is my favorite subject in science stream.,Academic branch names ending in -s take singular verb 'is'.
+Measles are a contagious viral disease.,2,SVA_ERROR,Measles is a contagious viral disease.,Disease names take singular verb 'is'.
+The scissors is kept on the wooden table.,2,SVA_ERROR,The scissors are kept on the wooden table.,Plural noun 'scissors' takes plural verb 'are'.
+My trousers is very loose and needs alteration.,2,SVA_ERROR,My trousers are very loose and need alteration.,'Trousers' is plural and takes 'are'.
+The spectacles is lying on the study desk.,2,SVA_ERROR,The spectacles are lying on the study desk.,'Spectacles' is plural and takes 'are'.
+The jury was divided in their opinions.,2,SVA_ERROR,The jury were divided in their opinions.,"When members act individually/divided, use plural 'were'."
+All of the milk were spilled on the kitchen floor.,2,SVA_ERROR,All of the milk was spilled on the kitchen floor.,Uncountable noun 'milk' takes singular verb 'was'.
+Some of the water have leaked through the roof.,2,SVA_ERROR,Some of the water has leaked through the roof.,Uncountable noun 'water' takes singular auxiliary 'has'.
+None of the information were reliable.,2,SVA_ERROR,None of the information was reliable.,Uncountable noun 'information' takes singular verb 'was'.
+I have a uncle who is doctor in Guntur.,3,ARTICLE_ERROR,I have an uncle who is a doctor in Guntur.,Use 'an' before vowel sounds and 'a' before professions.
+He is a honest police officer in this town.,3,ARTICLE_ERROR,He is an honest police officer in this town.,Use 'an' before 'honest' because the 'h' is silent.
+She gave me an useful piece of advice yesterday.,3,ARTICLE_ERROR,She gave me a useful piece of advice yesterday.,Use 'a' before 'useful' because it begins with a consonant sound /juː/.
+He is an European tourist visiting historical monuments.,3,ARTICLE_ERROR,He is a European tourist visiting historical monuments.,Use 'a' before 'European' because it begins with a consonant /j/ sound.
+I saw an unique temple near the river bank.,3,ARTICLE_ERROR,I saw a unique temple near the river bank.,"'Unique' begins with a consonant glide /j/, requiring article 'a'."
+Sun rises in east and sets in west.,3,ARTICLE_ERROR,The sun rises in the east and sets in the west.,Unique celestial bodies and cardinal directions take definite article 'the'.
+Mount Everest is highest mountain peak in world.,3,ARTICLE_ERROR,Mount Everest is the highest mountain peak in the world.,Superlatives like 'highest' require the definite article 'the'.
+The honesty is always the best policy in life.,3,ARTICLE_ERROR,Honesty is always the best policy in life.,Do not use definite article 'the' before abstract nouns used in general sense.
+Can you please give me a water to drink?,3,ARTICLE_ERROR,Can you please give me some water to drink?,Water is an uncountable noun and cannot be preceded by indefinite article 'a'.
+She works as software engineer in multinational company.,3,ARTICLE_ERROR,She works as a software engineer in a multinational company.,Singular countable professions require indefinite article 'a/an'.
+He bought a iPhone from the electronics store.,3,ARTICLE_ERROR,He bought an iPhone from the electronics store.,Use 'an' before words beginning with vowel sound like 'iPhone'.
+She got an one rupee coin from the shopkeeper.,3,ARTICLE_ERROR,She got a one-rupee coin from the shopkeeper.,"'One' begins with consonant sound /w/, so use 'a' instead of 'an'."
+Pacific Ocean is largest ocean on the earth.,3,ARTICLE_ERROR,The Pacific Ocean is the largest ocean on the earth.,Names of oceans and superlatives require definite article 'the'.
+He had a lunch at one o'clock in college canteen.,3,ARTICLE_ERROR,He had lunch at one o'clock in the college canteen.,Do not use article 'a' before names of routine meals.
+Taj Mahal is famous historical monument in Agra.,3,ARTICLE_ERROR,The Taj Mahal is a famous historical monument in Agra.,Historical monuments require definite article 'the'.
+I waited for bus for more than an hour.,3,ARTICLE_ERROR,I waited for the bus for more than an hour.,Use definite article 'the' when referring to a specific public transit.
+She has an headache and cannot attend class today.,3,ARTICLE_ERROR,She has a headache and cannot attend class today.,'Headache' takes indefinite article 'a'.
+He went to university to collect his certificates.,3,ARTICLE_ERROR,He went to the university to collect his certificates.,Use 'the' when referring to a specific university campus.
+The gold is a very precious and expensive metal.,3,ARTICLE_ERROR,Gold is a very precious and expensive metal.,Material nouns used in a general sense do not take article 'the'.
+He wants to purchase car for his family.,3,ARTICLE_ERROR,He wants to purchase a car for his family.,Singular countable noun 'car' requires indefinite article 'a'.
+I read interesting novel written by R K Narayan.,3,ARTICLE_ERROR,I read an interesting novel written by R K Narayan.,Countable noun modified by vowel-initial adjective takes 'an'.
+Ganga is considered holy river in India.,3,ARTICLE_ERROR,The Ganga is considered a holy river in India.,"Rivers require definite article 'the', and singular noun takes 'a'."
+She wants to become teacher in government school.,3,ARTICLE_ERROR,She wants to become a teacher in a government school.,Singular professions require indefinite article 'a'.
+He is tallest boy in the entire classroom.,3,ARTICLE_ERROR,He is the tallest boy in the entire classroom.,Superlative adjective 'tallest' requires 'the'.
+We stayed in hotel near the railway station.,3,ARTICLE_ERROR,We stayed in a hotel near the railway station.,Singular countable noun 'hotel' requires indefinite article 'a'.
+Ravi wants to become doctor in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a doctor in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as doctor in reputed organization.,3,ARTICLE_ERROR,His sister is working as a doctor in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming doctor in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a doctor in a reputed organization.,Singular countable professions require article 'a'.
+My friend is doctor in reputed organization.,3,ARTICLE_ERROR,My friend is a doctor in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as doctor in reputed organization.,3,ARTICLE_ERROR,He was hired as a doctor in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become lawyer in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a lawyer in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as lawyer in reputed organization.,3,ARTICLE_ERROR,His sister is working as a lawyer in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming lawyer in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a lawyer in a reputed organization.,Singular countable professions require article 'a'.
+My friend is lawyer in reputed organization.,3,ARTICLE_ERROR,My friend is a lawyer in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as lawyer in reputed organization.,3,ARTICLE_ERROR,He was hired as a lawyer in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become police constable in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a police constable in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as police constable in reputed organization.,3,ARTICLE_ERROR,His sister is working as a police constable in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming police constable in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a police constable in a reputed organization.,Singular countable professions require article 'a'.
+My friend is police constable in reputed organization.,3,ARTICLE_ERROR,My friend is a police constable in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as police constable in reputed organization.,3,ARTICLE_ERROR,He was hired as a police constable in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become lecturer in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a lecturer in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as lecturer in reputed organization.,3,ARTICLE_ERROR,His sister is working as a lecturer in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming lecturer in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a lecturer in a reputed organization.,Singular countable professions require article 'a'.
+My friend is lecturer in reputed organization.,3,ARTICLE_ERROR,My friend is a lecturer in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as lecturer in reputed organization.,3,ARTICLE_ERROR,He was hired as a lecturer in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become software engineer in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a software engineer in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as software engineer in reputed organization.,3,ARTICLE_ERROR,His sister is working as a software engineer in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming software engineer in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a software engineer in a reputed organization.,Singular countable professions require article 'a'.
+My friend is software engineer in reputed organization.,3,ARTICLE_ERROR,My friend is a software engineer in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as software engineer in reputed organization.,3,ARTICLE_ERROR,He was hired as a software engineer in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become bank manager in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a bank manager in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as bank manager in reputed organization.,3,ARTICLE_ERROR,His sister is working as a bank manager in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming bank manager in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a bank manager in a reputed organization.,Singular countable professions require article 'a'.
+My friend is bank manager in reputed organization.,3,ARTICLE_ERROR,My friend is a bank manager in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as bank manager in reputed organization.,3,ARTICLE_ERROR,He was hired as a bank manager in a reputed organization.,Singular countable professions require article 'a'.
+Ravi wants to become data scientist in reputed organization.,3,ARTICLE_ERROR,Ravi wants to become a data scientist in a reputed organization.,Singular countable professions require article 'a'.
+His sister is working as data scientist in reputed organization.,3,ARTICLE_ERROR,His sister is working as a data scientist in a reputed organization.,Singular countable professions require article 'a'.
+She dreamed of becoming data scientist in reputed organization.,3,ARTICLE_ERROR,She dreamed of becoming a data scientist in a reputed organization.,Singular countable professions require article 'a'.
+My friend is data scientist in reputed organization.,3,ARTICLE_ERROR,My friend is a data scientist in a reputed organization.,Singular countable professions require article 'a'.
+He was hired as data scientist in reputed organization.,3,ARTICLE_ERROR,He was hired as a data scientist in a reputed organization.,Singular countable professions require article 'a'.
+I noticed a umbrella near the entrance.,3,ARTICLE_ERROR,I noticed an umbrella near the entrance.,Umbrella begins with vowel sound requiring 'an'.
+She carried a umbrella to the examination hall.,3,ARTICLE_ERROR,She carried an umbrella to the examination hall.,Umbrella begins with vowel sound requiring 'an'.
+They reported a umbrella yesterday morning.,3,ARTICLE_ERROR,They reported an umbrella yesterday morning.,Umbrella begins with vowel sound requiring 'an'.
+He observed a umbrella during the journey.,3,ARTICLE_ERROR,He observed an umbrella during the journey.,Umbrella begins with vowel sound requiring 'an'.
+We found a umbrella inside the classroom.,3,ARTICLE_ERROR,We found an umbrella inside the classroom.,Umbrella begins with vowel sound requiring 'an'.
+I noticed a honest boy near the entrance.,3,ARTICLE_ERROR,I noticed an honest boy near the entrance.,"Honest begins with silent 'h', requiring 'an'."
+She carried a honest boy to the examination hall.,3,ARTICLE_ERROR,She carried an honest boy to the examination hall.,"Honest begins with silent 'h', requiring 'an'."
+They reported a honest boy yesterday morning.,3,ARTICLE_ERROR,They reported an honest boy yesterday morning.,"Honest begins with silent 'h', requiring 'an'."
+He observed a honest boy during the journey.,3,ARTICLE_ERROR,He observed an honest boy during the journey.,"Honest begins with silent 'h', requiring 'an'."
+We found a honest boy inside the classroom.,3,ARTICLE_ERROR,We found an honest boy inside the classroom.,"Honest begins with silent 'h', requiring 'an'."
+I noticed a hour delay near the entrance.,3,ARTICLE_ERROR,I noticed an hour delay near the entrance.,"Hour has a silent 'h', requiring 'an'."
+She carried a hour delay to the examination hall.,3,ARTICLE_ERROR,She carried an hour delay to the examination hall.,"Hour has a silent 'h', requiring 'an'."
+They reported a hour delay yesterday morning.,3,ARTICLE_ERROR,They reported an hour delay yesterday morning.,"Hour has a silent 'h', requiring 'an'."
+He observed a hour delay during the journey.,3,ARTICLE_ERROR,He observed an hour delay during the journey.,"Hour has a silent 'h', requiring 'an'."
+We found a hour delay inside the classroom.,3,ARTICLE_ERROR,We found an hour delay inside the classroom.,"Hour has a silent 'h', requiring 'an'."
+I noticed a engineer near the entrance.,3,ARTICLE_ERROR,I noticed an engineer near the entrance.,"Engineer begins with vowel sound /e/, requiring 'an'."
+She carried a engineer to the examination hall.,3,ARTICLE_ERROR,She carried an engineer to the examination hall.,"Engineer begins with vowel sound /e/, requiring 'an'."
+They reported a engineer yesterday morning.,3,ARTICLE_ERROR,They reported an engineer yesterday morning.,"Engineer begins with vowel sound /e/, requiring 'an'."
+He observed a engineer during the journey.,3,ARTICLE_ERROR,He observed an engineer during the journey.,"Engineer begins with vowel sound /e/, requiring 'an'."
+We found a engineer inside the classroom.,3,ARTICLE_ERROR,We found an engineer inside the classroom.,"Engineer begins with vowel sound /e/, requiring 'an'."
+I noticed a accident near the entrance.,3,ARTICLE_ERROR,I noticed an accident near the entrance.,"Accident begins with vowel sound /æ/, requiring 'an'."
+She carried a accident to the examination hall.,3,ARTICLE_ERROR,She carried an accident to the examination hall.,"Accident begins with vowel sound /æ/, requiring 'an'."
+They reported a accident yesterday morning.,3,ARTICLE_ERROR,They reported an accident yesterday morning.,"Accident begins with vowel sound /æ/, requiring 'an'."
+He observed a accident during the journey.,3,ARTICLE_ERROR,He observed an accident during the journey.,"Accident begins with vowel sound /æ/, requiring 'an'."
+We found a accident inside the classroom.,3,ARTICLE_ERROR,We found an accident inside the classroom.,"Accident begins with vowel sound /æ/, requiring 'an'."
+I noticed a orange near the entrance.,3,ARTICLE_ERROR,I noticed an orange near the entrance.,"Orange begins with vowel sound /ɒ/, requiring 'an'."
+She carried a orange to the examination hall.,3,ARTICLE_ERROR,She carried an orange to the examination hall.,"Orange begins with vowel sound /ɒ/, requiring 'an'."
+They reported a orange yesterday morning.,3,ARTICLE_ERROR,They reported an orange yesterday morning.,"Orange begins with vowel sound /ɒ/, requiring 'an'."
+He observed a orange during the journey.,3,ARTICLE_ERROR,He observed an orange during the journey.,"Orange begins with vowel sound /ɒ/, requiring 'an'."
+We found a orange inside the classroom.,3,ARTICLE_ERROR,We found an orange inside the classroom.,"Orange begins with vowel sound /ɒ/, requiring 'an'."
+I noticed a apple near the entrance.,3,ARTICLE_ERROR,I noticed an apple near the entrance.,"Apple begins with vowel sound /æ/, requiring 'an'."
+She carried a apple to the examination hall.,3,ARTICLE_ERROR,She carried an apple to the examination hall.,"Apple begins with vowel sound /æ/, requiring 'an'."
+They reported a apple yesterday morning.,3,ARTICLE_ERROR,They reported an apple yesterday morning.,"Apple begins with vowel sound /æ/, requiring 'an'."
+He observed a apple during the journey.,3,ARTICLE_ERROR,He observed an apple during the journey.,"Apple begins with vowel sound /æ/, requiring 'an'."
+We found a apple inside the classroom.,3,ARTICLE_ERROR,We found an apple inside the classroom.,"Apple begins with vowel sound /æ/, requiring 'an'."
+He is recognized as smartest student in class.,3,ARTICLE_ERROR,He is recognized as the smartest student in the class.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered smartest student in class.,3,ARTICLE_ERROR,Ramesh is considered the smartest student in the class.,Superlative adjectives require the definite article 'the'.
+That place is smartest student in class.,3,ARTICLE_ERROR,That place is the smartest student in the class.,Superlative adjectives require the definite article 'the'.
+She achieved smartest student in class.,3,ARTICLE_ERROR,She achieved the smartest student in the class.,Superlative adjectives require the definite article 'the'.
+It is known as smartest student in class.,3,ARTICLE_ERROR,It is known as the smartest student in the class.,Superlative adjectives require the definite article 'the'.
+He is recognized as fastest runner in college.,3,ARTICLE_ERROR,He is recognized as the fastest runner in the college.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered fastest runner in college.,3,ARTICLE_ERROR,Ramesh is considered the fastest runner in the college.,Superlative adjectives require the definite article 'the'.
+That place is fastest runner in college.,3,ARTICLE_ERROR,That place is the fastest runner in the college.,Superlative adjectives require the definite article 'the'.
+She achieved fastest runner in college.,3,ARTICLE_ERROR,She achieved the fastest runner in the college.,Superlative adjectives require the definite article 'the'.
+It is known as fastest runner in college.,3,ARTICLE_ERROR,It is known as the fastest runner in the college.,Superlative adjectives require the definite article 'the'.
+He is recognized as highest score in mathematics.,3,ARTICLE_ERROR,He is recognized as the highest score in mathematics.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered highest score in mathematics.,3,ARTICLE_ERROR,Ramesh is considered the highest score in mathematics.,Superlative adjectives require the definite article 'the'.
+That place is highest score in mathematics.,3,ARTICLE_ERROR,That place is the highest score in mathematics.,Superlative adjectives require the definite article 'the'.
+She achieved highest score in mathematics.,3,ARTICLE_ERROR,She achieved the highest score in mathematics.,Superlative adjectives require the definite article 'the'.
+It is known as highest score in mathematics.,3,ARTICLE_ERROR,It is known as the highest score in mathematics.,Superlative adjectives require the definite article 'the'.
+He is recognized as oldest temple in district.,3,ARTICLE_ERROR,He is recognized as the oldest temple in the district.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered oldest temple in district.,3,ARTICLE_ERROR,Ramesh is considered the oldest temple in the district.,Superlative adjectives require the definite article 'the'.
+That place is oldest temple in district.,3,ARTICLE_ERROR,That place is the oldest temple in the district.,Superlative adjectives require the definite article 'the'.
+She achieved oldest temple in district.,3,ARTICLE_ERROR,She achieved the oldest temple in the district.,Superlative adjectives require the definite article 'the'.
+It is known as oldest temple in district.,3,ARTICLE_ERROR,It is known as the oldest temple in the district.,Superlative adjectives require the definite article 'the'.
+He is recognized as richest person in city.,3,ARTICLE_ERROR,He is recognized as the richest person in the city.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered richest person in city.,3,ARTICLE_ERROR,Ramesh is considered the richest person in the city.,Superlative adjectives require the definite article 'the'.
+That place is richest person in city.,3,ARTICLE_ERROR,That place is the richest person in the city.,Superlative adjectives require the definite article 'the'.
+She achieved richest person in city.,3,ARTICLE_ERROR,She achieved the richest person in the city.,Superlative adjectives require the definite article 'the'.
+It is known as richest person in city.,3,ARTICLE_ERROR,It is known as the richest person in the city.,Superlative adjectives require the definite article 'the'.
+He is recognized as deepest lake in country.,3,ARTICLE_ERROR,He is recognized as the deepest lake in the country.,Superlative adjectives require the definite article 'the'.
+Ramesh is considered deepest lake in country.,3,ARTICLE_ERROR,Ramesh is considered the deepest lake in the country.,Superlative adjectives require the definite article 'the'.
+That place is deepest lake in country.,3,ARTICLE_ERROR,That place is the deepest lake in the country.,Superlative adjectives require the definite article 'the'.
+She achieved deepest lake in country.,3,ARTICLE_ERROR,She achieved the deepest lake in the country.,Superlative adjectives require the definite article 'the'.
+It is known as deepest lake in country.,3,ARTICLE_ERROR,It is known as the deepest lake in the country.,Superlative adjectives require the definite article 'the'.
+He travelled around world in eighty days.,3,ARTICLE_ERROR,He travelled around the world in eighty days.,Unique entities like 'world' require definite article 'the'.
+Moon shines brightly during the clear night.,3,ARTICLE_ERROR,The moon shines brightly during the clear night.,Celestial bodies take definite article 'the'.
+Sky looks very dark and stormy this evening.,3,ARTICLE_ERROR,The sky looks very dark and stormy this evening.,Natural unique entities like 'sky' take definite article 'the'.
+Earth revolves around sun once every year.,3,ARTICLE_ERROR,The earth revolves around the sun once every year.,Celestial bodies take definite article 'the'.
+Equator divides earth into two equal halves.,3,ARTICLE_ERROR,The equator divides the earth into two equal halves.,Geographical lines take definite article 'the'.
+North pole experiences continuous winter darkness.,3,ARTICLE_ERROR,The North Pole experiences continuous winter darkness.,Geographical poles take definite article 'the'.
+She plays violin very melodiously on stage.,3,ARTICLE_ERROR,She plays the violin very melodiously on stage.,Musical instruments take definite article 'the'.
+He is learning to play classical guitar.,3,ARTICLE_ERROR,He is learning to play the classical guitar.,Musical instruments require definite article 'the'.
+My sister plays piano in Sunday church.,3,ARTICLE_ERROR,My sister plays the piano in Sunday church.,Musical instruments take definite article 'the'.
+The musician played flute at temple festival.,3,ARTICLE_ERROR,The musician played the flute at the temple festival.,Musical instruments take definite article 'the'.
+I saw big elephant crossing the road.,3,ARTICLE_ERROR,I saw a big elephant crossing the road.,Singular countable noun requires indefinite article 'a'.
+She bought beautiful silk saree for wedding.,3,ARTICLE_ERROR,She bought a beautiful silk saree for the wedding.,Singular countable noun requires article 'a'.
+He built small cottage near Krishna river.,3,ARTICLE_ERROR,He built a small cottage near the Krishna river.,Singular countable noun requires 'a'.
+They opened new branch in Guntur city.,3,ARTICLE_ERROR,They opened a new branch in Guntur city.,Singular countable noun requires article 'a'.
+We attended inspiring speech by eminent scientist.,3,ARTICLE_ERROR,We attended an inspiring speech by an eminent scientist.,Singular countable noun requires article 'an'.
+He wrote informative article on renewable energy.,3,ARTICLE_ERROR,He wrote an informative article on renewable energy.,Countable noun modified by vowel requires 'an'.
+He met with terrible bike accident on highway.,3,ARTICLE_ERROR,He met with a terrible bike accident on the highway.,Countable noun requires indefinite article 'a'.
+We had fruitful discussion with college principal.,3,ARTICLE_ERROR,We had a fruitful discussion with the college principal.,Countable event requires indefinite article 'a'.
+They reached formal agreement after negotiations.,3,ARTICLE_ERROR,They reached a formal agreement after negotiations.,Countable noun 'agreement' takes article 'a'.
+He can speak the English with great fluency.,3,ARTICLE_ERROR,He can speak English with great fluency.,Do not use article 'the' before names of languages.
+The Telugu is an ancient classical language.,3,ARTICLE_ERROR,Telugu is an ancient classical language.,Do not use article 'the' before language names.
+We enjoy playing the cricket every Sunday.,3,ARTICLE_ERROR,We enjoy playing cricket every Sunday.,Do not use 'the' before names of sports.
+They had the lunch at two in the afternoon.,3,ARTICLE_ERROR,They had lunch at two in the afternoon.,Do not use 'the' before names of regular meals.
+The breakfast is essential for good health.,3,ARTICLE_ERROR,Breakfast is essential for good health.,Do not use 'the' before names of meals.
+She likes studying the history and literature.,3,ARTICLE_ERROR,She likes studying history and literature.,Do not use 'the' before academic subjects in general.
+He travels to the Hyderabad by government bus.,3,ARTICLE_ERROR,He travels to Hyderabad by government bus.,Do not use 'the' before city names.
+Can you please pass me a salt from rack?,3,ARTICLE_ERROR,Can you please pass me the salt from the rack?,"Specific condiment takes 'the', not indefinite 'a'."
+She gave me an advice regarding higher education.,3,ARTICLE_ERROR,She gave me advice regarding higher education.,'Advice' is uncountable and cannot take 'an'.
+He bought a new furniture for his apartment.,3,ARTICLE_ERROR,He bought new furniture for his apartment.,'Furniture' is uncountable and cannot take 'a'.
+I have an important work to finish today.,3,ARTICLE_ERROR,I have important work to finish today.,'Work' in this sense is uncountable and takes no 'an'.
+She received a bad news from her village.,3,ARTICLE_ERROR,She received bad news from her village.,'News' is uncountable and does not take 'a'.
+The knowledge is more valuable than wealth.,3,ARTICLE_ERROR,Knowledge is more valuable than wealth.,Abstract nouns in general sense do not take 'the'.
+The poverty is a major socio economic problem.,3,ARTICLE_ERROR,Poverty is a major socio economic problem.,Abstract nouns in general sense do not take 'the'.
+He goes to the school to study every morning.,3,ARTICLE_ERROR,He goes to school to study every morning.,Omit 'the' when visiting institutions for primary purpose.
+The patients were taken to the hospital.,3,ARTICLE_ERROR,The patients were taken to hospital.,Omit 'the' when hospital is used for primary medical care.
+He was sent to the prison for two years.,3,ARTICLE_ERROR,He was sent to prison for two years.,Omit 'the' when institution is used for its primary purpose.
+We go to the bed at ten o'clock sharp.,3,ARTICLE_ERROR,We go to bed at ten o'clock sharp.,Idiomatic expression 'go to bed' does not take 'the'.
+He is man of great wisdom and humility.,3,ARTICLE_ERROR,He is a man of great wisdom and humility.,Singular countable noun 'man' requires 'a'.
+She showed kindness to poor beggar on street.,3,ARTICLE_ERROR,She showed kindness to a poor beggar on the street.,Singular countable noun requires article 'a'.
+He is MBA student at Osmania University.,3,ARTICLE_ERROR,He is an MBA student at Osmania University.,"Acronym MBA begins with vowel sound /em/, requiring 'an'."
+She lodged a FIR at local police station.,3,ARTICLE_ERROR,She lodged an FIR at the local police station.,"Acronym FIR begins with vowel sound /ef/, requiring 'an'."
+He is a NCC cadet in our college battalion.,3,ARTICLE_ERROR,He is an NCC cadet in our college battalion.,"Acronym NCC begins with vowel sound /en/, requiring 'an'."
+His father is a MLA from this constituency.,3,ARTICLE_ERROR,His father is an MLA from this constituency.,"Acronym MLA begins with vowel sound /em/, requiring 'an'."
+He works as a X-ray technician in clinic.,3,ARTICLE_ERROR,He works as an X-ray technician in the clinic.,"X-ray begins with vowel sound /eks/, requiring 'an'."
+She is an unique singer with soulful voice.,3,ARTICLE_ERROR,She is a unique singer with a soulful voice.,"'Unique' begins with consonant sound /juː/, requiring 'a'."
+It was an one sided cricket match yesterday.,3,ARTICLE_ERROR,It was a one-sided cricket match yesterday.,"'One' begins with consonant sound /w/, requiring 'a'."
+He has a university degree in civil engineering.,3,ARTICLE_ERROR,He has a university degree in civil engineering.,"'University' begins with consonant sound /j/, requiring 'a'."
+She wore an uniform with blue scarf to school.,3,ARTICLE_ERROR,She wore a uniform with a blue scarf to school.,"'Uniform' begins with consonant sound /j/, requiring 'a'."
+This is an universal truth recognized worldwide.,3,ARTICLE_ERROR,This is a universal truth recognized worldwide.,"'Universal' begins with consonant sound /j/, requiring 'a'."
+He is an useful resource person for workshop.,3,ARTICLE_ERROR,He is a useful resource person for the workshop.,"'Useful' begins with consonant sound /j/, requiring 'a'."
+I am very good in English speaking and grammar.,4,PREPOSITION_ERROR,I am very good at English speaking and grammar.,"Use 'good at' for abilities and competencies, not 'good in'."
+My teacher is very angry on me for coming late.,4,PREPOSITION_ERROR,My teacher is very angry with me for coming late.,"Use 'angry with someone', not 'angry on someone'."
+We congratulated Suresh for his great achievement in sports.,4,PREPOSITION_ERROR,We congratulated Suresh on his great achievement in sports.,"Use 'congratulate on', not 'congratulate for'."
+The students discussed about the project topic with teacher.,4,PREPOSITION_ERROR,The students discussed the project topic with the teacher.,'Discuss' is a transitive verb; do not use 'about' after it.
+The principal entered into the examination hall quietly.,4,PREPOSITION_ERROR,The principal entered the examination hall quietly.,'Enter' meaning to go into a physical place takes no preposition 'into'.
+She is married with a senior doctor in Apollo hospital.,4,PREPOSITION_ERROR,She is married to a senior doctor in Apollo hospital.,"Use 'married to', not 'married with'."
+The patient died with severe malaria fever last night.,4,PREPOSITION_ERROR,The patient died of severe malaria fever last night.,"Use 'died of' a disease, not 'died with'."
+He has been suffering with viral fever since three days.,4,PREPOSITION_ERROR,He has been suffering from viral fever for three days.,"Use 'suffering from' an illness, not 'suffering with'."
+She is extremely afraid from street dogs at night.,4,PREPOSITION_ERROR,She is extremely afraid of street dogs at night.,"Use adjective 'afraid of', not 'afraid from'."
+I will meet you in Monday morning at the canteen.,4,PREPOSITION_ERROR,I will meet you on Monday morning at the canteen.,"Use 'on' with days of the week, not 'in'."
+The final semester examination will start in 15th March.,4,PREPOSITION_ERROR,The final semester examination will start on 15th March.,Use 'on' before specific calendar dates.
+The express train will arrive on 6 PM at platform two.,4,PREPOSITION_ERROR,The express train will arrive at 6 PM at platform two.,Use preposition 'at' for specific clock times.
+Distribute these sweet packets between all the ten children.,4,PREPOSITION_ERROR,Distribute these sweet packets among all the ten children.,Use 'among' for more than two people; 'between' is for two.
+She sat besides me on the bench during the lecture.,4,PREPOSITION_ERROR,She sat beside me on the bench during the lecture.,"Use 'beside' (next to), not 'besides' (in addition to)."
+Write your answers with blue ink only in the booklet.,4,PREPOSITION_ERROR,Write your answers in blue ink only in the booklet.,"Use 'in ink' or 'with a pen', not 'with ink'."
+They reached to the railway station five minutes late.,4,PREPOSITION_ERROR,They reached the railway station five minutes late.,'Reach' is transitive and does not take 'to'.
+He ordered for two plates of chicken biryani.,4,PREPOSITION_ERROR,He ordered two plates of chicken biryani.,'Order' is transitive; do not use 'for'.
+Please listen what the mathematics teacher is explaining.,4,PREPOSITION_ERROR,Please listen to what the mathematics teacher is explaining.,Verb 'listen' requires preposition 'to'.
+He jumped in the river to save the drowning boy.,4,PREPOSITION_ERROR,He jumped into the river to save the drowning boy.,Use 'into' to express motion into an enclosed space or water.
+She is senior than me in the engineering college.,4,PREPOSITION_ERROR,She is senior to me in the engineering college.,"Adjectives ending in -ior (senior, junior, prior) take 'to', not 'than'."
+Open your textbook on page number fifty six.,4,PREPOSITION_ERROR,Open your textbook to page number fifty six.,"Use 'open to page', not 'open on page'."
+He was accused for stealing the gold chain from room.,4,PREPOSITION_ERROR,He was accused of stealing the gold chain from the room.,"Use 'accused of', not 'accused for'."
+She insisted for paying the restaurant bill herself.,4,PREPOSITION_ERROR,She insisted on paying the restaurant bill herself.,"Use 'insist on', not 'insist for'."
+I prefer coffee than tea during study hours.,4,PREPOSITION_ERROR,I prefer coffee to tea during study hours.,"Use 'prefer ... to ...', not 'prefer ... than ...'."
+He prevented me to attend the special coaching class.,4,PREPOSITION_ERROR,He prevented me from attending the special coaching class.,"Use 'prevent from + verb-ing', not 'prevent to'."
+Ravi is good in mathematics.,4,PREPOSITION_ERROR,Ravi is good at mathematics.,Use 'good/weak at' for skills and subjects.
+My sister is weak in mathematics.,4,PREPOSITION_ERROR,My sister is weak at mathematics.,Use 'good/weak at' for skills and subjects.
+Priya is excellent in mathematics.,4,PREPOSITION_ERROR,Priya is excellent at mathematics.,Use 'good/weak at' for skills and subjects.
+The student is clever in mathematics.,4,PREPOSITION_ERROR,The student is clever at mathematics.,Use 'good/weak at' for skills and subjects.
+He is skilled in mathematics.,4,PREPOSITION_ERROR,He is skilled at mathematics.,Use 'good/weak at' for skills and subjects.
+Ravi is good in coding in Python.,4,PREPOSITION_ERROR,Ravi is good at coding in Python.,Use 'good at' for activities and abilities.
+My sister is weak in coding in Python.,4,PREPOSITION_ERROR,My sister is weak at coding in Python.,Use 'good at' for activities and abilities.
+Priya is excellent in coding in Python.,4,PREPOSITION_ERROR,Priya is excellent at coding in Python.,Use 'good at' for activities and abilities.
+The student is clever in coding in Python.,4,PREPOSITION_ERROR,The student is clever at coding in Python.,Use 'good at' for activities and abilities.
+He is skilled in coding in Python.,4,PREPOSITION_ERROR,He is skilled at coding in Python.,Use 'good at' for activities and abilities.
+Ravi is good in public speaking.,4,PREPOSITION_ERROR,Ravi is good at public speaking.,Use 'good at' for specific skills.
+My sister is weak in public speaking.,4,PREPOSITION_ERROR,My sister is weak at public speaking.,Use 'good at' for specific skills.
+Priya is excellent in public speaking.,4,PREPOSITION_ERROR,Priya is excellent at public speaking.,Use 'good at' for specific skills.
+The student is clever in public speaking.,4,PREPOSITION_ERROR,The student is clever at public speaking.,Use 'good at' for specific skills.
+He is skilled in public speaking.,4,PREPOSITION_ERROR,He is skilled at public speaking.,Use 'good at' for specific skills.
+Ravi is good in playing chess.,4,PREPOSITION_ERROR,Ravi is good at playing chess.,Use 'good at' for games and skills.
+My sister is weak in playing chess.,4,PREPOSITION_ERROR,My sister is weak at playing chess.,Use 'good at' for games and skills.
+Priya is excellent in playing chess.,4,PREPOSITION_ERROR,Priya is excellent at playing chess.,Use 'good at' for games and skills.
+The student is clever in playing chess.,4,PREPOSITION_ERROR,The student is clever at playing chess.,Use 'good at' for games and skills.
+He is skilled in playing chess.,4,PREPOSITION_ERROR,He is skilled at playing chess.,Use 'good at' for games and skills.
+Ravi is good in solving puzzles.,4,PREPOSITION_ERROR,Ravi is good at solving puzzles.,Use 'good at' for activities.
+My sister is weak in solving puzzles.,4,PREPOSITION_ERROR,My sister is weak at solving puzzles.,Use 'good at' for activities.
+Priya is excellent in solving puzzles.,4,PREPOSITION_ERROR,Priya is excellent at solving puzzles.,Use 'good at' for activities.
+The student is clever in solving puzzles.,4,PREPOSITION_ERROR,The student is clever at solving puzzles.,Use 'good at' for activities.
+He is skilled in solving puzzles.,4,PREPOSITION_ERROR,He is skilled at solving puzzles.,Use 'good at' for activities.
+The father was angry on his younger brother.,4,PREPOSITION_ERROR,The father was angry with his younger brother.,"Use 'angry with' a person, not 'angry on'."
+Our teacher became angry on his younger brother.,4,PREPOSITION_ERROR,Our teacher became angry with his younger brother.,"Use 'angry with' a person, not 'angry on'."
+The manager got angry on his younger brother.,4,PREPOSITION_ERROR,The manager got angry with his younger brother.,"Use 'angry with' a person, not 'angry on'."
+My friend was angry on his younger brother.,4,PREPOSITION_ERROR,My friend was angry with his younger brother.,"Use 'angry with' a person, not 'angry on'."
+The principal seemed angry on his younger brother.,4,PREPOSITION_ERROR,The principal seemed angry with his younger brother.,"Use 'angry with' a person, not 'angry on'."
+The father was shouted on the auto driver.,4,PREPOSITION_ERROR,The father was shouted at the auto driver.,"Use 'shout at' someone, not 'shout on'."
+Our teacher became shouted on the auto driver.,4,PREPOSITION_ERROR,Our teacher became shouted at the auto driver.,"Use 'shout at' someone, not 'shout on'."
+The manager got shouted on the auto driver.,4,PREPOSITION_ERROR,The manager got shouted at the auto driver.,"Use 'shout at' someone, not 'shout on'."
+My friend was shouted on the auto driver.,4,PREPOSITION_ERROR,My friend was shouted at the auto driver.,"Use 'shout at' someone, not 'shout on'."
+The principal seemed shouted on the auto driver.,4,PREPOSITION_ERROR,The principal seemed shouted at the auto driver.,"Use 'shout at' someone, not 'shout on'."
+The father was screamed on the sales boy.,4,PREPOSITION_ERROR,The father was screamed at the sales boy.,"Use 'scream at', not 'scream on'."
+Our teacher became screamed on the sales boy.,4,PREPOSITION_ERROR,Our teacher became screamed at the sales boy.,"Use 'scream at', not 'scream on'."
+The manager got screamed on the sales boy.,4,PREPOSITION_ERROR,The manager got screamed at the sales boy.,"Use 'scream at', not 'scream on'."
+My friend was screamed on the sales boy.,4,PREPOSITION_ERROR,My friend was screamed at the sales boy.,"Use 'scream at', not 'scream on'."
+The principal seemed screamed on the sales boy.,4,PREPOSITION_ERROR,The principal seemed screamed at the sales boy.,"Use 'scream at', not 'scream on'."
+The father was annoyed on the noisy neighbours.,4,PREPOSITION_ERROR,The father was annoyed with the noisy neighbours.,"Use 'annoyed with' persons, not 'annoyed on'."
+Our teacher became annoyed on the noisy neighbours.,4,PREPOSITION_ERROR,Our teacher became annoyed with the noisy neighbours.,"Use 'annoyed with' persons, not 'annoyed on'."
+The manager got annoyed on the noisy neighbours.,4,PREPOSITION_ERROR,The manager got annoyed with the noisy neighbours.,"Use 'annoyed with' persons, not 'annoyed on'."
+My friend was annoyed on the noisy neighbours.,4,PREPOSITION_ERROR,My friend was annoyed with the noisy neighbours.,"Use 'annoyed with' persons, not 'annoyed on'."
+The principal seemed annoyed on the noisy neighbours.,4,PREPOSITION_ERROR,The principal seemed annoyed with the noisy neighbours.,"Use 'annoyed with' persons, not 'annoyed on'."
+The father was furious on his classmate.,4,PREPOSITION_ERROR,The father was furious with his classmate.,"Use 'furious with' a person, not 'furious on'."
+Our teacher became furious on his classmate.,4,PREPOSITION_ERROR,Our teacher became furious with his classmate.,"Use 'furious with' a person, not 'furious on'."
+The manager got furious on his classmate.,4,PREPOSITION_ERROR,The manager got furious with his classmate.,"Use 'furious with' a person, not 'furious on'."
+My friend was furious on his classmate.,4,PREPOSITION_ERROR,My friend was furious with his classmate.,"Use 'furious with' a person, not 'furious on'."
+The principal seemed furious on his classmate.,4,PREPOSITION_ERROR,The principal seemed furious with his classmate.,"Use 'furious with' a person, not 'furious on'."
+The students discussed about the project issues.,4,PREPOSITION_ERROR,The students discussed the project issues.,Do not use 'about' after transitive verb 'discuss'.
+The professors discussed about the project issues.,4,PREPOSITION_ERROR,The professors discussed the project issues.,Do not use 'about' after transitive verb 'discuss'.
+The tourists discussed about the project issues.,4,PREPOSITION_ERROR,The tourists discussed the project issues.,Do not use 'about' after transitive verb 'discuss'.
+Our family members discussed about the project issues.,4,PREPOSITION_ERROR,Our family members discussed the project issues.,Do not use 'about' after transitive verb 'discuss'.
+The delegates discussed about the project issues.,4,PREPOSITION_ERROR,The delegates discussed the project issues.,Do not use 'about' after transitive verb 'discuss'.
+The students entered into the computer laboratory.,4,PREPOSITION_ERROR,The students entered the computer laboratory.,Do not use 'into' after 'enter'.
+The professors entered into the computer laboratory.,4,PREPOSITION_ERROR,The professors entered the computer laboratory.,Do not use 'into' after 'enter'.
+The tourists entered into the computer laboratory.,4,PREPOSITION_ERROR,The tourists entered the computer laboratory.,Do not use 'into' after 'enter'.
+Our family members entered into the computer laboratory.,4,PREPOSITION_ERROR,Our family members entered the computer laboratory.,Do not use 'into' after 'enter'.
+The delegates entered into the computer laboratory.,4,PREPOSITION_ERROR,The delegates entered the computer laboratory.,Do not use 'into' after 'enter'.
+The students ordered for a cold beverage.,4,PREPOSITION_ERROR,The students ordered a cold beverage.,Do not use 'for' after transitive verb 'order'.
+The professors ordered for a cold beverage.,4,PREPOSITION_ERROR,The professors ordered a cold beverage.,Do not use 'for' after transitive verb 'order'.
+The tourists ordered for a cold beverage.,4,PREPOSITION_ERROR,The tourists ordered a cold beverage.,Do not use 'for' after transitive verb 'order'.
+Our family members ordered for a cold beverage.,4,PREPOSITION_ERROR,Our family members ordered a cold beverage.,Do not use 'for' after transitive verb 'order'.
+The delegates ordered for a cold beverage.,4,PREPOSITION_ERROR,The delegates ordered a cold beverage.,Do not use 'for' after transitive verb 'order'.
+The students reached to the bus stop early.,4,PREPOSITION_ERROR,The students reached the bus stop early.,Do not use 'to' after 'reach'.
+The professors reached to the bus stop early.,4,PREPOSITION_ERROR,The professors reached the bus stop early.,Do not use 'to' after 'reach'.
+The tourists reached to the bus stop early.,4,PREPOSITION_ERROR,The tourists reached the bus stop early.,Do not use 'to' after 'reach'.
+Our family members reached to the bus stop early.,4,PREPOSITION_ERROR,Our family members reached the bus stop early.,Do not use 'to' after 'reach'.
+The delegates reached to the bus stop early.,4,PREPOSITION_ERROR,The delegates reached the bus stop early.,Do not use 'to' after 'reach'.
+The students described about the scenic beauty.,4,PREPOSITION_ERROR,The students described the scenic beauty.,Do not use 'about' after transitive verb 'describe'.
+The professors described about the scenic beauty.,4,PREPOSITION_ERROR,The professors described the scenic beauty.,Do not use 'about' after transitive verb 'describe'.
+The tourists described about the scenic beauty.,4,PREPOSITION_ERROR,The tourists described the scenic beauty.,Do not use 'about' after transitive verb 'describe'.
+Our family members described about the scenic beauty.,4,PREPOSITION_ERROR,Our family members described the scenic beauty.,Do not use 'about' after transitive verb 'describe'.
+The delegates described about the scenic beauty.,4,PREPOSITION_ERROR,The delegates described the scenic beauty.,Do not use 'about' after transitive verb 'describe'.
+We will organize the meeting in Sunday.,4,PREPOSITION_ERROR,We will organize the meeting on Sunday.,Use preposition 'on' before days of the week.
+The workshop will take place in Sunday.,4,PREPOSITION_ERROR,The workshop will take place on Sunday.,Use preposition 'on' before days of the week.
+Classes will resume in Sunday.,4,PREPOSITION_ERROR,Classes will resume on Sunday.,Use preposition 'on' before days of the week.
+They will travel to Guntur in Sunday.,4,PREPOSITION_ERROR,They will travel to Guntur on Sunday.,Use preposition 'on' before days of the week.
+The test will be conducted in Sunday.,4,PREPOSITION_ERROR,The test will be conducted on Sunday.,Use preposition 'on' before days of the week.
+We will organize the meeting in Tuesday.,4,PREPOSITION_ERROR,We will organize the meeting on Tuesday.,Use preposition 'on' before days of the week.
+The workshop will take place in Tuesday.,4,PREPOSITION_ERROR,The workshop will take place on Tuesday.,Use preposition 'on' before days of the week.
+Classes will resume in Tuesday.,4,PREPOSITION_ERROR,Classes will resume on Tuesday.,Use preposition 'on' before days of the week.
+They will travel to Guntur in Tuesday.,4,PREPOSITION_ERROR,They will travel to Guntur on Tuesday.,Use preposition 'on' before days of the week.
+The test will be conducted in Tuesday.,4,PREPOSITION_ERROR,The test will be conducted on Tuesday.,Use preposition 'on' before days of the week.
+We will organize the meeting in Wednesday.,4,PREPOSITION_ERROR,We will organize the meeting on Wednesday.,Use preposition 'on' before days of the week.
+The workshop will take place in Wednesday.,4,PREPOSITION_ERROR,The workshop will take place on Wednesday.,Use preposition 'on' before days of the week.
+Classes will resume in Wednesday.,4,PREPOSITION_ERROR,Classes will resume on Wednesday.,Use preposition 'on' before days of the week.
+They will travel to Guntur in Wednesday.,4,PREPOSITION_ERROR,They will travel to Guntur on Wednesday.,Use preposition 'on' before days of the week.
+The test will be conducted in Wednesday.,4,PREPOSITION_ERROR,The test will be conducted on Wednesday.,Use preposition 'on' before days of the week.
+We will organize the meeting in Friday.,4,PREPOSITION_ERROR,We will organize the meeting on Friday.,Use preposition 'on' before days of the week.
+The workshop will take place in Friday.,4,PREPOSITION_ERROR,The workshop will take place on Friday.,Use preposition 'on' before days of the week.
+Classes will resume in Friday.,4,PREPOSITION_ERROR,Classes will resume on Friday.,Use preposition 'on' before days of the week.
+They will travel to Guntur in Friday.,4,PREPOSITION_ERROR,They will travel to Guntur on Friday.,Use preposition 'on' before days of the week.
+The test will be conducted in Friday.,4,PREPOSITION_ERROR,The test will be conducted on Friday.,Use preposition 'on' before days of the week.
+We will organize the meeting in Saturday.,4,PREPOSITION_ERROR,We will organize the meeting on Saturday.,Use preposition 'on' before days of the week.
+The workshop will take place in Saturday.,4,PREPOSITION_ERROR,The workshop will take place on Saturday.,Use preposition 'on' before days of the week.
+Classes will resume in Saturday.,4,PREPOSITION_ERROR,Classes will resume on Saturday.,Use preposition 'on' before days of the week.
+They will travel to Guntur in Saturday.,4,PREPOSITION_ERROR,They will travel to Guntur on Saturday.,Use preposition 'on' before days of the week.
+The test will be conducted in Saturday.,4,PREPOSITION_ERROR,The test will be conducted on Saturday.,Use preposition 'on' before days of the week.
+He is travelling in train right now.,4,PREPOSITION_ERROR,He is travelling on a train right now.,"Use 'on a train', not 'in train'."
+She was sitting on the private car.,4,PREPOSITION_ERROR,She was sitting in the private car.,"Use 'in a car', not 'on a car'."
+I met him on the bus station yesterday.,4,PREPOSITION_ERROR,I met him at the bus station yesterday.,"Use 'at the bus station', not 'on'."
+We arrived in the airport thirty minutes late.,4,PREPOSITION_ERROR,We arrived at the airport thirty minutes late.,Use 'at the airport' for specific transit points.
+He has been living at Hyderabad since five years.,4,PREPOSITION_ERROR,He has been living in Hyderabad for five years.,Use 'in' for large cities and 'for' with duration.
+She works on a reputed multinational IT company.,4,PREPOSITION_ERROR,She works in a reputed multinational IT company.,"Use 'in' or 'at' a company, not 'on'."
+He prevented me from to go to the party.,4,PREPOSITION_ERROR,He prevented me from going to the party.,Use 'prevent from + verb-ing'.
+I am looking forward to meet you next week.,4,PREPOSITION_ERROR,I am looking forward to meeting you next week.,'Look forward to' is followed by a gerund (-ing).
+She is accustomed with waking up early at dawn.,4,PREPOSITION_ERROR,She is accustomed to waking up early at dawn.,"Use 'accustomed to', not 'accustomed with'."
+He is very fond for Indian classical music.,4,PREPOSITION_ERROR,He is very fond of Indian classical music.,"Use 'fond of', not 'fond for'."
+I am totally tired with doing this repetitive task.,4,PREPOSITION_ERROR,I am totally tired of doing this repetitive task.,"Use 'tired of', not 'tired with'."
+She is capable to complete the work alone.,4,PREPOSITION_ERROR,She is capable of completing the work alone.,"Use 'capable of + -ing', not 'capable to'."
+He is confident for passing the civil services exam.,4,PREPOSITION_ERROR,He is confident of passing the civil services exam.,"Use 'confident of', not 'confident for'."
+We are very proud for his academic achievement.,4,PREPOSITION_ERROR,We are very proud of his academic achievement.,"Use 'proud of', not 'proud for'."
+She feels extremely jealous on her colleague promotion.,4,PREPOSITION_ERROR,She feels extremely jealous of her colleague's promotion.,"Use 'jealous of', not 'jealous on'."
+He has become addicted with playing online games.,4,PREPOSITION_ERROR,He has become addicted to playing online games.,"Use 'addicted to', not 'addicted with'."
+This restaurant is famous of its spicy biryani.,4,PREPOSITION_ERROR,This restaurant is famous for its spicy biryani.,"Use 'famous for', not 'famous of'."
+The suspect was found guilty for committing fraud.,4,PREPOSITION_ERROR,The suspect was found guilty of committing fraud.,"Use 'guilty of', not 'guilty for'."
+She is extremely keen for learning classical dance.,4,PREPOSITION_ERROR,She is extremely keen on learning classical dance.,"Use 'keen on', not 'keen for'."
+I am not satisfied by your incomplete explanation.,4,PREPOSITION_ERROR,I am not satisfied with your incomplete explanation.,"Use 'satisfied with', not 'satisfied by'."
+He is not eligible to this government scholarship.,4,PREPOSITION_ERROR,He is not eligible for this government scholarship.,"Use 'eligible for', not 'eligible to'."
+She apologized from the teacher for being late.,4,PREPOSITION_ERROR,She apologized to the teacher for being late.,"Use 'apologize to someone', not 'from someone'."
+He insisted to pay the restaurant dinner bill.,4,PREPOSITION_ERROR,He insisted on paying the restaurant dinner bill.,"Use 'insist on + -ing', not 'insist to'."
+Please pay attention on what the lecturer writes.,4,PREPOSITION_ERROR,Please pay attention to what the lecturer writes.,"Use 'pay attention to', not 'pay attention on'."
+She smiled on the little child playing outside.,4,PREPOSITION_ERROR,She smiled at the little child playing outside.,"Use 'smile at', not 'smile on'."
+The dog was barking on the unfamiliar stranger.,4,PREPOSITION_ERROR,The dog was barking at the unfamiliar stranger.,"Use 'bark at', not 'bark on'."
+He threw the ball on his younger brother.,4,PREPOSITION_ERROR,He threw the ball to his younger brother.,Use 'throw to' for catching; 'throw at' for hitting.
+She aimed the stone on the mango tree branch.,4,PREPOSITION_ERROR,She aimed the stone at the mango tree branch.,"Use 'aim at', not 'aim on'."
+He laughed on the poor man clothes.,4,PREPOSITION_ERROR,He laughed at the poor man's clothes.,"Use 'laugh at', not 'laugh on'."
+We reached at the tourist destination safely.,4,PREPOSITION_ERROR,We reached the tourist destination safely.,'Reach' is transitive and does not take 'at'.
+He ordered for three cups of hot tea.,4,PREPOSITION_ERROR,He ordered three cups of hot tea.,'Order' is transitive and does not take 'for'.
+They signed on the contract agreement yesterday.,4,PREPOSITION_ERROR,They signed the contract agreement yesterday.,'Sign' is transitive and does not take 'on'.
+She emphasized on the importance of punctuality.,4,PREPOSITION_ERROR,She emphasized the importance of punctuality.,'Emphasize' is transitive; do not use 'on'.
+He investigated about the missing office laptop.,4,PREPOSITION_ERROR,He investigated the missing office laptop.,'Investigate' is transitive; do not use 'about'.
+The manager demanded for an immediate explanation.,4,PREPOSITION_ERROR,The manager demanded an immediate explanation.,'Demand' is transitive; do not use 'for'.
+We resemble to our maternal grandfather.,4,PREPOSITION_ERROR,We resemble our maternal grandfather.,'Resemble' is transitive and takes no preposition.
+He lacks in confidence during group discussions.,4,PREPOSITION_ERROR,He lacks confidence during group discussions.,Verb 'lack' takes no preposition.
+I accompanied with him to the medical clinic.,4,PREPOSITION_ERROR,I accompanied him to the medical clinic.,'Accompany' is transitive; do not use 'with'.
+She refused from accepting the consolation prize.,4,PREPOSITION_ERROR,She refused to accept the consolation prize.,"Use 'refuse to accept', not 'refuse from'."
+He resigned from his job yesterday morning.,4,PREPOSITION_ERROR,He resigned his job yesterday morning.,Standard formal English prefers transitive 'resigned his position'.
+The cat climbed on the tall mango tree.,4,PREPOSITION_ERROR,The cat climbed up the tall mango tree.,"Use 'climbed up', not 'climbed on'."
+She fell down from the moving city bus.,4,PREPOSITION_ERROR,She fell off the moving city bus.,"Use 'fell off a vehicle', not 'from'."
+He parted with his old friends with heavy heart.,4,PREPOSITION_ERROR,He parted from his old friends with a heavy heart.,Use 'part from persons' and 'part with things'.
+She died by cancer after fighting bravely.,4,PREPOSITION_ERROR,She died of cancer after fighting bravely.,"Use 'died of' a disease, not 'by'."
+He cured him from the chronic throat infection.,4,PREPOSITION_ERROR,He cured him of the chronic throat infection.,"Use 'cure of', not 'from'."
+I was deprived from my basic student rights.,4,PREPOSITION_ERROR,I was deprived of my basic student rights.,"Use 'deprived of', not 'from'."
+He is devoid from common sense and manners.,4,PREPOSITION_ERROR,He is devoid of common sense and manners.,"Use 'devoid of', not 'from'."
+She is blind with one eye since birth.,4,PREPOSITION_ERROR,She is blind in one eye since birth.,"Use 'blind in one eye', not 'with'."
+He was shocked by the tragic accident news.,4,PREPOSITION_ERROR,He was shocked at the tragic accident news.,"Use 'shocked at news', not 'by'."
+I am tired by walking ten kilometers.,4,PREPOSITION_ERROR,I am tired of walking ten kilometers.,"Use 'tired of', not 'by'."
+She speaked very fastly during the debate competition.,5,SPELLING_ERROR,She spoke very fast during the debate competition.,"Past tense of 'speak' is irregular 'spoke', and 'fast' has no '-ly' adverb form."
+The cricket fielder catched the ball with one hand.,5,SPELLING_ERROR,The cricket fielder caught the ball with one hand.,"Irregular past tense of 'catch' is 'caught', not 'catched'."
+I writed a formal leave application to the principal.,5,SPELLING_ERROR,I wrote a formal leave application to the principal.,Irregular past tense of 'write' is 'wrote'.
+A street dog bited the small boy on the road.,5,SPELLING_ERROR,A street dog bit the small boy on the road.,"Past tense of irregular verb 'bite' is 'bit', not 'bited'."
+He runned five kilometers in the morning marathon.,5,SPELLING_ERROR,He ran five kilometers in the morning marathon.,Past tense of irregular verb 'run' is 'ran'.
+She feeled very happy after looking at the score.,5,SPELLING_ERROR,She felt very happy after looking at the score.,Irregular past tense of 'feel' is 'felt'.
+He payed his semester tuition fee at the bank.,5,SPELLING_ERROR,He paid his semester tuition fee at the bank.,"Spelling of past tense for 'pay' is 'paid', not 'payed'."
+The experienced teacher teached mathematics with clarity.,5,SPELLING_ERROR,The experienced teacher taught mathematics with clarity.,"Past tense of 'teach' is 'taught', not 'teached'."
+I have a serious doubt in English grammer.,5,SPELLING_ERROR,I have a serious doubt in English grammar.,"Spelling error: 'grammar' is spelled with 'ar', not 'er'."
+The college principal gave a definate confirmation.,5,SPELLING_ERROR,The college principal gave a definite confirmation.,"Spelling error: 'definite' is spelled with 'i', not 'a'."
+We recieved the registered parcel yesterday evening.,5,SPELLING_ERROR,We received the registered parcel yesterday evening.,Spelling rule: 'i' before 'e' except after 'c' ('received').
+His college attendence percentage is below seventy.,5,SPELLING_ERROR,His college attendance percentage is below seventy.,"Spelling error: 'attendance' ends with 'ance', not 'ence'."
+It was a beautifull sunset over the Bay of Bengal.,5,SPELLING_ERROR,It was a beautiful sunset over the Bay of Bengal.,Spelling error: 'beautiful' has a single 'l'.
+Please write your permanent address seperately.,5,SPELLING_ERROR,Please write your permanent address separately.,"Spelling error: 'separately' contains 'para', not 'pera'."
+Do not loose your confidence before the interview.,5,SPELLING_ERROR,Do not lose your confidence before the interview.,'Lose' means to misplace; 'loose' means not tight.
+The winter weather is very pleasent in Araku valley.,5,SPELLING_ERROR,The weather is very pleasant in Araku valley.,"Spelling error: 'pleasant' ends with 'ant', not 'ent'."
+I truely appreciate your valuable guidance and help.,5,SPELLING_ERROR,I truly appreciate your valuable guidance and help.,Spelling error: 'truly' drops the 'e'.
+They had a heated arguement regarding the project.,5,SPELLING_ERROR,They had a heated argument regarding the project.,Spelling error: 'argument' drops the 'e' from 'argue'.
+We had dinner at a famous South Indian resturant.,5,SPELLING_ERROR,We had dinner at a famous South Indian restaurant.,Spelling error: 'restaurant' contains 'au'.
+The goverment announced new scholarship schemes for students.,5,SPELLING_ERROR,The government announced new scholarship schemes for students.,Spelling error: 'government' contains an 'n' before 'ment'.
+We must protect our natural enviroment from pollution.,5,SPELLING_ERROR,We must protect our natural environment from pollution.,Spelling error: 'environment' contains an 'n' before 'ment'.
+Let us meet tommorow morning at the library.,5,SPELLING_ERROR,Let us meet tomorrow morning at the library.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+He is a succesful software entrepreneur in Hyderabad.,5,SPELLING_ERROR,He is a successful software entrepreneur in Hyderabad.,Spelling error: 'successful' has double 'c' and double 's'.
+The students were dissapointed with the test results.,5,SPELLING_ERROR,The students were disappointed with the test results.,Spelling error: 'disappointed' has one 's' and two 'p's.
+I beleive that hard work always leads to success.,5,SPELLING_ERROR,I believe that hard work always leads to success.,Spelling error: 'believe' is spelled with 'ie'.
+The teacher checked the grammer in student assignments.,5,SPELLING_ERROR,The teacher checked the grammar in student assignments.,Spelling error: 'grammar' is spelled with -ar.
+We discussed about the grammer in yesterday meeting.,5,SPELLING_ERROR,We discussed about the grammar in yesterday meeting.,Spelling error: 'grammar' is spelled with -ar.
+He submitted the document grammer without any delay.,5,SPELLING_ERROR,He submitted the document grammar without any delay.,Spelling error: 'grammar' is spelled with -ar.
+She noted down the grammer in her personal diary.,5,SPELLING_ERROR,She noted down the grammar in her personal diary.,Spelling error: 'grammar' is spelled with -ar.
+Everyone noticed the grammer during the presentation.,5,SPELLING_ERROR,Everyone noticed the grammar during the presentation.,Spelling error: 'grammar' is spelled with -ar.
+The inspector pointed out grammer in official records.,5,SPELLING_ERROR,The inspector pointed out grammar in official records.,Spelling error: 'grammar' is spelled with -ar.
+I observed that the grammer needed urgent correction.,5,SPELLING_ERROR,I observed that the grammar needed urgent correction.,Spelling error: 'grammar' is spelled with -ar.
+They realized the grammer after publishing the notice.,5,SPELLING_ERROR,They realized the grammar after publishing the notice.,Spelling error: 'grammar' is spelled with -ar.
+Our mentor reviewed the grammer with great patience.,5,SPELLING_ERROR,Our mentor reviewed the grammar with great patience.,Spelling error: 'grammar' is spelled with -ar.
+The report mentioned the grammer on the front page.,5,SPELLING_ERROR,The report mentioned the grammar on the front page.,Spelling error: 'grammar' is spelled with -ar.
+The teacher checked the definate in student assignments.,5,SPELLING_ERROR,The teacher checked the definite in student assignments.,Spelling error: 'definite' is spelled with -ite.
+We discussed about the definate in yesterday meeting.,5,SPELLING_ERROR,We discussed about the definite in yesterday meeting.,Spelling error: 'definite' is spelled with -ite.
+He submitted the document definate without any delay.,5,SPELLING_ERROR,He submitted the document definite without any delay.,Spelling error: 'definite' is spelled with -ite.
+She noted down the definate in her personal diary.,5,SPELLING_ERROR,She noted down the definite in her personal diary.,Spelling error: 'definite' is spelled with -ite.
+Everyone noticed the definate during the presentation.,5,SPELLING_ERROR,Everyone noticed the definite during the presentation.,Spelling error: 'definite' is spelled with -ite.
+The inspector pointed out definate in official records.,5,SPELLING_ERROR,The inspector pointed out definite in official records.,Spelling error: 'definite' is spelled with -ite.
+I observed that the definate needed urgent correction.,5,SPELLING_ERROR,I observed that the definite needed urgent correction.,Spelling error: 'definite' is spelled with -ite.
+They realized the definate after publishing the notice.,5,SPELLING_ERROR,They realized the definite after publishing the notice.,Spelling error: 'definite' is spelled with -ite.
+Our mentor reviewed the definate with great patience.,5,SPELLING_ERROR,Our mentor reviewed the definite with great patience.,Spelling error: 'definite' is spelled with -ite.
+The report mentioned the definate on the front page.,5,SPELLING_ERROR,The report mentioned the definite on the front page.,Spelling error: 'definite' is spelled with -ite.
+The teacher checked the recieved in student assignments.,5,SPELLING_ERROR,The teacher checked the received in student assignments.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+We discussed about the recieved in yesterday meeting.,5,SPELLING_ERROR,We discussed about the received in yesterday meeting.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+He submitted the document recieved without any delay.,5,SPELLING_ERROR,He submitted the document received without any delay.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+She noted down the recieved in her personal diary.,5,SPELLING_ERROR,She noted down the received in her personal diary.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+Everyone noticed the recieved during the presentation.,5,SPELLING_ERROR,Everyone noticed the received during the presentation.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+The inspector pointed out recieved in official records.,5,SPELLING_ERROR,The inspector pointed out received in official records.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+I observed that the recieved needed urgent correction.,5,SPELLING_ERROR,I observed that the received needed urgent correction.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+They realized the recieved after publishing the notice.,5,SPELLING_ERROR,They realized the received after publishing the notice.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+Our mentor reviewed the recieved with great patience.,5,SPELLING_ERROR,Our mentor reviewed the received with great patience.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+The report mentioned the recieved on the front page.,5,SPELLING_ERROR,The report mentioned the received on the front page.,Spelling error: 'received' places 'e' before 'i' after 'c'.
+The teacher checked the attendence in student assignments.,5,SPELLING_ERROR,The teacher checked the attendance in student assignments.,Spelling error: 'attendance' is spelled with -ance.
+We discussed about the attendence in yesterday meeting.,5,SPELLING_ERROR,We discussed about the attendance in yesterday meeting.,Spelling error: 'attendance' is spelled with -ance.
+He submitted the document attendence without any delay.,5,SPELLING_ERROR,He submitted the document attendance without any delay.,Spelling error: 'attendance' is spelled with -ance.
+She noted down the attendence in her personal diary.,5,SPELLING_ERROR,She noted down the attendance in her personal diary.,Spelling error: 'attendance' is spelled with -ance.
+Everyone noticed the attendence during the presentation.,5,SPELLING_ERROR,Everyone noticed the attendance during the presentation.,Spelling error: 'attendance' is spelled with -ance.
+The inspector pointed out attendence in official records.,5,SPELLING_ERROR,The inspector pointed out attendance in official records.,Spelling error: 'attendance' is spelled with -ance.
+I observed that the attendence needed urgent correction.,5,SPELLING_ERROR,I observed that the attendance needed urgent correction.,Spelling error: 'attendance' is spelled with -ance.
+They realized the attendence after publishing the notice.,5,SPELLING_ERROR,They realized the attendance after publishing the notice.,Spelling error: 'attendance' is spelled with -ance.
+Our mentor reviewed the attendence with great patience.,5,SPELLING_ERROR,Our mentor reviewed the attendance with great patience.,Spelling error: 'attendance' is spelled with -ance.
+The report mentioned the attendence on the front page.,5,SPELLING_ERROR,The report mentioned the attendance on the front page.,Spelling error: 'attendance' is spelled with -ance.
+The teacher checked the beautifull in student assignments.,5,SPELLING_ERROR,The teacher checked the beautiful in student assignments.,Spelling error: 'beautiful' has one 'l'.
+We discussed about the beautifull in yesterday meeting.,5,SPELLING_ERROR,We discussed about the beautiful in yesterday meeting.,Spelling error: 'beautiful' has one 'l'.
+He submitted the document beautifull without any delay.,5,SPELLING_ERROR,He submitted the document beautiful without any delay.,Spelling error: 'beautiful' has one 'l'.
+She noted down the beautifull in her personal diary.,5,SPELLING_ERROR,She noted down the beautiful in her personal diary.,Spelling error: 'beautiful' has one 'l'.
+Everyone noticed the beautifull during the presentation.,5,SPELLING_ERROR,Everyone noticed the beautiful during the presentation.,Spelling error: 'beautiful' has one 'l'.
+The inspector pointed out beautifull in official records.,5,SPELLING_ERROR,The inspector pointed out beautiful in official records.,Spelling error: 'beautiful' has one 'l'.
+I observed that the beautifull needed urgent correction.,5,SPELLING_ERROR,I observed that the beautiful needed urgent correction.,Spelling error: 'beautiful' has one 'l'.
+They realized the beautifull after publishing the notice.,5,SPELLING_ERROR,They realized the beautiful after publishing the notice.,Spelling error: 'beautiful' has one 'l'.
+Our mentor reviewed the beautifull with great patience.,5,SPELLING_ERROR,Our mentor reviewed the beautiful with great patience.,Spelling error: 'beautiful' has one 'l'.
+The report mentioned the beautifull on the front page.,5,SPELLING_ERROR,The report mentioned the beautiful on the front page.,Spelling error: 'beautiful' has one 'l'.
+The teacher checked the seperately in student assignments.,5,SPELLING_ERROR,The teacher checked the separately in student assignments.,Spelling error: 'separately' has -para-.
+We discussed about the seperately in yesterday meeting.,5,SPELLING_ERROR,We discussed about the separately in yesterday meeting.,Spelling error: 'separately' has -para-.
+He submitted the document seperately without any delay.,5,SPELLING_ERROR,He submitted the document separately without any delay.,Spelling error: 'separately' has -para-.
+She noted down the seperately in her personal diary.,5,SPELLING_ERROR,She noted down the separately in her personal diary.,Spelling error: 'separately' has -para-.
+Everyone noticed the seperately during the presentation.,5,SPELLING_ERROR,Everyone noticed the separately during the presentation.,Spelling error: 'separately' has -para-.
+The inspector pointed out seperately in official records.,5,SPELLING_ERROR,The inspector pointed out separately in official records.,Spelling error: 'separately' has -para-.
+I observed that the seperately needed urgent correction.,5,SPELLING_ERROR,I observed that the separately needed urgent correction.,Spelling error: 'separately' has -para-.
+They realized the seperately after publishing the notice.,5,SPELLING_ERROR,They realized the separately after publishing the notice.,Spelling error: 'separately' has -para-.
+Our mentor reviewed the seperately with great patience.,5,SPELLING_ERROR,Our mentor reviewed the separately with great patience.,Spelling error: 'separately' has -para-.
+The report mentioned the seperately on the front page.,5,SPELLING_ERROR,The report mentioned the separately on the front page.,Spelling error: 'separately' has -para-.
+The teacher checked the pleasent in student assignments.,5,SPELLING_ERROR,The teacher checked the pleasant in student assignments.,Spelling error: 'pleasant' ends in -ant.
+We discussed about the pleasent in yesterday meeting.,5,SPELLING_ERROR,We discussed about the pleasant in yesterday meeting.,Spelling error: 'pleasant' ends in -ant.
+He submitted the document pleasent without any delay.,5,SPELLING_ERROR,He submitted the document pleasant without any delay.,Spelling error: 'pleasant' ends in -ant.
+She noted down the pleasent in her personal diary.,5,SPELLING_ERROR,She noted down the pleasant in her personal diary.,Spelling error: 'pleasant' ends in -ant.
+Everyone noticed the pleasent during the presentation.,5,SPELLING_ERROR,Everyone noticed the pleasant during the presentation.,Spelling error: 'pleasant' ends in -ant.
+The inspector pointed out pleasent in official records.,5,SPELLING_ERROR,The inspector pointed out pleasant in official records.,Spelling error: 'pleasant' ends in -ant.
+I observed that the pleasent needed urgent correction.,5,SPELLING_ERROR,I observed that the pleasant needed urgent correction.,Spelling error: 'pleasant' ends in -ant.
+They realized the pleasent after publishing the notice.,5,SPELLING_ERROR,They realized the pleasant after publishing the notice.,Spelling error: 'pleasant' ends in -ant.
+Our mentor reviewed the pleasent with great patience.,5,SPELLING_ERROR,Our mentor reviewed the pleasant with great patience.,Spelling error: 'pleasant' ends in -ant.
+The report mentioned the pleasent on the front page.,5,SPELLING_ERROR,The report mentioned the pleasant on the front page.,Spelling error: 'pleasant' ends in -ant.
+The teacher checked the truely in student assignments.,5,SPELLING_ERROR,The teacher checked the truly in student assignments.,Spelling error: 'truly' has no 'e'.
+We discussed about the truely in yesterday meeting.,5,SPELLING_ERROR,We discussed about the truly in yesterday meeting.,Spelling error: 'truly' has no 'e'.
+He submitted the document truely without any delay.,5,SPELLING_ERROR,He submitted the document truly without any delay.,Spelling error: 'truly' has no 'e'.
+She noted down the truely in her personal diary.,5,SPELLING_ERROR,She noted down the truly in her personal diary.,Spelling error: 'truly' has no 'e'.
+Everyone noticed the truely during the presentation.,5,SPELLING_ERROR,Everyone noticed the truly during the presentation.,Spelling error: 'truly' has no 'e'.
+The inspector pointed out truely in official records.,5,SPELLING_ERROR,The inspector pointed out truly in official records.,Spelling error: 'truly' has no 'e'.
+I observed that the truely needed urgent correction.,5,SPELLING_ERROR,I observed that the truly needed urgent correction.,Spelling error: 'truly' has no 'e'.
+They realized the truely after publishing the notice.,5,SPELLING_ERROR,They realized the truly after publishing the notice.,Spelling error: 'truly' has no 'e'.
+Our mentor reviewed the truely with great patience.,5,SPELLING_ERROR,Our mentor reviewed the truly with great patience.,Spelling error: 'truly' has no 'e'.
+The report mentioned the truely on the front page.,5,SPELLING_ERROR,The report mentioned the truly on the front page.,Spelling error: 'truly' has no 'e'.
+The teacher checked the arguement in student assignments.,5,SPELLING_ERROR,The teacher checked the argument in student assignments.,Spelling error: 'argument' drops 'e'.
+We discussed about the arguement in yesterday meeting.,5,SPELLING_ERROR,We discussed about the argument in yesterday meeting.,Spelling error: 'argument' drops 'e'.
+He submitted the document arguement without any delay.,5,SPELLING_ERROR,He submitted the document argument without any delay.,Spelling error: 'argument' drops 'e'.
+She noted down the arguement in her personal diary.,5,SPELLING_ERROR,She noted down the argument in her personal diary.,Spelling error: 'argument' drops 'e'.
+Everyone noticed the arguement during the presentation.,5,SPELLING_ERROR,Everyone noticed the argument during the presentation.,Spelling error: 'argument' drops 'e'.
+The inspector pointed out arguement in official records.,5,SPELLING_ERROR,The inspector pointed out argument in official records.,Spelling error: 'argument' drops 'e'.
+I observed that the arguement needed urgent correction.,5,SPELLING_ERROR,I observed that the argument needed urgent correction.,Spelling error: 'argument' drops 'e'.
+They realized the arguement after publishing the notice.,5,SPELLING_ERROR,They realized the argument after publishing the notice.,Spelling error: 'argument' drops 'e'.
+Our mentor reviewed the arguement with great patience.,5,SPELLING_ERROR,Our mentor reviewed the argument with great patience.,Spelling error: 'argument' drops 'e'.
+The report mentioned the arguement on the front page.,5,SPELLING_ERROR,The report mentioned the argument on the front page.,Spelling error: 'argument' drops 'e'.
+The teacher checked the resturant in student assignments.,5,SPELLING_ERROR,The teacher checked the restaurant in student assignments.,Spelling error: 'restaurant' is the correct spelling.
+We discussed about the resturant in yesterday meeting.,5,SPELLING_ERROR,We discussed about the restaurant in yesterday meeting.,Spelling error: 'restaurant' is the correct spelling.
+He submitted the document resturant without any delay.,5,SPELLING_ERROR,He submitted the document restaurant without any delay.,Spelling error: 'restaurant' is the correct spelling.
+She noted down the resturant in her personal diary.,5,SPELLING_ERROR,She noted down the restaurant in her personal diary.,Spelling error: 'restaurant' is the correct spelling.
+Everyone noticed the resturant during the presentation.,5,SPELLING_ERROR,Everyone noticed the restaurant during the presentation.,Spelling error: 'restaurant' is the correct spelling.
+The inspector pointed out resturant in official records.,5,SPELLING_ERROR,The inspector pointed out restaurant in official records.,Spelling error: 'restaurant' is the correct spelling.
+I observed that the resturant needed urgent correction.,5,SPELLING_ERROR,I observed that the restaurant needed urgent correction.,Spelling error: 'restaurant' is the correct spelling.
+They realized the resturant after publishing the notice.,5,SPELLING_ERROR,They realized the restaurant after publishing the notice.,Spelling error: 'restaurant' is the correct spelling.
+Our mentor reviewed the resturant with great patience.,5,SPELLING_ERROR,Our mentor reviewed the restaurant with great patience.,Spelling error: 'restaurant' is the correct spelling.
+The report mentioned the resturant on the front page.,5,SPELLING_ERROR,The report mentioned the restaurant on the front page.,Spelling error: 'restaurant' is the correct spelling.
+The teacher checked the goverment in student assignments.,5,SPELLING_ERROR,The teacher checked the government in student assignments.,Spelling error: 'government' has 'n' before 'ment'.
+We discussed about the goverment in yesterday meeting.,5,SPELLING_ERROR,We discussed about the government in yesterday meeting.,Spelling error: 'government' has 'n' before 'ment'.
+He submitted the document goverment without any delay.,5,SPELLING_ERROR,He submitted the document government without any delay.,Spelling error: 'government' has 'n' before 'ment'.
+She noted down the goverment in her personal diary.,5,SPELLING_ERROR,She noted down the government in her personal diary.,Spelling error: 'government' has 'n' before 'ment'.
+Everyone noticed the goverment during the presentation.,5,SPELLING_ERROR,Everyone noticed the government during the presentation.,Spelling error: 'government' has 'n' before 'ment'.
+The inspector pointed out goverment in official records.,5,SPELLING_ERROR,The inspector pointed out government in official records.,Spelling error: 'government' has 'n' before 'ment'.
+I observed that the goverment needed urgent correction.,5,SPELLING_ERROR,I observed that the government needed urgent correction.,Spelling error: 'government' has 'n' before 'ment'.
+They realized the goverment after publishing the notice.,5,SPELLING_ERROR,They realized the government after publishing the notice.,Spelling error: 'government' has 'n' before 'ment'.
+Our mentor reviewed the goverment with great patience.,5,SPELLING_ERROR,Our mentor reviewed the government with great patience.,Spelling error: 'government' has 'n' before 'ment'.
+The report mentioned the goverment on the front page.,5,SPELLING_ERROR,The report mentioned the government on the front page.,Spelling error: 'government' has 'n' before 'ment'.
+The teacher checked the enviroment in student assignments.,5,SPELLING_ERROR,The teacher checked the environment in student assignments.,Spelling error: 'environment' has 'n' before 'ment'.
+We discussed about the enviroment in yesterday meeting.,5,SPELLING_ERROR,We discussed about the environment in yesterday meeting.,Spelling error: 'environment' has 'n' before 'ment'.
+He submitted the document enviroment without any delay.,5,SPELLING_ERROR,He submitted the document environment without any delay.,Spelling error: 'environment' has 'n' before 'ment'.
+She noted down the enviroment in her personal diary.,5,SPELLING_ERROR,She noted down the environment in her personal diary.,Spelling error: 'environment' has 'n' before 'ment'.
+Everyone noticed the enviroment during the presentation.,5,SPELLING_ERROR,Everyone noticed the environment during the presentation.,Spelling error: 'environment' has 'n' before 'ment'.
+The inspector pointed out enviroment in official records.,5,SPELLING_ERROR,The inspector pointed out environment in official records.,Spelling error: 'environment' has 'n' before 'ment'.
+I observed that the enviroment needed urgent correction.,5,SPELLING_ERROR,I observed that the environment needed urgent correction.,Spelling error: 'environment' has 'n' before 'ment'.
+They realized the enviroment after publishing the notice.,5,SPELLING_ERROR,They realized the environment after publishing the notice.,Spelling error: 'environment' has 'n' before 'ment'.
+Our mentor reviewed the enviroment with great patience.,5,SPELLING_ERROR,Our mentor reviewed the environment with great patience.,Spelling error: 'environment' has 'n' before 'ment'.
+The report mentioned the enviroment on the front page.,5,SPELLING_ERROR,The report mentioned the environment on the front page.,Spelling error: 'environment' has 'n' before 'ment'.
+The teacher checked the tommorow in student assignments.,5,SPELLING_ERROR,The teacher checked the tomorrow in student assignments.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+We discussed about the tommorow in yesterday meeting.,5,SPELLING_ERROR,We discussed about the tomorrow in yesterday meeting.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+He submitted the document tommorow without any delay.,5,SPELLING_ERROR,He submitted the document tomorrow without any delay.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+She noted down the tommorow in her personal diary.,5,SPELLING_ERROR,She noted down the tomorrow in her personal diary.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+Everyone noticed the tommorow during the presentation.,5,SPELLING_ERROR,Everyone noticed the tomorrow during the presentation.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+The inspector pointed out tommorow in official records.,5,SPELLING_ERROR,The inspector pointed out tomorrow in official records.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+I observed that the tommorow needed urgent correction.,5,SPELLING_ERROR,I observed that the tomorrow needed urgent correction.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+They realized the tommorow after publishing the notice.,5,SPELLING_ERROR,They realized the tomorrow after publishing the notice.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+Our mentor reviewed the tommorow with great patience.,5,SPELLING_ERROR,Our mentor reviewed the tomorrow with great patience.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+The report mentioned the tommorow on the front page.,5,SPELLING_ERROR,The report mentioned the tomorrow on the front page.,Spelling error: 'tomorrow' has one 'm' and two 'r's.
+The teacher checked the beleive in student assignments.,5,SPELLING_ERROR,The teacher checked the believe in student assignments.,Spelling error: 'believe' is spelled with 'ie'.
+We discussed about the beleive in yesterday meeting.,5,SPELLING_ERROR,We discussed about the believe in yesterday meeting.,Spelling error: 'believe' is spelled with 'ie'.
+He submitted the document beleive without any delay.,5,SPELLING_ERROR,He submitted the document believe without any delay.,Spelling error: 'believe' is spelled with 'ie'.
+She noted down the beleive in her personal diary.,5,SPELLING_ERROR,She noted down the believe in her personal diary.,Spelling error: 'believe' is spelled with 'ie'.
+Everyone noticed the beleive during the presentation.,5,SPELLING_ERROR,Everyone noticed the believe during the presentation.,Spelling error: 'believe' is spelled with 'ie'.
+The inspector pointed out beleive in official records.,5,SPELLING_ERROR,The inspector pointed out believe in official records.,Spelling error: 'believe' is spelled with 'ie'.
+I observed that the beleive needed urgent correction.,5,SPELLING_ERROR,I observed that the believe needed urgent correction.,Spelling error: 'believe' is spelled with 'ie'.
+They realized the beleive after publishing the notice.,5,SPELLING_ERROR,They realized the believe after publishing the notice.,Spelling error: 'believe' is spelled with 'ie'.
+Our mentor reviewed the beleive with great patience.,5,SPELLING_ERROR,Our mentor reviewed the believe with great patience.,Spelling error: 'believe' is spelled with 'ie'.
+The report mentioned the beleive on the front page.,5,SPELLING_ERROR,The report mentioned the believe on the front page.,Spelling error: 'believe' is spelled with 'ie'.
+I English very much like to study and speak.,6,STRUCTURE_ERROR,I like to study and speak English very much.,"English follows SVO (Subject-Verb-Object) word order, not Telugu SOV."
+Where you are going right now with heavy bag?,6,STRUCTURE_ERROR,Where are you going right now with a heavy bag?,"In Wh-questions, auxiliary verb must precede the subject (inversion)."
+Why you didn't came to college yesterday?,6,STRUCTURE_ERROR,Why didn't you come to college yesterday?,Inverted question structure requires auxiliary before subject and base verb.
+What your father name is?,6,STRUCTURE_ERROR,What is your father's name?,"In questions, the verb 'is' must precede the subject."
+What they are talking about in the meeting?,6,STRUCTURE_ERROR,What are they talking about in the meeting?,Auxiliary verb 'are' must precede the subject 'they' in questions.
+When the bus will arrive at the junction?,6,STRUCTURE_ERROR,When will the bus arrive at the junction?,Invert auxiliary 'will' before subject 'the bus' in questions.
+How much money you need for college fee?,6,STRUCTURE_ERROR,How much money do you need for college fee?,Questions in simple present require auxiliary 'do/does' before subject.
+He asked me that where I was living.,6,STRUCTURE_ERROR,He asked me where I was living.,Do not use conjunction 'that' before wh-question words in indirect speech.
+She asked him that why he was shouting.,6,STRUCTURE_ERROR,She asked him why he was shouting.,Omit redundant conjunction 'that' before indirect question word 'why'.
+"Though he worked hard, but he failed the exam.",6,STRUCTURE_ERROR,"Though he worked hard, he failed the exam.",Do not use 'though' and 'but' together in a single sentence.
+"Although it was raining heavily, but we went out.",6,STRUCTURE_ERROR,"Although it was raining heavily, we went out.",Do not combine 'although' with 'but'.
+"Because he was sick, so he could not attend.",6,STRUCTURE_ERROR,"Because he was sick, he could not attend.",Do not use 'so' when the sentence already begins with 'because'.
+Please return back my notebook by tomorrow morning.,6,STRUCTURE_ERROR,Please return my notebook by tomorrow morning.,'Return' means to give back; using 'back' with it is redundant pleonasm.
+Kindly revert back to my email as soon as possible.,6,STRUCTURE_ERROR,Kindly revert to my email as soon as possible.,'Revert' already means to reply back; 'back' is redundant.
+Please repeat again whatever the professor explained.,6,STRUCTURE_ERROR,Please repeat whatever the professor explained.,'Repeat' means to say again; 'again' is redundant.
+Myself I am Suresh from Vijayawada city.,6,STRUCTURE_ERROR,I am Suresh from Vijayawada city.,Do not use reflexive pronoun 'myself' as the sentence subject.
+Myself I am studying BTech second year.,6,STRUCTURE_ERROR,I am studying BTech second year.,Use subjective personal pronoun 'I' instead of 'myself'.
+Coffee you will drink or tea you prefer?,6,STRUCTURE_ERROR,Will you drink coffee or do you prefer tea?,Do not topicalize the object to the front of the sentence (Telugu syntax).
+Food already you ate in the canteen?,6,STRUCTURE_ERROR,Did you already eat food in the canteen?,Questions require auxiliary inversion ('Did you eat...').
+Bag where you kept after coming home?,6,STRUCTURE_ERROR,Where did you keep the bag after coming home?,English questions begin with the Wh-word followed by auxiliary verb.
+College tomorrow is declared holiday by principal.,6,STRUCTURE_ERROR,A holiday is declared for college tomorrow by the principal.,Rearrange subject and predicate to follow English syntax.
+He is taller compared to me in height.,6,STRUCTURE_ERROR,He is taller than me.,Use comparative 'taller than' instead of 'compared to'.
+"Unless you do not work hard, you will not pass.",6,STRUCTURE_ERROR,"Unless you work hard, you will not pass.",'Unless' is already negative; do not use 'do not' in the same clause.
+Tell me where do you live in Hyderabad.,6,STRUCTURE_ERROR,Tell me where you live in Hyderabad.,Indirect questions follow statement word order without auxiliary 'do'.
+I and my brother went to the temple yesterday.,6,STRUCTURE_ERROR,My brother and I went to the temple yesterday.,"In compound subjects, place the first-person pronoun 'I' last for politeness."
+Where you are going in such a hurry?,6,STRUCTURE_ERROR,Where are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Where you were shouting in the library?,6,STRUCTURE_ERROR,Where were they shouting in the library?,Invert auxiliary before subject in question.
+Where you will submit the project files?,6,STRUCTURE_ERROR,Where will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Where you can solve this difficult riddle?,6,STRUCTURE_ERROR,Where can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Where they are going in such a hurry?,6,STRUCTURE_ERROR,Where are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Where they were shouting in the library?,6,STRUCTURE_ERROR,Where were they shouting in the library?,Invert auxiliary before subject in question.
+Where they will submit the project files?,6,STRUCTURE_ERROR,Where will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Where they can solve this difficult riddle?,6,STRUCTURE_ERROR,Where can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Where he are going in such a hurry?,6,STRUCTURE_ERROR,Where are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Where he were shouting in the library?,6,STRUCTURE_ERROR,Where were they shouting in the library?,Invert auxiliary before subject in question.
+Where he will submit the project files?,6,STRUCTURE_ERROR,Where will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Where he can solve this difficult riddle?,6,STRUCTURE_ERROR,Where can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Where she are going in such a hurry?,6,STRUCTURE_ERROR,Where are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Where she were shouting in the library?,6,STRUCTURE_ERROR,Where were they shouting in the library?,Invert auxiliary before subject in question.
+Where she will submit the project files?,6,STRUCTURE_ERROR,Where will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Where she can solve this difficult riddle?,6,STRUCTURE_ERROR,Where can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Why you are going in such a hurry?,6,STRUCTURE_ERROR,Why are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Why you were shouting in the library?,6,STRUCTURE_ERROR,Why were they shouting in the library?,Invert auxiliary before subject in question.
+Why you will submit the project files?,6,STRUCTURE_ERROR,Why will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Why you can solve this difficult riddle?,6,STRUCTURE_ERROR,Why can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Why they are going in such a hurry?,6,STRUCTURE_ERROR,Why are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Why they were shouting in the library?,6,STRUCTURE_ERROR,Why were they shouting in the library?,Invert auxiliary before subject in question.
+Why they will submit the project files?,6,STRUCTURE_ERROR,Why will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Why they can solve this difficult riddle?,6,STRUCTURE_ERROR,Why can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Why he are going in such a hurry?,6,STRUCTURE_ERROR,Why are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Why he were shouting in the library?,6,STRUCTURE_ERROR,Why were they shouting in the library?,Invert auxiliary before subject in question.
+Why he will submit the project files?,6,STRUCTURE_ERROR,Why will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Why he can solve this difficult riddle?,6,STRUCTURE_ERROR,Why can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Why she are going in such a hurry?,6,STRUCTURE_ERROR,Why are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+Why she were shouting in the library?,6,STRUCTURE_ERROR,Why were they shouting in the library?,Invert auxiliary before subject in question.
+Why she will submit the project files?,6,STRUCTURE_ERROR,Why will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+Why she can solve this difficult riddle?,6,STRUCTURE_ERROR,Why can you solve this difficult riddle?,Modal verb precedes subject in question form.
+When you are going in such a hurry?,6,STRUCTURE_ERROR,When are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+When you were shouting in the library?,6,STRUCTURE_ERROR,When were they shouting in the library?,Invert auxiliary before subject in question.
+When you will submit the project files?,6,STRUCTURE_ERROR,When will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+When you can solve this difficult riddle?,6,STRUCTURE_ERROR,When can you solve this difficult riddle?,Modal verb precedes subject in question form.
+When they are going in such a hurry?,6,STRUCTURE_ERROR,When are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+When they were shouting in the library?,6,STRUCTURE_ERROR,When were they shouting in the library?,Invert auxiliary before subject in question.
+When they will submit the project files?,6,STRUCTURE_ERROR,When will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+When they can solve this difficult riddle?,6,STRUCTURE_ERROR,When can you solve this difficult riddle?,Modal verb precedes subject in question form.
+When he are going in such a hurry?,6,STRUCTURE_ERROR,When are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+When he were shouting in the library?,6,STRUCTURE_ERROR,When were they shouting in the library?,Invert auxiliary before subject in question.
+When he will submit the project files?,6,STRUCTURE_ERROR,When will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+When he can solve this difficult riddle?,6,STRUCTURE_ERROR,When can you solve this difficult riddle?,Modal verb precedes subject in question form.
+When she are going in such a hurry?,6,STRUCTURE_ERROR,When are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+When she were shouting in the library?,6,STRUCTURE_ERROR,When were they shouting in the library?,Invert auxiliary before subject in question.
+When she will submit the project files?,6,STRUCTURE_ERROR,When will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+When she can solve this difficult riddle?,6,STRUCTURE_ERROR,When can you solve this difficult riddle?,Modal verb precedes subject in question form.
+How you are going in such a hurry?,6,STRUCTURE_ERROR,How are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+How you were shouting in the library?,6,STRUCTURE_ERROR,How were they shouting in the library?,Invert auxiliary before subject in question.
+How you will submit the project files?,6,STRUCTURE_ERROR,How will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+How you can solve this difficult riddle?,6,STRUCTURE_ERROR,How can you solve this difficult riddle?,Modal verb precedes subject in question form.
+How they are going in such a hurry?,6,STRUCTURE_ERROR,How are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+How they were shouting in the library?,6,STRUCTURE_ERROR,How were they shouting in the library?,Invert auxiliary before subject in question.
+How they will submit the project files?,6,STRUCTURE_ERROR,How will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+How they can solve this difficult riddle?,6,STRUCTURE_ERROR,How can you solve this difficult riddle?,Modal verb precedes subject in question form.
+How he are going in such a hurry?,6,STRUCTURE_ERROR,How are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+How he were shouting in the library?,6,STRUCTURE_ERROR,How were they shouting in the library?,Invert auxiliary before subject in question.
+How he will submit the project files?,6,STRUCTURE_ERROR,How will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+How he can solve this difficult riddle?,6,STRUCTURE_ERROR,How can you solve this difficult riddle?,Modal verb precedes subject in question form.
+How she are going in such a hurry?,6,STRUCTURE_ERROR,How are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+How she were shouting in the library?,6,STRUCTURE_ERROR,How were they shouting in the library?,Invert auxiliary before subject in question.
+How she will submit the project files?,6,STRUCTURE_ERROR,How will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+How she can solve this difficult riddle?,6,STRUCTURE_ERROR,How can you solve this difficult riddle?,Modal verb precedes subject in question form.
+What you are going in such a hurry?,6,STRUCTURE_ERROR,What are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+What you were shouting in the library?,6,STRUCTURE_ERROR,What were they shouting in the library?,Invert auxiliary before subject in question.
+What you will submit the project files?,6,STRUCTURE_ERROR,What will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+What you can solve this difficult riddle?,6,STRUCTURE_ERROR,What can you solve this difficult riddle?,Modal verb precedes subject in question form.
+What they are going in such a hurry?,6,STRUCTURE_ERROR,What are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+What they were shouting in the library?,6,STRUCTURE_ERROR,What were they shouting in the library?,Invert auxiliary before subject in question.
+What they will submit the project files?,6,STRUCTURE_ERROR,What will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+What they can solve this difficult riddle?,6,STRUCTURE_ERROR,What can you solve this difficult riddle?,Modal verb precedes subject in question form.
+What he are going in such a hurry?,6,STRUCTURE_ERROR,What are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+What he were shouting in the library?,6,STRUCTURE_ERROR,What were they shouting in the library?,Invert auxiliary before subject in question.
+What he will submit the project files?,6,STRUCTURE_ERROR,What will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+What he can solve this difficult riddle?,6,STRUCTURE_ERROR,What can you solve this difficult riddle?,Modal verb precedes subject in question form.
+What she are going in such a hurry?,6,STRUCTURE_ERROR,What are you going in such a hurry?,Auxiliary verb must precede subject in Wh-questions.
+What she were shouting in the library?,6,STRUCTURE_ERROR,What were they shouting in the library?,Invert auxiliary before subject in question.
+What she will submit the project files?,6,STRUCTURE_ERROR,What will you submit the project files?,Auxiliary 'will' must precede subject in interrogatives.
+What she can solve this difficult riddle?,6,STRUCTURE_ERROR,What can you solve this difficult riddle?,Modal verb precedes subject in question form.
+Please return back the borrowed money.,6,STRUCTURE_ERROR,Please return the borrowed money.,Do not use 'back' with 'return'.
+Kindly return back the borrowed money.,6,STRUCTURE_ERROR,Kindly return the borrowed money.,Do not use 'back' with 'return'.
+You must return back the borrowed money.,6,STRUCTURE_ERROR,You must return the borrowed money.,Do not use 'back' with 'return'.
+Students should return back the borrowed money.,6,STRUCTURE_ERROR,Students should return the borrowed money.,Do not use 'back' with 'return'.
+We request you to return back the borrowed money.,6,STRUCTURE_ERROR,We request you to return the borrowed money.,Do not use 'back' with 'return'.
+He forgot to return back the borrowed money.,6,STRUCTURE_ERROR,He forgot to return the borrowed money.,Do not use 'back' with 'return'.
+They decided to return back the borrowed money.,6,STRUCTURE_ERROR,They decided to return the borrowed money.,Do not use 'back' with 'return'.
+Please revert back to this urgent query.,6,STRUCTURE_ERROR,Please revert to this urgent query.,Do not use 'back' with 'revert'.
+Kindly revert back to this urgent query.,6,STRUCTURE_ERROR,Kindly revert to this urgent query.,Do not use 'back' with 'revert'.
+You must revert back to this urgent query.,6,STRUCTURE_ERROR,You must revert to this urgent query.,Do not use 'back' with 'revert'.
+Students should revert back to this urgent query.,6,STRUCTURE_ERROR,Students should revert to this urgent query.,Do not use 'back' with 'revert'.
+We request you to revert back to this urgent query.,6,STRUCTURE_ERROR,We request you to revert to this urgent query.,Do not use 'back' with 'revert'.
+He forgot to revert back to this urgent query.,6,STRUCTURE_ERROR,He forgot to revert to this urgent query.,Do not use 'back' with 'revert'.
+They decided to revert back to this urgent query.,6,STRUCTURE_ERROR,They decided to revert to this urgent query.,Do not use 'back' with 'revert'.
+Please repeat again the poem stanzas.,6,STRUCTURE_ERROR,Please repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+Kindly repeat again the poem stanzas.,6,STRUCTURE_ERROR,Kindly repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+You must repeat again the poem stanzas.,6,STRUCTURE_ERROR,You must repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+Students should repeat again the poem stanzas.,6,STRUCTURE_ERROR,Students should repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+We request you to repeat again the poem stanzas.,6,STRUCTURE_ERROR,We request you to repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+He forgot to repeat again the poem stanzas.,6,STRUCTURE_ERROR,He forgot to repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+They decided to repeat again the poem stanzas.,6,STRUCTURE_ERROR,They decided to repeat the poem stanzas.,Do not use 'again' with 'repeat'.
+Please recall back the pleasant memories.,6,STRUCTURE_ERROR,Please recall the pleasant memories.,Do not use 'back' with 'recall'.
+Kindly recall back the pleasant memories.,6,STRUCTURE_ERROR,Kindly recall the pleasant memories.,Do not use 'back' with 'recall'.
+You must recall back the pleasant memories.,6,STRUCTURE_ERROR,You must recall the pleasant memories.,Do not use 'back' with 'recall'.
+Students should recall back the pleasant memories.,6,STRUCTURE_ERROR,Students should recall the pleasant memories.,Do not use 'back' with 'recall'.
+We request you to recall back the pleasant memories.,6,STRUCTURE_ERROR,We request you to recall the pleasant memories.,Do not use 'back' with 'recall'.
+He forgot to recall back the pleasant memories.,6,STRUCTURE_ERROR,He forgot to recall the pleasant memories.,Do not use 'back' with 'recall'.
+They decided to recall back the pleasant memories.,6,STRUCTURE_ERROR,They decided to recall the pleasant memories.,Do not use 'back' with 'recall'.
+Please regroup back at the pavilion.,6,STRUCTURE_ERROR,Please regroup at the pavilion.,Do not use 'back' with 'regroup'.
+Kindly regroup back at the pavilion.,6,STRUCTURE_ERROR,Kindly regroup at the pavilion.,Do not use 'back' with 'regroup'.
+You must regroup back at the pavilion.,6,STRUCTURE_ERROR,You must regroup at the pavilion.,Do not use 'back' with 'regroup'.
+Students should regroup back at the pavilion.,6,STRUCTURE_ERROR,Students should regroup at the pavilion.,Do not use 'back' with 'regroup'.
+We request you to regroup back at the pavilion.,6,STRUCTURE_ERROR,We request you to regroup at the pavilion.,Do not use 'back' with 'regroup'.
+He forgot to regroup back at the pavilion.,6,STRUCTURE_ERROR,He forgot to regroup at the pavilion.,Do not use 'back' with 'regroup'.
+They decided to regroup back at the pavilion.,6,STRUCTURE_ERROR,They decided to regroup at the pavilion.,Do not use 'back' with 'regroup'.
+Please reply back to my message.,6,STRUCTURE_ERROR,Please reply to my message.,Do not use 'back' with 'reply'.
+Kindly reply back to my message.,6,STRUCTURE_ERROR,Kindly reply to my message.,Do not use 'back' with 'reply'.
+You must reply back to my message.,6,STRUCTURE_ERROR,You must reply to my message.,Do not use 'back' with 'reply'.
+Students should reply back to my message.,6,STRUCTURE_ERROR,Students should reply to my message.,Do not use 'back' with 'reply'.
+We request you to reply back to my message.,6,STRUCTURE_ERROR,We request you to reply to my message.,Do not use 'back' with 'reply'.
+He forgot to reply back to my message.,6,STRUCTURE_ERROR,He forgot to reply to my message.,Do not use 'back' with 'reply'.
+They decided to reply back to my message.,6,STRUCTURE_ERROR,They decided to reply to my message.,Do not use 'back' with 'reply'.
+I homework quickly finished.,6,STRUCTURE_ERROR,I quickly finished homework.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+She homework quickly finished.,6,STRUCTURE_ERROR,She quickly finished homework.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+He homework quickly finished.,6,STRUCTURE_ERROR,He quickly finished homework.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+They homework quickly finished.,6,STRUCTURE_ERROR,They quickly finished homework.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+We homework quickly finished.,6,STRUCTURE_ERROR,We quickly finished homework.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+I cricket match enthusiastically watched.,6,STRUCTURE_ERROR,I enthusiastically watched cricket match.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+She cricket match enthusiastically watched.,6,STRUCTURE_ERROR,She enthusiastically watched cricket match.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+He cricket match enthusiastically watched.,6,STRUCTURE_ERROR,He enthusiastically watched cricket match.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+They cricket match enthusiastically watched.,6,STRUCTURE_ERROR,They enthusiastically watched cricket match.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+We cricket match enthusiastically watched.,6,STRUCTURE_ERROR,We enthusiastically watched cricket match.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+I Telugu songs happily sang.,6,STRUCTURE_ERROR,I happily sang Telugu songs.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+She Telugu songs happily sang.,6,STRUCTURE_ERROR,She happily sang Telugu songs.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+He Telugu songs happily sang.,6,STRUCTURE_ERROR,He happily sang Telugu songs.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+They Telugu songs happily sang.,6,STRUCTURE_ERROR,They happily sang Telugu songs.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+We Telugu songs happily sang.,6,STRUCTURE_ERROR,We happily sang Telugu songs.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+I examination results eagerly checked.,6,STRUCTURE_ERROR,I eagerly checked examination results.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+She examination results eagerly checked.,6,STRUCTURE_ERROR,She eagerly checked examination results.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+He examination results eagerly checked.,6,STRUCTURE_ERROR,He eagerly checked examination results.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+They examination results eagerly checked.,6,STRUCTURE_ERROR,They eagerly checked examination results.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.
+We examination results eagerly checked.,6,STRUCTURE_ERROR,We eagerly checked examination results.,English follows Subject-Verb-Object (SVO) order rather than Telugu SOV.

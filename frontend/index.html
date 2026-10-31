@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluenora AI ✨ - Grammar Classifier</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Login Wall Overlay ─────────────────────────────────────── */
+    #login-wall {
+      position: fixed; inset: 0; z-index: 9999;
+      background: #0a0f1e;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    #login-wall .lw-bg {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+    }
+    #login-wall .lw-blob {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .35;
+    }
+    #login-wall .lw-blob-1 { width:480px; height:480px; background:#7c3aed; top:-120px; left:-120px; }
+    #login-wall .lw-blob-2 { width:400px; height:400px; background:#2563eb; bottom:-100px; right:-100px; }
+    #login-wall .lw-blob-3 { width:300px; height:300px; background:#059669; top:40%; left:55%; }
+
+    #login-wall .lw-card {
+      position: relative; z-index: 1;
+      background: rgba(15,23,42,.92); backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 20px; padding: 2.4rem 2.8rem;
+      width: 100%; max-width: 440px;
+      box-shadow: 0 32px 64px rgba(0,0,0,.6);
+    }
+    #login-wall .lw-brand { text-align: center; margin-bottom: 1.6rem; }
+    #login-wall .lw-brand .lw-logo { font-size: 2.8rem; }
+    #login-wall .lw-brand h1 {
+      font-size: 1.7rem; font-weight: 800; color: #fff;
+      background: linear-gradient(135deg,#a78bfa,#60a5fa);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin: .3rem 0 .1rem;
+    }
+    #login-wall .lw-brand p { font-size: .78rem; color: #94a3b8; margin: 0; }
+    #login-wall .lw-badge {
+      display: inline-block; background: rgba(124,58,237,.25);
+      border: 1px solid rgba(124,58,237,.5); border-radius: 20px;
+      padding: 2px 10px; font-size: .7rem; color: #a78bfa;
+      margin-top: .5rem;
+    }
+
+    #login-wall .lw-tabs {
+      display: flex; gap: .5rem; margin-bottom: 1.4rem;
+      background: rgba(255,255,255,.05); border-radius: 10px; padding: 4px;
+    }
+    #login-wall .lw-tab {
+      flex: 1; text-align: center; padding: .5rem .8rem;
+      border: none; background: transparent;
+      border-radius: 7px; cursor: pointer;
+      font-size: .88rem; font-weight: 600; color: #94a3b8;
+      transition: all .2s;
+    }
+    #login-wall .lw-tab.active {
+      background: rgba(124,58,237,.4); color: #fff;
+    }
+
+    #login-wall .lw-form-group { margin-bottom: 1rem; }
+    #login-wall .lw-label {
+      display: block; font-size: .8rem; font-weight: 600;
+      color: #cbd5e1; margin-bottom: .35rem;
+    }
+    #login-wall .lw-input {
+      width: 100%; padding: .65rem .9rem;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13);
+      border-radius: 9px; color: #fff; font-size: .9rem;
+      font-family: inherit; outline: none; box-sizing: border-box;
+      transition: border .2s;
+    }
+    #login-wall .lw-input:focus { border-color: #7c3aed; }
+    #login-wall .lw-input-wrap { position: relative; }
+    #login-wall .lw-eye {
+      position: absolute; right: .7rem; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; color: #64748b;
+      font-size: 1rem; padding: 0; line-height: 1;
+    }
+    #login-wall .lw-input-wrap .lw-input { padding-right: 2.2rem; }
+
+    #login-wall .lw-demo-hint {
+      background: rgba(5,150,105,.12); border: 1px solid rgba(5,150,105,.3);
+      border-radius: 9px; padding: .7rem .9rem; margin-bottom: 1rem;
+      font-size: .8rem; color: #6ee7b7;
+    }
+    #login-wall .lw-demo-hint strong { color: #a7f3d0; }
+
+    #login-wall .lw-btn {
+      width: 100%; padding: .75rem;
+      background: linear-gradient(135deg,#7c3aed,#2563eb);
+      border: none; border-radius: 10px; cursor: pointer;
+      font-size: .95rem; font-weight: 700; color: #fff;
+      font-family: inherit; transition: opacity .2s; margin-top: .2rem;
+    }
+    #login-wall .lw-btn:hover { opacity: .88; }
+    #login-wall .lw-btn:disabled { opacity: .55; cursor: not-allowed; }
+
+    #login-wall .lw-error {
+      background: rgba(239,68,68,.15); border: 1px solid rgba(239,68,68,.4);
+      border-radius: 8px; padding: .55rem .8rem;
+      color: #fca5a5; font-size: .82rem; margin-bottom: .8rem;
+      display: none;
+    }
+    #login-wall .lw-success {
+      background: rgba(5,150,105,.15); border: 1px solid rgba(5,150,105,.4);
+      border-radius: 8px; padding: .55rem .8rem;
+      color: #6ee7b7; font-size: .82rem; margin-bottom: .8rem;
+      display: none;
+    }
+
+    /* app body hidden until authed */
+    body.auth-pending > *:not(#login-wall) { display: none !important; }
+  </style>
+</head>
+<body class="auth-pending">
+
+  <!-- ╔══════════════════════════════════╗ -->
+  <!-- ║       LOGIN WALL OVERLAY         ║ -->
+  <!-- ╚══════════════════════════════════╝ -->
+  <div id="login-wall">
+    <div class="lw-bg">
+      <div class="lw-blob lw-blob-1"></div>
+      <div class="lw-blob lw-blob-2"></div>
+      <div class="lw-blob lw-blob-3"></div>
+    </div>
+    <div class="lw-card">
+      <!-- Brand -->
+      <div class="lw-brand">
+        <div class="lw-logo">✨</div>
+        <h1>Fluenora AI</h1>
+        <p>Deep Learning Grammar Classification System</p>
+      </div>
+
+      <!-- Tab switcher -->
+      <div class="lw-tabs">
+        <button class="lw-tab active" id="lw-tab-signin" onclick="lwShowTab('signin')">Sign In</button>
+        <button class="lw-tab" id="lw-tab-register" onclick="lwShowTab('register')">Create Account</button>
+      </div>
+
+      <!-- Error / Success banners -->
+      <div id="lw-error" class="lw-error"></div>
+      <div id="lw-success" class="lw-success"></div>
+
+      <!-- Demo hint -->
+      <div class="lw-demo-hint">
+        🎓 <strong>Demo Account:</strong> username <strong>demo_student</strong> · password <strong>Academy123!</strong>
+      </div>
+
+      <!-- ── SIGN IN FORM ── -->
+      <div id="lw-signin-form">
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-si-username">Username</label>
+          <input id="lw-si-username" class="lw-input" type="text" placeholder="Enter username" autocomplete="username">
+        </div>
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-si-password">Password</label>
+          <div class="lw-input-wrap">
+            <input id="lw-si-password" class="lw-input" type="password" placeholder="Enter password" autocomplete="current-password">
+            <button class="lw-eye" type="button" onclick="lwToggleEye('lw-si-password', this)" title="Show/hide password">👁</button>
+          </div>
+        </div>
+        <button id="lw-signin-btn" class="lw-btn" onclick="lwSignIn()">Sign In →</button>
+      </div>
+
+      <!-- ── REGISTER FORM ── -->
+      <div id="lw-register-form" style="display:none;">
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-reg-fullname">Full Name</label>
+          <input id="lw-reg-fullname" class="lw-input" type="text" placeholder="Your full name">
+        </div>
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-reg-username">Username</label>
+          <input id="lw-reg-username" class="lw-input" type="text" placeholder="Choose a username" autocomplete="username">
+        </div>
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-reg-email">Email</label>
+          <input id="lw-reg-email" class="lw-input" type="email" placeholder="your@email.com" autocomplete="email">
+        </div>
+        <div class="lw-form-group">
+          <label class="lw-label" for="lw-reg-password">Password</label>
+          <div class="lw-input-wrap">
+            <input id="lw-reg-password" class="lw-input" type="password" placeholder="Min 6 characters" autocomplete="new-password">
+            <button class="lw-eye" type="button" onclick="lwToggleEye('lw-reg-password', this)" title="Show/hide password">👁</button>
+          </div>
+        </div>
+        <button id="lw-register-btn" class="lw-btn" onclick="lwRegister()">Create Account →</button>
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">✨</div>
+        <div class="brand-text">
+          <h1>Fluenora AI</h1>
+          <p class="tagline">Deep Learning Grammar Classification &amp; Pedagogical Correction System</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <div class="status-indicator">
+          <span class="status-dot ready" id="system-status-dot"></span>
+          <span class="status-text" id="system-status-text">Bi-LSTM Model Ready</span>
+        </div>
+        <div class="user-pill" id="header-user-pill">
+          <span class="user-avatar">👤</span>
+          <span class="user-name" id="header-username">Learner</span>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="btn-logout" onclick="lwLogout()" style="margin-left:6px; font-size:.78rem; padding:.3rem .7rem;" title="Sign out">Sign Out</button>
+        <a href="/academy" class="btn btn-primary btn-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-left:8px; font-weight:700;">
+          <span>🎓</span>
+          <span>Open English Academy</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs-wrapper">
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="tab-analyzer">
+          <span class="tab-icon">✍️</span>
+          <span>Interactive Analyzer</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-practice">
+          <span class="tab-icon">📚</span>
+          <span>Daily Practice &amp; Questions</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-progress">
+          <span class="tab-icon">📊</span>
+          <span>Weakness &amp; Progress</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    
+    <!-- TAB 1: INTERACTIVE ANALYZER -->
+    <section id="tab-analyzer" class="tab-content active">
+      <div class="card analyzer-card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Real-Time Grammar Error Analysis</h2>
+            <p class="card-subtitle">Test sentences exhibiting Telugu L1 interference patterns or standard English.</p>
+          </div>
+          <span class="badge badge-purple">PyTorch Bi-LSTM (84.70% Acc)</span>
+        </div>
+
+        <!-- Sample Sentence Presets -->
+        <div class="presets-container">
+          <span class="presets-label">Quick Samples:</span>
+          <div class="preset-chips">
+            <button class="chip" data-sample="Yesterday I am going to college by bus.">Tense Error</button>
+            <button class="chip" data-sample="She go to school every day with her sister.">SVA Error</button>
+            <button class="chip" data-sample="I have a uncle who is doctor in Guntur.">Article Error</button>
+            <button class="chip" data-sample="My teacher is very angry on me for coming late.">Preposition Error</button>
+            <button class="chip" data-sample="She speaked very fastly during the debate competition.">Spelling Error</button>
+            <button class="chip" data-sample="Where you are going right now with heavy bag?">Structure Error</button>
+            <button class="chip" data-sample="The students are preparing diligently for their upcoming examinations.">Correct English</button>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-group">
+          <label for="analyzer-input" class="input-label">Enter Sentence or Answer:</label>
+          <textarea 
+            id="analyzer-input" 
+            class="text-input" 
+            rows="3" 
+            placeholder="Type or paste an English sentence to classify error category and view correction..."
+            maxlength="1000"
+          ></textarea>
+          <div class="input-footer">
+            <span class="char-count" id="char-count">0 / 1000 characters</span>
+            <div class="action-buttons">
+              <button class="btn btn-secondary" id="btn-mic-analyzer" title="Speak via Microphone">🎤 Speak</button>
+              <button class="btn btn-secondary" id="btn-clear-analyzer">Clear</button>
+              <button class="btn btn-primary" id="btn-run-analyzer">
+                <span class="btn-spinner hidden" id="analyzer-spinner"></span>
+                <span>Analyze Sentence ✨</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="analyzer-error-alert" class="alert alert-danger hidden"></div>
+
+        <!-- Results Section -->
+        <div id="analyzer-results" class="results-container hidden">
+          <div class="results-grid">
+            
+            <!-- Left: Model Classification Card -->
+            <div class="result-box model-prediction-box">
+              <div class="result-box-header">
+                <h3>Bi-LSTM Error Classification</h3>
+                <span class="tag-pill tag-bilstm">Deep Learning Model</span>
+              </div>
+              
+              <div class="prediction-summary">
+                <div class="summary-label">Predicted Category</div>
+                <div class="summary-badge-container">
+                  <span class="category-badge" id="res-category-badge">TENSE_ERROR</span>
+                  <span class="confidence-pill" id="res-confidence-pill">98.5% confidence</span>
+                </div>
+              </div>
+
+              <!-- Top-3 Probability Distribution -->
+              <div class="top3-section">
+                <h4>Top-3 Probability Distribution</h4>
+                <div class="distribution-bars" id="res-top3-bars">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+
+              <div class="model-note">
+                <small>⚡ Model output strictly indicates predicted error category distribution across 7 learned classes.</small>
+              </div>
+            </div>
+
+            <!-- Right: Dedicated Sentence Corrector Card -->
+            <div class="result-box correction-box">
+              <div class="result-box-header">
+                <h3>Sentence Correction &amp; Feedback</h3>
+                <span class="tag-pill tag-corrector" id="res-provider-tag">Correction Engine</span>
+              </div>
+
+              <div class="correction-content">
+                <div class="correction-group">
+                  <span class="field-title">Recommended Correction:</span>
+                  <div class="corrected-sentence" id="res-corrected-text">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+
+                <div class="correction-group">
+                  <span class="field-title">Grammatical Explanation:</span>
+                  <p class="explanation-text" id="res-explanation-text">
+                    <!-- Populated dynamically -->
+                  </p>
+                </div>
+
+                <!-- Architectural Disclaimer -->
+                <div class="disclaimer-banner">
+                  <div class="disclaimer-icon">ℹ️</div>
+                  <div class="disclaimer-text">
+                    <strong>Architectural Note:</strong>
+                    <span id="res-disclaimer-text">
+                      Sentence corrections and grammatical explanations are provided by the dedicated Sentence Correction Engine, NOT by the Bi-LSTM error classification model. The Bi-LSTM model is strictly an error-category classifier.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: DAILY QUESTIONS & GUIDED LEARNING -->
+    <section id="tab-practice" class="tab-content">
+      <div class="practice-layout">
+        
+        <!-- Left: Daily Questions List -->
+        <div class="daily-questions-panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="card-title">Daily Practice Prompts</h2>
+              <p class="card-subtitle">Structured prompts designed to address common Telugu L1 language habits.</p>
+            </div>
+            <button class="btn btn-sm btn-secondary" id="btn-refresh-daily">🔄 Refresh</button>
+          </div>
+
+          <div id="daily-questions-list" class="questions-list">
+            <!-- Populated dynamically -->
+            <div class="loading-state">Loading today's practice questions...</div>
+          </div>
+        </div>
+
+        <!-- Right: Personalized Recommendation Card -->
+        <div class="personalized-panel">
+          <div class="card weakness-recommendation-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">🎯 Adaptive Next Question</h3>
+                <p class="card-subtitle">AI selects prompts targeting your most frequent grammar weakness.</p>
+              </div>
+            </div>
+
+            <div class="recommendation-body">
+              <div class="detected-weakness-badge" id="adaptive-target-weakness">
+                Current Weakness Focus: <strong id="rec-weakness-name">Analyzing...</strong>
+              </div>
+              <p class="rec-reason-text" id="rec-reason">Click below to fetch a tailored practice exercise.</p>
+
+              <div id="personalized-question-card" class="targeted-q-box hidden">
+                <div class="q-difficulty-row">
+                  <span class="badge badge-outline" id="rec-difficulty">Intermediate</span>
+                  <span class="badge badge-purple" id="rec-category">TENSE_ERROR</span>
+                </div>
+                <h4 class="q-prompt-text" id="rec-prompt"></h4>
+                <p class="q-context-text" id="rec-context"></p>
+                
+                <div class="q-answer-box">
+                  <textarea 
+                    id="rec-answer-input" 
+                    class="text-input" 
+                    rows="2" 
+                    placeholder="Type your response to this targeted prompt..."
+                  ></textarea>
+                  <div class="action-buttons mt-2">
+                    <button class="btn btn-secondary btn-sm" id="btn-mic-personalized" title="Speak via Microphone">🎤 Speak</button>
+                    <button class="btn btn-primary btn-sm" id="btn-submit-personalized">Submit Answer ✨</button>
+                  </div>
+                </div>
+                <div id="rec-feedback-area" class="feedback-area hidden"></div>
+              </div>
+
+              <button class="btn btn-gradient w-100" id="btn-fetch-personalized">
+                Get Personalized Question Target 🎯
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: WEAKNESS TRACKER & PROGRESS -->
+    <section id="tab-progress" class="tab-content">
+      <div class="progress-container">
+        
+        <!-- Summary Stats Cards -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-details">
+              <span class="stat-value" id="stat-total-submissions">0</span>
+              <span class="stat-label">Total Submissions</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-details">
+              <span class="stat-value" id="stat-accuracy">0.0%</span>
+              <span class="stat-label">Grammar Accuracy</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-details">
+              <span class="stat-value" id="stat-streak">0 Days</span>
+              <span class="stat-label">Current Streak</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">⚠️</div>
+            <div class="stat-details">
+              <span class="stat-value text-accent" id="stat-primary-weakness">None</span>
+              <span class="stat-label">Primary Weakness</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Error Distribution -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Grammar Weakness Distribution (7 Error Categories)</h3>
+              <p class="card-subtitle">Real-time counts of errors diagnosed across your submissions.</p>
+            </div>
+          </div>
+          <div class="category-bars-container" id="category-weakness-bars">
+            <!-- Populated dynamically -->
+            <p class="empty-state">No submissions recorded yet. Try answering daily questions!</p>
+          </div>
+        </div>
+
+        <!-- Recent Submissions History Table -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Recent Submissions History</h3>
+              <p class="card-subtitle">Persistent SQLite records of your recent sentences and model feedback.</p>
+            </div>
+            <button class="btn btn-sm btn-secondary" id="btn-refresh-history">🔄 Refresh History</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="submissions-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Submitted Sentence</th>
+                  <th>Model Classification</th>
+                  <th>Confidence</th>
+                  <th>Correction / Feedback</th>
+                </tr>
+              </thead>
+              <tbody id="submissions-table-body">
+                <tr>
+                  <td colspan="5" class="text-center">Loading submission history...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>Fluenora AI ✨ &mdash; Telugu-English Learner Grammar System</p>
+      <p class="footer-sub">Bi-LSTM Classifier (84.70% Test Acc) &bull; Dedicated Correction Engine &bull; SQLite Persistence</p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

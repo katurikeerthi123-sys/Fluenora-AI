@@ -1,0 +1,9 @@
+{
+  "0": "CORRECT",
+  "1": "TENSE_ERROR",
+  "2": "SVA_ERROR",
+  "3": "ARTICLE_ERROR",
+  "4": "PREPOSITION_ERROR",
+  "5": "SPELLING_ERROR",
+  "6": "STRUCTURE_ERROR"
+}
