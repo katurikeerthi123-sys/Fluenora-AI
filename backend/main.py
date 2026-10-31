@@ -281,3 +281,10 @@ if os.path.exists(frontend_dir):
         if os.path.exists(index_path):
             return FileResponse(index_path)
         return JSONResponse({"message": "Fluenora AI Backend is running. Frontend index.html not found."})
+
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("backend.main:app", host="0.0.0.0", port=port, reload=False)
+
