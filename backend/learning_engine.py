@@ -111,9 +111,31 @@ class LearningEngine:
             clean_text, predicted_category=prediction["label_name"]
         )
 
+        # Step C: Reconcile Classifier and Rule-based Corrector
+        # If the corrector identified and repaired concrete grammatical errors:
+        detected_category = correction_result.get("category")
+        if (
+            detected_category
+            and detected_category != "CORRECT"
+            and (prediction["label_name"] == "CORRECT" or prediction["confidence"] < 0.65)
+        ):
+            # Override false-positive CORRECT with the verified error category
+            label2id = {v: k for k, v in self.predictor.labels.items()}
+            prediction["label_name"] = detected_category
+            prediction["label_id"] = label2id.get(detected_category, 6)
+            prediction["confidence"] = max(prediction["confidence"], 0.88)
+            # Re-rank top3
+            reordered = [
+                {"label": detected_category, "label_id": prediction["label_id"], "confidence": prediction["confidence"]}
+            ]
+            for t in prediction.get("top3", []):
+                if t["label"] != detected_category and len(reordered) < 3:
+                    reordered.append(t)
+            prediction["top3"] = reordered
+
         is_correct = bool(prediction["label_name"] == "CORRECT")
 
-        # Step C: Database Persistence
+        # Step D: Database Persistence
         submission_id = None
         if persist and user_id:
             try:
