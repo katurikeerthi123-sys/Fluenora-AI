@@ -262,6 +262,60 @@ class TestGeneralPurposeGEC:
         assert res["category"] == "TENSE_ERROR"
         assert res["is_correct"] is False
         assert "played" in res["correction"]
+        assert res["is_suitable"] is True
+
+    def test_question_answer_suitability_checking(self):
+        """Requirement: Validate whether learner answer is suitable and relevant to the question prompt."""
+        q1_ctx = {
+            "id": 1,
+            "prompt": "Describe what you did yesterday from morning to evening.",
+            "category_target": "TENSE_ERROR",
+            "context": "Daily routines and past actions. Watch out for simple past vs present continuous.",
+            "sample_correct": "Yesterday I woke up early, attended my college classes, and studied in the library."
+        }
+        q4_ctx = {
+            "id": 4,
+            "prompt": "Write a complete sentence explaining why someone was absent or unable to attend class.",
+            "category_target": "STRUCTURE_ERROR",
+            "context": "Complete sentence structure, avoiding fragmented 'Because...' clauses, and proper auxiliary placement.",
+            "sample_correct": "I could not attend college yesterday because I was sick, but I have completed all the homework."
+        }
+
+        # Case 1: Suitable answer to Q1
+        res_q1_ok = self.corrector.correct("Yesterday I played football and studied for my exams.", question_context=q1_ctx)
+        assert res_q1_ok["is_suitable"] is True
+        assert res_q1_ok["relevance_score"] >= 0.70
+        assert res_q1_ok["suitability_verdict"] == "SUITABLE"
+
+        # Case 2: Suitable attempt with error to Q1
+        res_q1_err = self.corrector.correct("I did playing football", question_context=q1_ctx)
+        assert res_q1_err["is_suitable"] is True
+        assert res_q1_err["relevance_score"] >= 0.70
+        assert res_q1_err["correction"] == "I played football."
+
+        # Case 3: Completely off-topic greeting to Q1
+        res_q1_greet = self.corrector.correct("hi", question_context=q1_ctx)
+        assert res_q1_greet["is_suitable"] is False
+        assert res_q1_greet["relevance_score"] <= 0.30
+        assert res_q1_greet["suitability_verdict"] == "OFF_TOPIC"
+        assert "does not answer" in res_q1_greet["suitability_feedback"]
+
+        # Case 4: Completely off-topic statement to Q1
+        res_q1_off = self.corrector.correct("The capital of France is Paris.", question_context=q1_ctx)
+        assert res_q1_off["is_suitable"] is False
+        assert res_q1_off["relevance_score"] <= 0.30
+        assert res_q1_off["suitability_verdict"] == "OFF_TOPIC"
+
+        # Case 5: Suitable answer to Q4 (absence reason)
+        res_q4_ok = self.corrector.correct("I could not attend class because I was sick.", question_context=q4_ctx)
+        assert res_q4_ok["is_suitable"] is True
+        assert res_q4_ok["relevance_score"] >= 0.70
+
+        # Case 6: Off-topic answer to Q4 (coffee preference instead of absence)
+        res_q4_off = self.corrector.correct("She does not like coffee.", question_context=q4_ctx)
+        assert res_q4_off["is_suitable"] is False
+        assert res_q4_off["relevance_score"] <= 0.30
+        assert res_q4_off["suitability_verdict"] == "OFF_TOPIC"
 
     def test_never_return_same_incorrect_sentence(self):
         """Requirement: Never return original sentence when error is present."""

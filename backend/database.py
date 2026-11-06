@@ -235,6 +235,8 @@ class Database:
         is_correct = 1 if label_name == "CORRECT" else 0
         correction = correction_info.get("correction")
         explanation = correction_info.get("explanation")
+        if question_id and correction_info.get("is_suitable") is False:
+            explanation = f"[{correction_info.get('suitability_verdict', 'OFF_TOPIC')}] {explanation}"
 
         with self.get_connection() as conn:
             cursor = conn.cursor()

@@ -438,6 +438,62 @@ function renderAnalyzerResults(data) {
   resultsContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
+function renderQuestionFeedbackHtml(data) {
+  const isCorrectSentence = (data.label_name === "CORRECT" || data.is_correct);
+  const correctionDisplay = isCorrectSentence
+    ? `<span style="color:#6ee7b7; font-weight:600;">No grammatical error found. Your sentence is clear and natural!</span>`
+    : `<span style="color:#a7f3d0; font-weight:600;">${data.correction || data.sentence}</span>`;
+
+  let suitabilityHtml = "";
+  if (data.question_id && data.suitability_feedback) {
+    const isOk = (data.is_suitable !== false);
+    const scorePct = Math.round((data.relevance_score != null ? data.relevance_score : 1.0) * 100);
+    const bg = isOk ? "rgba(16,185,129,0.12)" : "rgba(239,68,68,0.14)";
+    const border = isOk ? "rgba(16,185,129,0.3)" : "rgba(239,68,68,0.35)";
+    const titleColor = isOk ? "#6ee7b7" : "#fca5a5";
+    const icon = isOk ? "✅" : "⚠️";
+    const title = isOk
+      ? `Prompt Relevance: Suitable Answer (${scorePct}%)`
+      : `Prompt Relevance Alert: Not Suitable / Off-Topic (${scorePct}%)`;
+
+    suitabilityHtml = `
+      <div style="background:${bg}; border:1px solid ${border}; border-radius:8px; padding:0.65rem 0.9rem; margin-bottom:0.6rem; display:flex; align-items:flex-start; gap:0.6rem;">
+        <span style="font-size:1.15rem; line-height:1.2;">${icon}</span>
+        <div style="flex:1;">
+          <div style="color:${titleColor}; font-weight:700; font-size:0.86rem; margin-bottom:3px;">${title}</div>
+          <div style="color:#e2e8f0; font-size:0.83rem; line-height:1.4;">${data.suitability_feedback}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="feedback-result" style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; border-radius:10px; background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08);">
+      ${suitabilityHtml}
+      <div style="font-size:0.88rem; color:#94a3b8;">
+        <strong>1. Original Sentence:</strong> <span style="color:#f1f5f9;">"${data.sentence}"</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <strong>2. Diagnosis:</strong> 
+        <span class="category-badge category-${data.label_name}">${data.label_name}</span>
+        <span class="confidence-pill">${Math.round(data.confidence * 100)}%</span>
+      </div>
+      <div style="font-size:0.92rem;">
+        <strong>3. Corrected Sentence:</strong> ${correctionDisplay}
+      </div>
+      <div style="font-size:0.86rem; color:#cbd5e1;">
+        <strong>4. Explanation:</strong> ${data.explanation}
+      </div>
+      <div style="font-size:0.84rem; color:#cbd5e1; background:rgba(255,255,255,0.04); padding:6px 10px; border-radius:6px; border-left:3px solid #8b5cf6;">
+        <strong>5. Grammar Rule:</strong> ${data.grammar_rule || "Adheres to standard English grammar conventions."}
+      </div>
+      <div style="font-size:0.84rem; color:#93c5fd; font-style:italic;">
+        <strong>6. Additional Example:</strong> "${data.example || data.correction}"
+      </div>
+    </div>
+  `;
+}
+
 // -------------------------------------------------------------
 // Tab 2: Daily Practice & Personalized Learning
 // -------------------------------------------------------------
@@ -478,35 +534,7 @@ function initPractice() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.detail);
 
-      const isCorrectSentence = (data.label_name === "CORRECT" || data.is_correct);
-      const correctionDisplay = isCorrectSentence
-        ? `<span style="color:#6ee7b7; font-weight:600;">No grammatical error found. Your sentence is clear and natural!</span>`
-        : `<span style="color:#a7f3d0; font-weight:600;">${data.correction || data.sentence}</span>`;
-
-      feedback.innerHTML = `
-        <div class="feedback-result" style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; border-radius:10px; background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08);">
-          <div style="font-size:0.88rem; color:#94a3b8;">
-            <strong>1. Original Sentence:</strong> <span style="color:#f1f5f9;">"${data.sentence}"</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.6rem;">
-            <strong>2. Diagnosis:</strong> 
-            <span class="category-badge category-${data.label_name}">${data.label_name}</span>
-            <span class="confidence-pill">${Math.round(data.confidence * 100)}%</span>
-          </div>
-          <div style="font-size:0.92rem;">
-            <strong>3. Corrected Sentence:</strong> ${correctionDisplay}
-          </div>
-          <div style="font-size:0.86rem; color:#cbd5e1;">
-            <strong>4. Explanation:</strong> ${data.explanation}
-          </div>
-          <div style="font-size:0.84rem; color:#cbd5e1; background:rgba(255,255,255,0.04); padding:6px 10px; border-radius:6px; border-left:3px solid #8b5cf6;">
-            <strong>5. Grammar Rule:</strong> ${data.grammar_rule || "Adheres to standard English grammar conventions."}
-          </div>
-          <div style="font-size:0.84rem; color:#93c5fd; font-style:italic;">
-            <strong>6. Additional Example:</strong> "${data.example || data.correction}"
-          </div>
-        </div>
-      `;
+      feedback.innerHTML = renderQuestionFeedbackHtml(data);
       feedback.classList.remove("hidden");
       loadUserProgress();
     } catch (e) {
@@ -584,35 +612,7 @@ window.submitDailyAnswer = async function(questionId) {
     const data = await res.json();
     if (!res.ok) throw new Error(data.detail);
 
-    const isCorrectSentence = (data.label_name === "CORRECT" || data.is_correct);
-    const correctionDisplay = isCorrectSentence
-      ? `<span style="color:#6ee7b7; font-weight:600;">No grammatical error found. Your sentence is clear and natural!</span>`
-      : `<span style="color:#a7f3d0; font-weight:600;">${data.correction || data.sentence}</span>`;
-
-    feedback.innerHTML = `
-      <div class="feedback-result" style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; border-radius:10px; background:rgba(15,23,42,0.6); border:1px solid rgba(255,255,255,0.08);">
-        <div style="font-size:0.88rem; color:#94a3b8;">
-          <strong>1. Original Sentence:</strong> <span style="color:#f1f5f9;">"${data.sentence}"</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:0.6rem;">
-          <strong>2. Diagnosis:</strong> 
-          <span class="category-badge category-${data.label_name}">${data.label_name}</span>
-          <span class="confidence-pill">${Math.round(data.confidence * 100)}%</span>
-        </div>
-        <div style="font-size:0.92rem;">
-          <strong>3. Corrected Sentence:</strong> ${correctionDisplay}
-        </div>
-        <div style="font-size:0.86rem; color:#cbd5e1;">
-          <strong>4. Explanation:</strong> ${data.explanation}
-        </div>
-        <div style="font-size:0.84rem; color:#cbd5e1; background:rgba(255,255,255,0.04); padding:6px 10px; border-radius:6px; border-left:3px solid #8b5cf6;">
-          <strong>5. Grammar Rule:</strong> ${data.grammar_rule || "Adheres to standard English grammar conventions."}
-        </div>
-        <div style="font-size:0.84rem; color:#93c5fd; font-style:italic;">
-          <strong>6. Additional Example:</strong> "${data.example || data.correction}"
-        </div>
-      </div>
-    `;
+    feedback.innerHTML = renderQuestionFeedbackHtml(data);
 
     loadUserProgress();
     updateWeaknessFocusBanner();

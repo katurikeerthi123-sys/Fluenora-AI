@@ -378,6 +378,225 @@ class SentenceCorrector:
             pass
         return None
 
+    def check_answer_suitability(
+        self,
+        sentence: str,
+        question_context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """
+        Evaluate whether the learner's submitted answer is semantically suitable
+        and relevant to the given practice prompt.
+
+        Returns:
+            {
+                "is_suitable": bool,
+                "relevance_score": float,  # 0.0 to 1.0
+                "suitability_verdict": str, # "SUITABLE" | "OFF_TOPIC" | "PARTIALLY_RELEVANT"
+                "suitability_feedback": str # Beginner-friendly guidance
+            }
+        """
+        if not question_context:
+            return {
+                "is_suitable": True,
+                "relevance_score": 1.0,
+                "suitability_verdict": "NOT_APPLICABLE",
+                "suitability_feedback": "Sentence analyzed independently without specific question constraints."
+            }
+
+        text = sentence.strip()
+        if not text:
+            return {
+                "is_suitable": False,
+                "relevance_score": 0.0,
+                "suitability_verdict": "EMPTY",
+                "suitability_feedback": "Please write a sentence answering the prompt."
+            }
+
+        norm = text.lower()
+        prompt = (question_context.get("prompt") or "").strip()
+        p_lower = prompt.lower()
+        context = (question_context.get("context") or "").lower()
+        sample_correct = (question_context.get("sample_correct") or "").lower()
+
+        words = re.findall(r'\b[a-zA-Z]+\b', norm)
+
+        # Check pure greeting / conversational courtesy for a prompt
+        if len(words) <= 2 and (norm in GREETINGS or any(norm == g or norm.startswith(g + " ") for g in ('hi', 'hello', 'hey', 'thanks', 'thank you'))):
+            return {
+                "is_suitable": False,
+                "relevance_score": 0.10,
+                "suitability_verdict": "OFF_TOPIC",
+                "suitability_feedback": f"⚠️ Conversational Greeting: '{text}' is a polite greeting, but does not answer the question: \"{prompt}\". Please provide a complete sentence addressing this topic."
+            }
+
+        # -------------------------------------------------------------
+        # Targeted checks for core question prompts
+        # -------------------------------------------------------------
+        # 1. Question 1: What did you do yesterday from morning to evening?
+        if "yesterday" in p_lower and ("morning" in p_lower or "evening" in p_lower or "did" in p_lower):
+            daily_activity_keywords = {
+                "yesterday", "morning", "evening", "afternoon", "night", "day", "woke", "wake", "got", "get", "up",
+                "breakfast", "lunch", "dinner", "tea", "coffee", "meal", "food", "ate", "eat", "eating", "drink", "drank",
+                "class", "classes", "college", "school", "university", "attended", "attend", "study", "studied", "studying",
+                "library", "exam", "homework", "book", "read", "wrote", "write", "office", "work", "worked", "working",
+                "played", "play", "playing", "cricket", "football", "game", "match", "chess", "badminton", "movie", "tv",
+                "watched", "watch", "cinema", "music", "songs", "friend", "friends", "met", "meet", "talked", "talk",
+                "visited", "visit", "market", "shop", "walk", "walked", "run", "ran", "gym", "exercise", "bus", "bike",
+                "train", "slept", "sleep", "went", "go", "going", "came", "come", "cooked", "cook", "cleaned", "clean"
+            }
+            overlap = set(words) & daily_activity_keywords
+            if overlap:
+                score = min(1.0, 0.70 + len(overlap) * 0.10)
+                return {
+                    "is_suitable": True,
+                    "relevance_score": round(score, 2),
+                    "suitability_verdict": "SUITABLE",
+                    "suitability_feedback": "✅ Suitable Answer: Your response relates directly to daily activities and routines."
+                }
+            else:
+                return {
+                    "is_suitable": False,
+                    "relevance_score": 0.20,
+                    "suitability_verdict": "OFF_TOPIC",
+                    "suitability_feedback": f"⚠️ Topic Mismatch: The question asks: \"{prompt}\". Your sentence does not describe any activities from yesterday. Tip: Write about your routine (e.g., waking up, attending classes, playing sports, or studying)."
+                }
+
+        # 2. Question 2: Two sentences about best friend and what they do every day
+        if "best friend" in p_lower or ("friend" in p_lower and "every day" in p_lower):
+            friend_refs = {"friend", "friends", "he", "she", "him", "her", "his", "brother", "sister", "buddy", "partner", "classmate", "roommate"}
+            habit_verbs = {"works", "work", "plays", "play", "studies", "study", "speaks", "speak", "lives", "live", "likes", "like", "loves", "love", "goes", "go", "reads", "read", "helps", "help", "watches", "watch", "is", "has", "cricket", "music", "college", "school"}
+            has_friend_ref = bool(set(words) & friend_refs)
+            has_habit = bool(set(words) & habit_verbs)
+            if has_friend_ref:
+                score = 0.90 if has_habit else 0.70
+                return {
+                    "is_suitable": True,
+                    "relevance_score": score,
+                    "suitability_verdict": "SUITABLE",
+                    "suitability_feedback": "✅ Suitable Answer: Your response describes your friend and their activities."
+                }
+            else:
+                return {
+                    "is_suitable": False,
+                    "relevance_score": 0.25,
+                    "suitability_verdict": "OFF_TOPIC",
+                    "suitability_feedback": f"⚠️ Missing Target Subject: The question asks: \"{prompt}\". Tip: Describe your best friend using 'My friend...', 'He...', or 'She...' and what they do every day."
+                }
+
+        # 3. Question 3: Daily routine or what you do every day before leaving home
+        if "routine" in p_lower or ("before leaving home" in p_lower) or ("every day" in p_lower and "home" in p_lower):
+            morning_words = {
+                "wake", "woke", "waking", "wakes", "get", "up", "bed", "brush", "bath", "shower", "wash", "tea", "coffee",
+                "milk", "breakfast", "eat", "ate", "food", "dress", "clothes", "wear", "pack", "bag", "prepare", "ready",
+                "pray", "prayer", "exercise", "walk", "read", "newspaper", "leave", "leaving", "home", "house", "morning",
+                "routine", "daily", "every day", "before", "college", "work", "gym"
+            }
+            overlap = set(words) & morning_words
+            if overlap:
+                score = min(1.0, 0.75 + len(overlap) * 0.10)
+                return {
+                    "is_suitable": True,
+                    "relevance_score": round(score, 2),
+                    "suitability_verdict": "SUITABLE",
+                    "suitability_feedback": "✅ Suitable Answer: Your response describes your daily habits and routine."
+                }
+            else:
+                return {
+                    "is_suitable": False,
+                    "relevance_score": 0.20,
+                    "suitability_verdict": "OFF_TOPIC",
+                    "suitability_feedback": f"⚠️ Topic Mismatch: The question asks: \"{prompt}\". Tip: Describe your morning routine before leaving home (e.g., waking up, having breakfast, getting dressed)."
+                }
+
+        # 4. Question 4: Explaining why someone was absent or unable to attend class
+        if "absent" in p_lower or "unable to attend" in p_lower:
+            absence_reason_words = {
+                "absent", "attend", "attended", "miss", "missed", "unable", "could not", "couldn't", "cannot", "can't",
+                "class", "classes", "college", "school", "lecture", "exam", "because", "due", "sick", "ill", "illness",
+                "fever", "headache", "cold", "cough", "stomach", "pain", "unwell", "hospital", "doctor", "medicine",
+                "emergency", "family", "marriage", "function", "travel", "train", "bus", "rain", "traffic", "reason", "leave"
+            }
+            overlap = set(words) & absence_reason_words
+            if overlap:
+                score = min(1.0, 0.75 + len(overlap) * 0.10)
+                return {
+                    "is_suitable": True,
+                    "relevance_score": round(score, 2),
+                    "suitability_verdict": "SUITABLE",
+                    "suitability_feedback": "✅ Suitable Answer: Your response provides a reason explaining absence or inability to attend class."
+                }
+            else:
+                return {
+                    "is_suitable": False,
+                    "relevance_score": 0.20,
+                    "suitability_verdict": "OFF_TOPIC",
+                    "suitability_feedback": f"⚠️ Topic Mismatch: The question asks: \"{prompt}\". Tip: Explain the reason for being absent (e.g., 'I could not attend college because I was sick.')."
+                }
+
+        # 5. Question 5: Important lesson learned in school and how it helped you
+        if "lesson" in p_lower or "learned in school" in p_lower:
+            lesson_words = {
+                "lesson", "learned", "learnt", "learn", "school", "teacher", "teachers", "taught", "teach", "sir", "madam",
+                "advice", "class", "student", "discipline", "punctuality", "respect", "honesty", "honest", "hard work",
+                "study", "studied", "helped", "help", "life", "mistake", "importance", "value", "remember", "success"
+            }
+            overlap = set(words) & lesson_words
+            if overlap:
+                score = min(1.0, 0.75 + len(overlap) * 0.10)
+                return {
+                    "is_suitable": True,
+                    "relevance_score": round(score, 2),
+                    "suitability_verdict": "SUITABLE",
+                    "suitability_feedback": "✅ Suitable Answer: Your response reflects on a lesson or experience from school."
+                }
+            else:
+                return {
+                    "is_suitable": False,
+                    "relevance_score": 0.20,
+                    "suitability_verdict": "OFF_TOPIC",
+                    "suitability_feedback": f"⚠️ Topic Mismatch: The question asks: \"{prompt}\". Tip: Mention what you learned in school and how it helped you (e.g., 'My teacher taught me the value of discipline, which helped me in my exams.')."
+                }
+
+        # -------------------------------------------------------------
+        # Generic Concept & Semantic Overlap for ANY Question
+        # -------------------------------------------------------------
+        stopwords = {
+            "a", "an", "the", "in", "on", "at", "to", "for", "of", "with", "by", "from",
+            "is", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had",
+            "do", "does", "did", "and", "or", "but", "so", "if", "that", "this", "these",
+            "it", "i", "me", "my", "we", "us", "our", "you", "your", "they", "them", "their",
+            "write", "describe", "explain", "tell", "two", "sentences", "complete", "short"
+        }
+        prompt_content = set(re.findall(r'\b[a-zA-Z]{3,}\b', p_lower + " " + context + " " + sample_correct)) - stopwords
+        answer_content = set(words) - stopwords
+
+        overlap = prompt_content & answer_content
+        if overlap:
+            overlap_ratio = len(overlap) / max(1, min(len(prompt_content), 5))
+            score = round(min(1.0, 0.60 + overlap_ratio * 0.40), 2)
+            return {
+                "is_suitable": True,
+                "relevance_score": score,
+                "suitability_verdict": "SUITABLE",
+                "suitability_feedback": f"✅ Suitable Answer: Your response addresses the prompt topic ({', '.join(sorted(overlap)[:3])})."
+            }
+
+        # If sentence is reasonably detailed (>= 6 words) and contains verbs and nouns, give benefit of doubt
+        if len(words) >= 6:
+            return {
+                "is_suitable": True,
+                "relevance_score": 0.65,
+                "suitability_verdict": "PARTIALLY_RELEVANT",
+                "suitability_feedback": "ℹ️ Your response appears plausible, but try to include more specific details requested in the prompt."
+            }
+
+        return {
+            "is_suitable": False,
+            "relevance_score": 0.25,
+            "suitability_verdict": "OFF_TOPIC",
+            "suitability_feedback": f"⚠️ Topic Relevance Notice: Your response does not appear to answer the question: \"{prompt}\". Please provide an answer addressing the requested topic."
+        }
+
     def correct(
         self,
         sentence: str,
@@ -388,7 +607,10 @@ class SentenceCorrector:
         Main entry point for general-purpose grammatical error correction and pedagogical feedback.
         Supports question-aware contextual grammar objective evaluation.
         """
-        if not sentence or not sentence.strip():
+        sentence_stripped = sentence.strip() if sentence else ""
+        suitability_info = self.check_answer_suitability(sentence_stripped, question_context)
+
+        if not sentence_stripped:
             return {
                 "original_sentence": sentence or "",
                 "correction": sentence or "",
@@ -401,9 +623,12 @@ class SentenceCorrector:
                 "status": "success",
                 "is_correct": True,
                 "disclaimer": DISCLAIMER_TEXT,
+                "is_suitable": suitability_info["is_suitable"],
+                "relevance_score": suitability_info["relevance_score"],
+                "suitability_verdict": suitability_info["suitability_verdict"],
+                "suitability_feedback": suitability_info["suitability_feedback"],
             }
 
-        sentence_stripped = sentence.strip()
         norm = self._normalize_key(sentence_stripped)
 
         # 1. Greetings & Conversational courtesy words ("hi", "hello", "thank you", "thanks")
@@ -418,10 +643,15 @@ class SentenceCorrector:
             cap_greeting = sentence_stripped[0].upper() + sentence_stripped[1:]
             if not cap_greeting.endswith(('.', '!', '?')):
                 cap_greeting += '!' if len(sentence_stripped.split()) <= 2 else '.'
+            
+            expl = "No grammatical error found. Standard greeting or conversational courtesy."
+            if question_context and not suitability_info["is_suitable"]:
+                expl = f"'{sentence_stripped}' is a valid greeting, but it does not address the question prompt."
+
             return {
                 "original_sentence": sentence_stripped,
                 "correction": cap_greeting,
-                "explanation": "No grammatical error found. Standard greeting or conversational courtesy.",
+                "explanation": expl,
                 "category": "CORRECT",
                 "grammar_rule": PEDAGOGICAL_GUIDE["CORRECT"]["rule"],
                 "example": PEDAGOGICAL_GUIDE["CORRECT"]["example"],
@@ -430,6 +660,10 @@ class SentenceCorrector:
                 "status": "success",
                 "is_correct": True,
                 "disclaimer": DISCLAIMER_TEXT,
+                "is_suitable": suitability_info["is_suitable"],
+                "relevance_score": suitability_info["relevance_score"],
+                "suitability_verdict": suitability_info["suitability_verdict"],
+                "suitability_feedback": suitability_info["suitability_feedback"],
             }
 
         # 2. Check Question Context & Pedagogical Objectives (e.g. Daily Practice Q1-Q5)
@@ -464,6 +698,10 @@ class SentenceCorrector:
                                 "status": "success",
                                 "is_correct": False,
                                 "disclaimer": DISCLAIMER_TEXT,
+                                "is_suitable": suitability_info["is_suitable"],
+                                "relevance_score": suitability_info["relevance_score"],
+                                "suitability_verdict": suitability_info["suitability_verdict"],
+                                "suitability_feedback": suitability_info["suitability_feedback"],
                             }
 
         # 2. Corpus exact match
@@ -485,6 +723,10 @@ class SentenceCorrector:
                 "status": "success",
                 "is_correct": is_corr,
                 "disclaimer": DISCLAIMER_TEXT,
+                "is_suitable": suitability_info["is_suitable"],
+                "relevance_score": suitability_info["relevance_score"],
+                "suitability_verdict": suitability_info["suitability_verdict"],
+                "suitability_feedback": suitability_info["suitability_feedback"],
             }
 
         # 3. Comprehensive Morpho-Syntactic Analysis & Transformation Layer
@@ -539,6 +781,10 @@ class SentenceCorrector:
                     "status": "success",
                     "is_correct": True,
                     "disclaimer": DISCLAIMER_TEXT,
+                    "is_suitable": suitability_info["is_suitable"],
+                    "relevance_score": suitability_info["relevance_score"],
+                    "suitability_verdict": suitability_info["suitability_verdict"],
+                    "suitability_feedback": suitability_info["suitability_feedback"],
                 }
 
         # 5. Non-Empty & Meaning Preservation Guarantee:
@@ -576,6 +822,10 @@ class SentenceCorrector:
             "status": "success",
             "is_correct": is_correct,
             "disclaimer": DISCLAIMER_TEXT,
+            "is_suitable": suitability_info["is_suitable"],
+            "relevance_score": suitability_info["relevance_score"],
+            "suitability_verdict": suitability_info["suitability_verdict"],
+            "suitability_feedback": suitability_info["suitability_feedback"],
         }
 
     def _apply_morphosyntactic_pipeline(
