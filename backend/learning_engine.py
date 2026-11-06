@@ -106,9 +106,19 @@ class LearningEngine:
         # Step A: Bi-LSTM Model Prediction (Classification ONLY)
         prediction = self.predictor.predict(clean_text)
 
-        # Step B: Separate Sentence Correction & Linguistic Explanation
+        # Retrieve question context if answering a specific practice challenge
+        question_context = None
+        if question_id:
+            try:
+                question_context = self.db.get_question_by_id(question_id)
+            except Exception:
+                question_context = None
+
+        # Step B: Separate Sentence Correction & Linguistic Explanation (with question context)
         correction_result = self.corrector.correct(
-            clean_text, predicted_category=prediction["label_name"]
+            clean_text,
+            predicted_category=prediction["label_name"],
+            question_context=question_context
         )
 
         # Step C: Reconcile Classifier and Rule-based Corrector

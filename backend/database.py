@@ -208,6 +208,14 @@ class Database:
             conn.commit()
             return {"id": user_id, "username": uname, "created_at": datetime.now().isoformat()}
 
+    def get_question_by_id(self, question_id: int) -> Optional[Dict[str, Any]]:
+        """Retrieve question metadata and pedagogical target by ID."""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM questions WHERE id = ?", (question_id,))
+            row = cursor.fetchone()
+            return dict(row) if row else None
+
     def record_submission(
         self,
         user_id: str,

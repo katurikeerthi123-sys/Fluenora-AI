@@ -378,9 +378,15 @@ class SentenceCorrector:
             pass
         return None
 
-    def correct(self, sentence: str, predicted_category: Optional[str] = None) -> Dict[str, Any]:
+    def correct(
+        self,
+        sentence: str,
+        predicted_category: Optional[str] = None,
+        question_context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """
         Main entry point for general-purpose grammatical error correction and pedagogical feedback.
+        Supports question-aware contextual grammar objective evaluation.
         """
         if not sentence or not sentence.strip():
             return {
@@ -425,6 +431,40 @@ class SentenceCorrector:
                 "is_correct": True,
                 "disclaimer": DISCLAIMER_TEXT,
             }
+
+        # 2. Check Question Context & Pedagogical Objectives (e.g. Daily Practice Q1-Q5)
+        if question_context:
+            q_target = question_context.get("category_target")
+            q_prompt = (question_context.get("prompt") or "").lower()
+            q_desc = (question_context.get("context") or "").lower()
+
+            # Past tense prompt objective (e.g., Question 1: "Describe what you did yesterday...")
+            if "yesterday" in q_prompt or "past actions" in q_desc or "did" in q_prompt or "lesson you learned" in q_prompt:
+                # Check if student used present base verbs instead of past tense (e.g., "i play football", "i go to college")
+                subj_pres_pattern = r'\b(I|we|you|they|he|she|my\s+friend)\s+([a-zA-Z]+)\b'
+                for sm in re.finditer(subj_pres_pattern, sentence_stripped, re.IGNORECASE):
+                    subj = sm.group(1)
+                    vb = sm.group(2).lower()
+                    if vb in IRREGULAR_VERBS or vb in ("play", "work", "study", "watch", "cook", "clean", "talk", "walk", "call", "wait", "visit", "help"):
+                        past_vb = to_past_tense(vb)
+                        if past_vb != vb:
+                            # Replaced present verb with simple past
+                            subj_fmt = "I" if subj.lower() == "i" else subj.capitalize()
+                            repaired = re.sub(rf'\b{subj}\s+{vb}\b', f"{subj_fmt} {past_vb}", sentence_stripped, count=1, flags=re.IGNORECASE)
+                            repaired = self._format_sentence(repaired)
+                            return {
+                                "original_sentence": sentence_stripped,
+                                "correction": repaired,
+                                "explanation": f"This question asks about activities from yesterday. Use simple past tense '{past_vb}' instead of present tense '{vb}'.",
+                                "category": "TENSE_ERROR",
+                                "grammar_rule": PEDAGOGICAL_GUIDE["TENSE_ERROR"]["rule"],
+                                "example": f"Yesterday, I {past_vb} football in the evening.",
+                                "detected_errors": [f"Past time objective requires simple past verb '{past_vb}' instead of present '{vb}'."],
+                                "provider": "question_context_evaluator",
+                                "status": "success",
+                                "is_correct": False,
+                                "disclaimer": DISCLAIMER_TEXT,
+                            }
 
         # 2. Corpus exact match
         if norm in self.dataset_corrections:

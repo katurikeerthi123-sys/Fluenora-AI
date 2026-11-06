@@ -249,6 +249,20 @@ class TestGeneralPurposeGEC:
             norm_corr = re.sub(r"[^\w\s]", "", res["correction"].lower())
             assert norm_orig == norm_corr
 
+    def test_question_context_evaluation(self):
+        """Requirement: When answering a specific question, evaluate according to grammar objective."""
+        q1_ctx = {
+            "id": 1,
+            "prompt": "Describe what you did yesterday from morning to evening.",
+            "category_target": "TENSE_ERROR",
+            "context": "Daily routines and past actions. Watch out for simple past vs present continuous."
+        }
+        res = self.corrector.correct("i play football", question_context=q1_ctx)
+        assert res["correction"] == "I played football."
+        assert res["category"] == "TENSE_ERROR"
+        assert res["is_correct"] is False
+        assert "played" in res["correction"]
+
     def test_never_return_same_incorrect_sentence(self):
         """Requirement: Never return original sentence when error is present."""
         incorrect_samples = [
