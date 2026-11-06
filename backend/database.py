@@ -24,24 +24,24 @@ INITIAL_QUESTIONS = [
         "sample_correct": "My best friend works at a software firm. He speaks English fluently and loves playing cricket."
     },
     {
-        "prompt": "Describe a historical monument or a natural wonder you would love to visit.",
-        "category_target": "ARTICLE_ERROR",
-        "difficulty": "Intermediate",
-        "context": "Use of definite ('the') and indefinite ('a/an') articles before unique monuments and countable nouns.",
-        "sample_correct": "I would love to visit the Taj Mahal in Agra because it is a world-famous historical monument."
+        "prompt": "Describe your daily routine or what you do every day before leaving home.",
+        "category_target": "TENSE_ERROR",
+        "difficulty": "Beginner",
+        "context": "Simple present tense for habitual actions and daily facts (watch out for incorrect continuous aspect).",
+        "sample_correct": "Every day I wake up early, drink coffee, and prepare my bag for college."
     },
     {
-        "prompt": "Share a skill or academic subject you are really good at, and one you find challenging.",
-        "category_target": "PREPOSITION_ERROR",
+        "prompt": "Write a complete sentence explaining why someone was absent or unable to attend class.",
+        "category_target": "STRUCTURE_ERROR",
         "difficulty": "Intermediate",
-        "context": "Preposition collocations: 'good at', 'interested in', 'afraid of'.",
-        "sample_correct": "I am very good at mathematics and computer programming, but I am nervous about public speaking."
+        "context": "Complete sentence structure, avoiding fragmented 'Because...' clauses, and proper auxiliary placement.",
+        "sample_correct": "I could not attend college yesterday because I was sick, but I have completed all the homework."
     },
     {
         "prompt": "Describe an important lesson you learned in school and how it helped you.",
-        "category_target": "SPELLING_ERROR",
+        "category_target": "TENSE_ERROR",
         "difficulty": "Intermediate",
-        "context": "Past tense irregular verbs (spoke, wrote, taught, felt) and common academic spelling words.",
+        "context": "Past tense irregular verbs (spoke, wrote, taught, felt, caught) and academic vocabulary.",
         "sample_correct": "Our teacher taught us the importance of discipline, and I wrote down all her valuable advice."
     },
     {
@@ -175,7 +175,7 @@ class Database:
                 VALUES ('default_user', 'Learner')
             """)
 
-            # Seed questions if table is empty
+            # Seed questions if table is empty or update first 5 questions
             cursor.execute("SELECT COUNT(*) FROM questions")
             count = cursor.fetchone()[0]
             if count == 0:
@@ -184,6 +184,14 @@ class Database:
                         INSERT INTO questions (prompt, category_target, difficulty, context, sample_correct)
                         VALUES (?, ?, ?, ?, ?)
                     """, (q["prompt"], q["category_target"], q["difficulty"], q["context"], q["sample_correct"]))
+            else:
+                # Ensure the primary 5 questions reflect the updated pedagogical prompts
+                for idx, q in enumerate(INITIAL_QUESTIONS[:5], start=1):
+                    cursor.execute("""
+                        UPDATE questions
+                        SET prompt = ?, category_target = ?, difficulty = ?, context = ?, sample_correct = ?
+                        WHERE id = ?
+                    """, (q["prompt"], q["category_target"], q["difficulty"], q["context"], q["sample_correct"], idx))
 
             conn.commit()
 
@@ -367,68 +375,94 @@ class Database:
                 "recent_submissions": recent
             }
 
-    def get_daily_questions(self, limit: int = 3) -> List[Dict[str, Any]]:
-        """Return daily practice questions based on the current calendar day."""
-        day_of_year = date.today().timetuple().tm_yday
+    def get_daily_questions(self, limit: int = 5) -> List[Dict[str, Any]]:
+        """Return the core daily practice challenges (Questions 1 through 5)."""
         with self.get_connection() as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM questions ORDER BY id ASC")
-            all_q = [dict(r) for r in cursor.fetchall()]
-
-            if not all_q:
-                return []
-
-            # Rotate starting offset by day of year
-            start_idx = day_of_year % len(all_q)
-            selected = []
-            for i in range(min(limit, len(all_q))):
-                idx = (start_idx + i) % len(all_q)
-                selected.append(all_q[idx])
-            return selected
+            cursor.execute("SELECT * FROM questions ORDER BY id ASC LIMIT ?", (limit,))
+            return [dict(r) for r in cursor.fetchall()]
 
     def get_personalized_next_question(self, user_id: str) -> Dict[str, Any]:
         """
-        Personalized Next-Question Selection:
-        1. Analyzes the user's error history to identify their highest-error grammar category.
-        2. Retrieves questions specifically targeting that weakness.
-        3. If no errors yet, serves a diverse introductory or progressive question.
+        Adaptive Next Question Selection:
+        1. Tracks student's most frequent grammar mistakes across multiple submissions.
+        2. Selects an exercise targeting their weakest grammar topic.
+        3. Excludes recent question IDs to prevent repetitive drills.
+        4. Scales difficulty (Beginner -> Intermediate -> Advanced) based on overall accuracy.
         """
         progress = self.get_user_progress(user_id)
         primary_weakness = progress.get("primary_weakness")
+        total_subs = progress.get("total_submissions", 0)
+        accuracy = progress.get("accuracy_percentage", 0.0)
+
+        # Determine target difficulty based on student progress
+        if total_subs < 3 or accuracy < 55.0:
+            target_diff = "Beginner"
+        elif accuracy >= 80.0 and total_subs >= 5:
+            target_diff = "Advanced"
+        else:
+            target_diff = "Intermediate"
 
         with self.get_connection() as conn:
             cursor = conn.cursor()
 
-            # Target user's primary weakness if present
+            # Find recent question IDs submitted by this user to avoid repeats
+            cursor.execute("""
+                SELECT question_id FROM submissions
+                WHERE user_id = ? AND question_id IS NOT NULL
+                ORDER BY submitted_at DESC
+                LIMIT 5
+            """, (user_id,))
+            recent_ids = [r[0] for r in cursor.fetchall() if r[0] is not None]
+
+            placeholders = ",".join("?" for _ in recent_ids) if recent_ids else ""
+
+            # Attempt 1: Target primary weakness + adaptive difficulty + non-recent
             if primary_weakness and primary_weakness != "None detected yet":
-                cursor.execute("""
+                query = f"""
                     SELECT * FROM questions
                     WHERE category_target = ?
-                    ORDER BY RANDOM()
+                    {"AND id NOT IN (" + placeholders + ")" if placeholders else ""}
+                    ORDER BY CASE WHEN difficulty = ? THEN 0 ELSE 1 END, RANDOM()
                     LIMIT 1
-                """, (primary_weakness,))
+                """
+                params = [primary_weakness]
+                if recent_ids:
+                    params.extend(recent_ids)
+                params.append(target_diff)
+
+                cursor.execute(query, params)
                 row = cursor.fetchone()
                 if row:
                     q = dict(row)
-                    q["recommendation_reason"] = f"Targeted practice for your detected weakness in {primary_weakness}."
+                    err_info = progress.get("category_breakdown", {}).get(primary_weakness, {})
+                    err_cnt = err_info.get("error_count", "multiple")
+                    q["recommendation_reason"] = (
+                        f"Targeted {q['difficulty']} exercise designed to strengthen your detected weakness "
+                        f"in {primary_weakness} ({err_cnt} past errors logged)."
+                    )
                     return q
 
-            # Fallback: Pick a question not answered recently or random
-            cursor.execute("""
-                SELECT q.* FROM questions q
-                LEFT JOIN submissions s ON q.id = s.question_id AND s.user_id = ?
-                WHERE s.id IS NULL
-                ORDER BY RANDOM()
-                LIMIT 1
-            """, (user_id,))
-            row = cursor.fetchone()
-            if row:
-                q = dict(row)
-                q["recommendation_reason"] = "Recommended for balanced grammar coverage."
-                return q
+            # Attempt 2: Target adaptive difficulty + non-recent
+            if placeholders:
+                cursor.execute(f"""
+                    SELECT * FROM questions
+                    WHERE id NOT IN ({placeholders})
+                    ORDER BY CASE WHEN difficulty = ? THEN 0 ELSE 1 END, RANDOM()
+                    LIMIT 1
+                """, (*recent_ids, target_diff))
+                row = cursor.fetchone()
+                if row:
+                    q = dict(row)
+                    q["recommendation_reason"] = f"Adaptive {q['difficulty']} exercise selected for well-rounded English grammar practice."
+                    return q
 
-            # If all answered, return a random question
-            cursor.execute("SELECT * FROM questions ORDER BY RANDOM() LIMIT 1")
+            # Attempt 3: Any question matching target difficulty
+            cursor.execute("""
+                SELECT * FROM questions
+                ORDER BY CASE WHEN difficulty = ? THEN 0 ELSE 1 END, RANDOM()
+                LIMIT 1
+            """, (target_diff,))
             q = dict(cursor.fetchone())
-            q["recommendation_reason"] = "Daily revision question."
+            q["recommendation_reason"] = f"Daily {q['difficulty']} revision prompt to maintain your learning streak."
             return q
