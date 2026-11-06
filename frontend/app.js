@@ -498,7 +498,13 @@ function renderQuestionFeedbackHtml(data) {
 // Tab 2: Daily Practice & Personalized Learning
 // -------------------------------------------------------------
 function initPractice() {
-  document.getElementById("btn-refresh-daily").addEventListener("click", loadDailyQuestions);
+  document.getElementById("btn-refresh-daily").addEventListener("click", () => loadDailyQuestions(false));
+
+  const btnNextDay = document.getElementById("btn-next-day-preview");
+  if (btnNextDay) {
+    btnNextDay.addEventListener("click", () => loadDailyQuestions(true));
+  }
+
   document.getElementById("btn-fetch-personalized").addEventListener("click", loadPersonalizedQuestion);
 
   const btnMicPersonalized = document.getElementById("btn-mic-personalized");
@@ -543,14 +549,18 @@ function initPractice() {
   });
 }
 
-async function loadDailyQuestions() {
+async function loadDailyQuestions(simulateNextDay = false) {
   const container = document.getElementById("daily-questions-list");
-  container.innerHTML = `<div class="loading-state">Fetching today's practice challenges...</div>`;
+  container.innerHTML = `<div class="loading-state">Generating weakness-adapted practice challenges...</div>`;
 
   try {
-    const res = await fetch(`${API_BASE}/api/questions/daily?limit=5`);
+    const url = `${API_BASE}/api/questions/daily?user_id=${encodeURIComponent(CURRENT_USER_ID)}&limit=5${simulateNextDay ? '&simulate_next_day=true' : ''}`;
+    const res = await fetch(url);
     if (!res.ok) throw new Error("Failed to load daily questions");
-    const questions = await res.json();
+    const data = await res.json();
+
+    const questions = Array.isArray(data) ? data : (data.questions || []);
+    const meta = Array.isArray(data) ? {} : data;
 
     if (!questions || questions.length === 0) {
       container.innerHTML = `<p class="empty-state">No daily questions available.</p>`;
@@ -558,6 +568,35 @@ async function loadDailyQuestions() {
     }
 
     container.innerHTML = "";
+
+    // Render Adaptive Plan Header Banner
+    if (meta.adaptation_reason || meta.difficulty_tier) {
+      const banner = document.createElement("div");
+      banner.className = "adaptive-plan-banner";
+      banner.style.cssText = "background:linear-gradient(135deg, rgba(124,58,237,0.18), rgba(37,99,235,0.18)); border:1px solid rgba(139,92,246,0.35); border-radius:12px; padding:1.1rem 1.3rem; margin-bottom:1.5rem;";
+      
+      const diffColor = meta.difficulty_tier === "Advanced" ? "#f43f5e" : (meta.difficulty_tier === "Intermediate" ? "#f59e0b" : "#10b981");
+      
+      banner.innerHTML = `
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.4rem;">
+          <div style="display:flex; align-items:center; gap:0.6rem;">
+            <span style="font-size:1.1rem;">🎯</span>
+            <strong style="color:#e2e8f0; font-size:1rem;">Day ${meta.day_number || 1} Adaptive Practice</strong>
+            <span class="badge" style="background:${diffColor}22; color:${diffColor}; border:1px solid ${diffColor}55; font-size:0.75rem;">
+              Level: ${meta.difficulty_tier || "Beginner"}
+            </span>
+          </div>
+          <span class="badge badge-purple" style="font-size:0.75rem;">
+            Weakness Focus: ${meta.primary_weakness || "Foundational"}
+          </span>
+        </div>
+        <p style="margin:0; font-size:0.85rem; color:#cbd5e1; line-height:1.45;">
+          ${meta.adaptation_reason || "Practicing core English grammar patterns."}
+        </p>
+      `;
+      container.appendChild(banner);
+    }
+
     questions.forEach((q, idx) => {
       const card = document.createElement("div");
       card.className = "question-card";

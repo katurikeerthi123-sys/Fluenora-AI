@@ -194,8 +194,13 @@ class LearningEngine:
             "question_id": question_id
         }
 
-    def get_daily_questions(self, limit: int = 5) -> List[Dict[str, Any]]:
-        return self.db.get_daily_questions(limit=limit)
+    def get_daily_questions(
+        self,
+        user_id: str = "default_user",
+        limit: int = 5,
+        simulate_next_day: bool = False
+    ) -> Dict[str, Any]:
+        return self.db.get_daily_questions(user_id=user_id, limit=limit, simulate_next_day=simulate_next_day)
 
     def get_personalized_question(self, user_id: str = "default_user") -> Dict[str, Any]:
         return self.db.get_personalized_next_question(user_id=user_id)

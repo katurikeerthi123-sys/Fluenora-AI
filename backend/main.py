@@ -205,10 +205,17 @@ async def submit_answer(payload: SubmissionRequest) -> Dict[str, Any]:
 
 
 @app.get("/api/questions/daily", tags=["Practice & Learning"])
-async def get_daily_questions(limit: int = Query(5, ge=1, le=10)) -> List[Dict[str, Any]]:
-    """Fetch daily practice questions rotated by calendar day."""
+async def get_daily_questions(
+    user_id: Optional[str] = Query("default_user"),
+    limit: int = Query(5, ge=1, le=10),
+    simulate_next_day: bool = Query(False)
+) -> Dict[str, Any]:
+    """
+    Fetch daily practice questions adapted dynamically based on user weaknesses and performance,
+    increasing difficulty (Beginner -> Intermediate -> Advanced) as performance improves.
+    """
     eng = get_engine()
-    return eng.get_daily_questions(limit=limit)
+    return eng.get_daily_questions(user_id=user_id or "default_user", limit=limit, simulate_next_day=simulate_next_day)
 
 
 @app.get("/api/questions/next", tags=["Practice & Learning"])

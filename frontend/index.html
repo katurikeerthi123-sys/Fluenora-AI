@@ -390,9 +390,12 @@
           <div class="panel-header">
             <div>
               <h2 class="card-title">Daily Practice Prompts</h2>
-              <p class="card-subtitle">Structured prompts designed to address common Telugu L1 language habits.</p>
+              <p class="card-subtitle">AI-adapted daily challenges calibrated to your grammar weaknesses and performance level.</p>
             </div>
-            <button class="btn btn-sm btn-secondary" id="btn-refresh-daily">🔄 Refresh</button>
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+              <button class="btn btn-sm btn-secondary" id="btn-refresh-daily" title="Reload current daily challenges">🔄 Refresh</button>
+              <button class="btn btn-sm btn-primary" id="btn-next-day-preview" title="Calibrate and generate the next day's question set based on your weaknesses and accuracy">🎯 Next Day's Weakness Set</button>
+            </div>
           </div>
 
           <div id="daily-questions-list" class="questions-list">
@@ -541,6 +544,6 @@
     </div>
   </footer>
 
-  <script src="/static/app.js?v=2.3"></script>
+  <script src="/static/app.js?v=2.4"></script>
 </body>
 </html>
