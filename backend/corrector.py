@@ -741,25 +741,51 @@ class SentenceCorrector:
         detected_errors: List[str] = []
         provider = "morpho_syntactic_engine"
 
-        if rule_result and rule_result.get("modified"):
+        rule_modified = bool(rule_result and rule_result.get("modified"))
+
+        # Check if neural candidate is available and semantically valid
+        neural_valid = False
+        orig_words = set(re.findall(r'\b[a-zA-Z]+\b', sentence_stripped.lower()))
+        neural_words = set(re.findall(r'\b[a-zA-Z]+\b', neural_candidate.lower())) if neural_candidate else set()
+        
+        if neural_candidate:
+            shared = orig_words & neural_words
+            preservation = len(shared) / max(len(orig_words), 1)
+            len_diff = abs(len(neural_candidate.split()) - len(sentence_stripped.split()))
+            if preservation >= 0.65 and len_diff <= 5:
+                neural_valid = True
+
+        if rule_modified:
             final_correction = rule_result["correction"]
             final_category = rule_result["category"]
             detected_errors = rule_result.get("errors", [])
             provider = "morpho_syntactic_engine"
-            
-            # If neural candidate also fixed additional punctuation/fluency, harmonize them
-            if neural_candidate:
-                neural_norm = self._normalize_key(neural_candidate)
-                rule_norm = self._normalize_key(final_correction)
-                # If neural candidate made a plausible fluency improvement while preserving rule fix
-                if len(neural_candidate.split()) == len(final_correction.split()):
+
+            if neural_valid:
+                rule_words = set(re.findall(r'\b[a-zA-Z]+\b', final_correction.lower()))
+                rule_is_pure_casing = (rule_words == orig_words)
+                
+                # If rule result ONLY did capitalization/punctuation, or if neural candidate added missing words
+                if rule_is_pure_casing and (neural_words != orig_words):
+                    final_correction = neural_candidate
+                    provider = "neural_gec_transformer"
+                    diagnosed_cat, error_hints = self._diagnose_difference(sentence_stripped, neural_candidate)
+                    final_category = diagnosed_cat or final_category
+                    detected_errors = error_hints
+                elif len(neural_words - orig_words) > 0 and len(rule_words - orig_words) == 0:
+                    final_correction = neural_candidate
+                    provider = "hybrid_neural_rule_engine"
+                    diagnosed_cat, error_hints = self._diagnose_difference(sentence_stripped, neural_candidate)
+                    final_category = diagnosed_cat or final_category
+                    detected_errors.extend([h for h in error_hints if h not in detected_errors])
+                elif abs(len(neural_candidate.split()) - len(final_correction.split())) <= 1:
+                    # Minor fluency or punctuation alignment
                     final_correction = neural_candidate
                     provider = "hybrid_neural_rule_engine"
 
-        elif neural_candidate:
+        elif neural_valid:
             final_correction = neural_candidate
             provider = "neural_gec_transformer"
-            # Diagnose which category changed between sentence_stripped and neural_candidate
             diagnosed_cat, error_hints = self._diagnose_difference(sentence_stripped, neural_candidate)
             final_category = diagnosed_cat or predicted_category or "STRUCTURE_ERROR"
             detected_errors = error_hints
@@ -1063,6 +1089,25 @@ class SentenceCorrector:
             (r"\b(they|we|you)\s+(going|playing|eating|working|studying|watching|reading|writing|coming)\b", r"\1 are \2", "Insert missing auxiliary 'are' before continuous verb.", "STRUCTURE_ERROR"),
         ]
         for pat, repl, expl, cat in missing_copula:
+            if re.search(pat, text, re.IGNORECASE):
+                text = re.sub(pat, repl, text, flags=re.IGNORECASE)
+                record(cat, expl)
+
+        # A2) Missing copula auxiliary 'be' before predicate nominals / adjectives (Telugu zero-copula transfer)
+        # e.g. "they my besties" -> "they are my besties"
+        #      "they my friends" -> "they are my friends"
+        #      "he my brother" -> "he is my brother"
+        #      "she a doctor" -> "she is a doctor"
+        #      "we students" -> "we are students"
+        missing_predicate_copula = [
+            (r"\b(they|we|you)\s+(my|our|your|their|his|her|the)\s+([a-zA-Z]+)\b", r"\1 are \2 \3", "Insert missing linking verb 'are' before predicate noun phrase.", "STRUCTURE_ERROR"),
+            (r"\b(they|we|you)\s+(besties|friends|students|teachers|classmates|doctors|engineers|ready|happy|fine|good)\b", r"\1 are \2", "Insert missing linking verb 'are' before predicate.", "STRUCTURE_ERROR"),
+            (r"\b(he|she|it|this|that)\s+(my|our|your|their|his|her|the)\s+([a-zA-Z]+)\b", r"\1 is \2 \3", "Insert missing linking verb 'is' before predicate noun phrase.", "STRUCTURE_ERROR"),
+            (r"\b(he|she|it|this|that)\s+(a|an)\s+([a-zA-Z]+)\b", r"\1 is \2 \3", "Insert missing linking verb 'is' before indefinite noun.", "STRUCTURE_ERROR"),
+            (r"\b(he|she|it|this|that)\s+(bestie|friend|student|teacher|classmate|doctor|engineer|ready|happy|fine|good|nice)\b", r"\1 is \2", "Insert missing linking verb 'is' before predicate.", "STRUCTURE_ERROR"),
+            (r"\bI\s+(a|an)\s+([a-zA-Z]+)\b", r"I am \1 \2", "Insert missing linking verb 'am'.", "STRUCTURE_ERROR"),
+        ]
+        for pat, repl, expl, cat in missing_predicate_copula:
             if re.search(pat, text, re.IGNORECASE):
                 text = re.sub(pat, repl, text, flags=re.IGNORECASE)
                 record(cat, expl)
